@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="3dL-Vp-Axj">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--ホーム-->
+        <scene sceneID="LFS-rj-Yie">
+            <objects>
+                <viewController id="auY-Ch-wSC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9TV-tg-qqY"/>
+                        <viewControllerLayoutGuide type="bottom" id="PWz-jR-lUf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="oQH-hx-xr2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="坊や3.png" translatesAutoresizingMaskIntoConstraints="NO" id="f6i-ml-2Ke">
+                                <rect key="frame" x="67" y="213" width="240" height="240"/>
+                            </imageView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8nJ-Vd-tOW">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <items>
+                                    <navigationItem id="3rQ-JF-S1b">
+                                        <barButtonItem key="rightBarButtonItem" image="setting" id="8K7-Hq-sGL"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="f6i-ml-2Ke" firstAttribute="top" secondItem="9TV-tg-qqY" secondAttribute="bottom" constant="193" id="I8U-CU-n8W"/>
+                            <constraint firstItem="PWz-jR-lUf" firstAttribute="top" secondItem="f6i-ml-2Ke" secondAttribute="bottom" constant="165" id="IOH-Og-zoz"/>
+                            <constraint firstItem="8nJ-Vd-tOW" firstAttribute="top" secondItem="9TV-tg-qqY" secondAttribute="bottom" id="f6o-Pm-15O"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="f6i-ml-2Ke" secondAttribute="trailing" constant="52" id="juV-1d-ioy"/>
+                            <constraint firstItem="f6i-ml-2Ke" firstAttribute="leading" secondItem="oQH-hx-xr2" secondAttribute="leadingMargin" constant="51" id="mWA-NQ-S8f"/>
+                            <constraint firstItem="8nJ-Vd-tOW" firstAttribute="leading" secondItem="oQH-hx-xr2" secondAttribute="leading" id="p9C-CE-dJa"/>
+                            <constraint firstAttribute="trailing" secondItem="8nJ-Vd-tOW" secondAttribute="trailing" id="r5w-7P-806"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="ホーム" image="home" id="An1-Ep-hxa"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NDF-5u-a7x" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="562" y="-60"/>
+        </scene>
+        <!--contactbook-->
+        <scene sceneID="1xo-Jr-3F3">
+            <objects>
+                <viewControllerPlaceholder storyboardName="contactbook" id="cbi-hk-DHA" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="MWL-PI-TQ9"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wWA-dw-yxA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="156" y="721"/>
+        </scene>
+        <!--chat-->
+        <scene sceneID="iI5-L6-Nkf">
+            <objects>
+                <viewControllerPlaceholder storyboardName="chat" id="8aG-nv-1cy" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="wNV-D1-6o0"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rq6-bh-cka" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-773" y="721"/>
+        </scene>
+        <!--stamp-->
+        <scene sceneID="wIH-gG-oT5">
+            <objects>
+                <viewControllerPlaceholder storyboardName="stamp" id="xcc-12-AbK" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="QtM-qi-rDP"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yNT-MF-C6M" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-510" y="726"/>
+        </scene>
+        <!--notification-->
+        <scene sceneID="pyH-eK-Fdg">
+            <objects>
+                <viewControllerPlaceholder storyboardName="notification" id="hjf-j6-so3" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="tGk-T9-7CR"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bMa-hH-Ivm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-152" y="721"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="lSE-P7-Sg0">
+            <objects>
+                <tabBarController id="3dL-Vp-Axj" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="nwb-m8-baM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="auY-Ch-wSC" kind="relationship" relationship="viewControllers" id="Y16-sU-lej"/>
+                        <segue destination="hjf-j6-so3" kind="relationship" relationship="viewControllers" id="lXf-tN-oIi"/>
+                        <segue destination="cbi-hk-DHA" kind="relationship" relationship="viewControllers" id="VXe-zb-ZHj"/>
+                        <segue destination="xcc-12-AbK" kind="relationship" relationship="viewControllers" id="nHJ-kQ-nNW"/>
+                        <segue destination="8aG-nv-1cy" kind="relationship" relationship="viewControllers" id="eTj-vA-gLX"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UxS-oH-dNc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-530" y="-59"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="home" width="32" height="32"/>
+        <image name="setting" width="32" height="32"/>
+        <image name="坊や3.png" width="800" height="800"/>
+    </resources>
+</document>
