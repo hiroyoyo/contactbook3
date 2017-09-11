@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="X27-au-BWG">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="6ln-Vr-g2e">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--トーク-->
+        <!--Chat-->
         <scene sceneID="WJq-po-3xj">
             <objects>
-                <viewController id="X27-au-BWG" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="X27-au-BWG" customClass="chat" customModule="contactbook" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="JGU-fH-40R"/>
                         <viewControllerLayoutGuide type="bottom" id="wut-n4-P2e"/>
@@ -22,12 +22,31 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="トーク" image="talk" id="Rqh-TZ-85Y"/>
+                    <navigationItem key="navigationItem" id="Eom-2p-dym"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="inB-sP-LjT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="124" y="179"/>
+            <point key="canvasLocation" x="1063.2" y="178.56071964017991"/>
+        </scene>
+        <!--トーク-->
+        <scene sceneID="M7h-ec-jLH">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6ln-Vr-g2e" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="トーク" image="talk" id="Rqh-TZ-85Y"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gkr-Ks-OgD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="X27-au-BWG" kind="relationship" relationship="rootViewController" id="R1f-Rt-1de"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5I7-6g-O3e" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="124" y="178.56071964017991"/>
         </scene>
     </scenes>
     <resources>
