@@ -31,9 +31,7 @@ class chat: JSQMessagesViewController {
         super.viewDidLoad()
         senderDisplayName = sendUser
         senderId = sendUser
-        title="もも組"
-
-        
+        title="もも組"      
       
         
         
