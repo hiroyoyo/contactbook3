@@ -13,13 +13,13 @@
         <!--ホーム-->
         <scene sceneID="LFS-rj-Yie">
             <objects>
-                <viewController id="auY-Ch-wSC" sceneMemberID="viewController">
+                <viewController id="auY-Ch-wSC" customClass="ViewController" customModule="contactbook" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="9TV-tg-qqY"/>
                         <viewControllerLayoutGuide type="bottom" id="PWz-jR-lUf"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="oQH-hx-xr2">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="坊や3.png" translatesAutoresizingMaskIntoConstraints="NO" id="f6i-ml-2Ke">
@@ -45,6 +45,7 @@
                             <constraint firstAttribute="trailing" secondItem="8nJ-Vd-tOW" secondAttribute="trailing" id="r5w-7P-806"/>
                         </constraints>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
                     <tabBarItem key="tabBarItem" title="ホーム" image="home" id="An1-Ep-hxa"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NDF-5u-a7x" userLabel="First Responder" sceneMemberID="firstResponder"/>

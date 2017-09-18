@@ -22,17 +22,15 @@ class chat: JSQMessagesViewController {
     var messages: [JSQMessage] = []
     
  
-    @IBAction func back(_ sender: Any) {
-        print("edge")
-    }
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
         senderDisplayName = sendUser
         senderId = sendUser
-        title="もも組"      
-      
+        title="もも組"
+        
+        
         
         
         let ref = Database.database().reference()

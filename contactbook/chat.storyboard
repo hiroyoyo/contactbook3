@@ -12,30 +12,22 @@
         <!--Chat-->
         <scene sceneID="WJq-po-3xj">
             <objects>
-                <viewController storyboardIdentifier="chat" hidesBottomBarWhenPushed="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="X27-au-BWG" customClass="chat" customModule="contactbook" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="chat" useStoryboardIdentifierAsRestorationIdentifier="YES" id="X27-au-BWG" customClass="chat" customModule="contactbook" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="JGU-fH-40R"/>
                         <viewControllerLayoutGuide type="bottom" id="wut-n4-P2e"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="XDW-lW-k6f">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="mHQ-lD-eGL" appends="YES" id="6c5-62-1sV"/>
-                        </connections>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
                     <navigationItem key="navigationItem" id="Eom-2p-dym"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="inB-sP-LjT" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <screenEdgePanGestureRecognizer minimumNumberOfTouches="1" id="mHQ-lD-eGL">
-                    <rectEdge key="edges" bottom="YES"/>
-                    <connections>
-                        <action selector="back:" destination="X27-au-BWG" id="gHI-IL-umo"/>
-                    </connections>
-                </screenEdgePanGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1063.2" y="178.56071964017991"/>
         </scene>
