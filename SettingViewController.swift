@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  SettingViewController.swift
 //  contactbook
 //
 //  Created by 佐野浩代 on 2017/09/06.
@@ -8,18 +8,14 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class SettingViewController : UIViewController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-
-
 }
-
