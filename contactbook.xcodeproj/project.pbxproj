@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		5014133F9F0E73A013123C3D /* Pods_contactbook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 677677C188E847FE92FA57FA /* Pods_contactbook.framework */; };
+		A36367301F70A94B00A4D1A9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A363672F1F70A94B00A4D1A9 /* GoogleService-Info.plist */; };
+		A36367321F70A97400A4D1A9 /* chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36367311F70A97400A4D1A9 /* chat.swift */; };
 		A8180D90E934AD9605F692E4 /* Pods_contactbookTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2054808D749649FA6B00CA95 /* Pods_contactbookTests.framework */; };
 		AC1BB7AA1F5F80FE003BE03E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1BB7A91F5F80FE003BE03E /* AppDelegate.swift */; };
 		AC1BB7AC1F5F80FE003BE03E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1BB7AB1F5F80FE003BE03E /* HomeViewController.swift */; };
@@ -15,7 +17,6 @@
 		AC1BB7B11F5F80FE003BE03E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC1BB7B01F5F80FE003BE03E /* Assets.xcassets */; };
 		AC1BB7B41F5F80FE003BE03E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC1BB7B21F5F80FE003BE03E /* LaunchScreen.storyboard */; };
 		AC1BB7BF1F5F80FE003BE03E /* contactbookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1BB7BE1F5F80FE003BE03E /* contactbookTests.swift */; };
-		AC1BB7CA1F5F8169003BE03E /* 坊や3.png in Resources */ = {isa = PBXBuildFile; fileRef = AC1BB7C91F5F8169003BE03E /* 坊や3.png */; };
 		AC1BB7CC1F5F818C003BE03E /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC1BB7CB1F5F818C003BE03E /* Media.xcassets */; };
 		AC1BB7CE1F5F820A003BE03E /* chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC1BB7CD1F5F820A003BE03E /* chat.storyboard */; };
 		AC1BB7D01F5F821B003BE03E /* setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC1BB7CF1F5F821B003BE03E /* setting.storyboard */; };
@@ -41,6 +42,8 @@
 		677677C188E847FE92FA57FA /* Pods_contactbook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_contactbook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7021DA337BBF59D9F891C424 /* Pods-contactbookTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-contactbookTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-contactbookTests/Pods-contactbookTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8DB16390574859BAD983EC77 /* Pods-contactbook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-contactbook.release.xcconfig"; path = "Pods/Target Support Files/Pods-contactbook/Pods-contactbook.release.xcconfig"; sourceTree = "<group>"; };
+		A363672F1F70A94B00A4D1A9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A36367311F70A97400A4D1A9 /* chat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = chat.swift; sourceTree = "<group>"; };
 		AC1BB7A61F5F80FE003BE03E /* contactbook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = contactbook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC1BB7A91F5F80FE003BE03E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AC1BB7AB1F5F80FE003BE03E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -51,7 +54,6 @@
 		AC1BB7BA1F5F80FE003BE03E /* contactbookTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = contactbookTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC1BB7BE1F5F80FE003BE03E /* contactbookTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = contactbookTests.swift; sourceTree = "<group>"; };
 		AC1BB7C01F5F80FE003BE03E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AC1BB7C91F5F8169003BE03E /* 坊や3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "坊や3.png"; path = "../../坊や3.png"; sourceTree = "<group>"; };
 		AC1BB7CB1F5F818C003BE03E /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		AC1BB7CD1F5F820A003BE03E /* chat.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = chat.storyboard; sourceTree = "<group>"; };
 		AC1BB7CF1F5F821B003BE03E /* setting.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = setting.storyboard; sourceTree = "<group>"; };
@@ -123,9 +125,10 @@
 				AC1BB7D11F5F8230003BE03E /* contactbook.storyboard */,
 				AC1BB7D31F5F8245003BE03E /* notification.storyboard */,
 				AC1BB7D51F5F8254003BE03E /* stamp.storyboard */,
+				A363672F1F70A94B00A4D1A9 /* GoogleService-Info.plist */,
 				AC1BB7CB1F5F818C003BE03E /* Media.xcassets */,
-				AC1BB7C91F5F8169003BE03E /* 坊や3.png */,
 				AC1BB7B01F5F80FE003BE03E /* Assets.xcassets */,
+				A36367311F70A97400A4D1A9 /* chat.swift */,
 				AC1BB7B21F5F80FE003BE03E /* LaunchScreen.storyboard */,
 				AC1BB7B51F5F80FE003BE03E /* Info.plist */,
 			);
@@ -208,6 +211,7 @@
 				TargetAttributes = {
 					AC1BB7A51F5F80FE003BE03E = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 5V89BB5PY3;
 						ProvisioningStyle = Automatic;
 					};
 					AC1BB7B91F5F80FE003BE03E = {
@@ -249,8 +253,8 @@
 				AC1BB7D41F5F8245003BE03E /* notification.storyboard in Resources */,
 				AC1BB7D21F5F8230003BE03E /* contactbook.storyboard in Resources */,
 				AC1BB7D01F5F821B003BE03E /* setting.storyboard in Resources */,
+				A36367301F70A94B00A4D1A9 /* GoogleService-Info.plist in Resources */,
 				AC1BB7CE1F5F820A003BE03E /* chat.storyboard in Resources */,
-				AC1BB7CA1F5F8169003BE03E /* 坊や3.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,6 +366,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC1BB7AC1F5F80FE003BE03E /* HomeViewController.swift in Sources */,
+				A36367321F70A97400A4D1A9 /* chat.swift in Sources */,
 				AC1BB7AA1F5F80FE003BE03E /* AppDelegate.swift in Sources */,
 				AC1BB7DA1F5FCA87003BE03E /* SettingViewController.swift in Sources */,
 			);
@@ -505,6 +510,7 @@
 			baseConfigurationReference = F76078BF55A90BCB5425EE6E /* Pods-contactbook.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 5V89BB5PY3;
 				INFOPLIST_FILE = contactbook/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = hiroyoyo.contactbook;
@@ -518,6 +524,7 @@
 			baseConfigurationReference = 8DB16390574859BAD983EC77 /* Pods-contactbook.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 5V89BB5PY3;
 				INFOPLIST_FILE = contactbook/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = hiroyoyo.contactbook;
@@ -575,6 +582,7 @@
 				AC1BB7C51F5F80FE003BE03E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AC1BB7C61F5F80FE003BE03E /* Build configuration list for PBXNativeTarget "contactbookTests" */ = {
 			isa = XCConfigurationList;
@@ -583,6 +591,7 @@
 				AC1BB7C81F5F80FE003BE03E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
