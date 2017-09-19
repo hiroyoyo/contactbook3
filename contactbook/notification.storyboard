@@ -17,11 +17,12 @@
                         <viewControllerLayoutGuide type="top" id="nP2-bm-Y3o"/>
                         <viewControllerLayoutGuide type="bottom" id="aEi-OC-KON"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="0be-rE-Pb3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <view key="view" contentMode="scaleToFill" misplaced="YES" id="0be-rE-Pb3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
                     <tabBarItem key="tabBarItem" title="園からのお知らせだお" image="!" id="WlX-nt-mIO"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
