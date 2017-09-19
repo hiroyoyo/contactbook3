@@ -13,7 +13,7 @@
         <!--ホーム-->
         <scene sceneID="LFS-rj-Yie">
             <objects>
-                <viewController id="auY-Ch-wSC" sceneMemberID="viewController">
+                <viewController id="auY-Ch-wSC" customClass="HomeViewController" customModule="contactbook" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="9TV-tg-qqY"/>
                         <viewControllerLayoutGuide type="bottom" id="PWz-jR-lUf"/>
@@ -29,7 +29,11 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <items>
                                     <navigationItem id="3rQ-JF-S1b">
-                                        <barButtonItem key="rightBarButtonItem" image="setting" id="8K7-Hq-sGL"/>
+                                        <barButtonItem key="rightBarButtonItem" image="setting" id="8K7-Hq-sGL">
+                                            <connections>
+                                                <action selector="button:" destination="auY-Ch-wSC" id="XJf-pd-PgH"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
