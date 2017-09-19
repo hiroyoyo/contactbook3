@@ -22,7 +22,7 @@ class chat: JSQMessagesViewController {
         super.viewDidLoad()
         senderDisplayName = sendUser
         senderId = sendUser
-        setupBackButton()
+        title="もも組"
         
         
         

@@ -513,7 +513,7 @@
 				DEVELOPMENT_TEAM = 5V89BB5PY3;
 				INFOPLIST_FILE = contactbook/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = hiroyoyo.contactbook;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.contactBook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -527,7 +527,7 @@
 				DEVELOPMENT_TEAM = 5V89BB5PY3;
 				INFOPLIST_FILE = contactbook/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = hiroyoyo.contactbook;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.contactBook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};

@@ -12,7 +12,7 @@
         <!--Chat-->
         <scene sceneID="WJq-po-3xj">
             <objects>
-                <viewController id="X27-au-BWG" customClass="chat" customModule="contactbook" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="chat" id="X27-au-BWG" customClass="chat" customModule="contactbook" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="JGU-fH-40R"/>
                         <viewControllerLayoutGuide type="bottom" id="wut-n4-P2e"/>
@@ -33,7 +33,7 @@
         <!--トーク-->
         <scene sceneID="W8y-Vh-LSE">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MO4-fe-JD5" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="chatNav" automaticallyAdjustsScrollViewInsets="NO" id="MO4-fe-JD5" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="トーク" image="talk" id="Rqh-TZ-85Y"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZyG-Ls-xjd">
