@@ -96,6 +96,7 @@
         <scene sceneID="lSE-P7-Sg0">
             <objects>
                 <tabBarController id="3dL-Vp-Axj" sceneMemberID="viewController">
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="nwb-m8-baM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
