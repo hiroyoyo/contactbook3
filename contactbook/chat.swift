@@ -82,12 +82,54 @@ class chat: JSQMessagesViewController {
         
         
     }
-    func setupBackButton() {
-        self.navigationItem.title = "もも組"
+    override func collectionView(_ collectionView: JSQMessagesCollectionView, attributedTextForCellTopLabelAt indexPath: IndexPath) -> NSAttributedString? {
+        
+        let message = self.messages[indexPath.item]
+        if indexPath.item == 0 {
+            return JSQMessagesTimestampFormatter.shared().attributedTimestamp(for: message.date)
+        }
+        
+        if indexPath.item -  1 > 0{
+            let previousMessage = self.messages[indexPath.item - 1 ]
+            
+            if  ( ( message.date.timeIntervalSince(previousMessage.date) / 60 ) > 1){
+                return JSQMessagesTimestampFormatter.shared().attributedTimestamp(for: message.date)
+            }
+        }
+        
+        return nil
+    }
+    
+    override func collectionView(_ collectionView: JSQMessagesCollectionView, layout collectionViewLayout: JSQMessagesCollectionViewFlowLayout, heightForCellTopLabelAt indexPath: IndexPath) -> CGFloat {
+        
+        if indexPath.item == 0 {
+            return kJSQMessagesCollectionViewCellLabelHeightDefault
+        }
+        
+        if indexPath.item -  1 > 0{
+            let message = self.messages[indexPath.item]
+            let previousMessage = self.messages[indexPath.item - 1 ]
+            
+            if  ( ( message.date.timeIntervalSince(previousMessage.date) / 60 ) > 1){
+                return kJSQMessagesCollectionViewCellLabelHeightDefault
+            }
+        }
+        return 0.0
+    }
+    
+    
+    
+    override func collectionView(_ collectionView: JSQMessagesCollectionView!, attributedTextForCellBottomLabelAt indexPath: IndexPath!) -> NSAttributedString! {
+        let message: JSQMessage = self.messages[indexPath.item]
+        
+        print(message.date)
+        return JSQMessagesTimestampFormatter.shared().attributedTimestamp(for: message.date)
+        
     }
     
     
     override func collectionView(_ collectionView: JSQMessagesCollectionView!, messageDataForItemAt indexPath: IndexPath!) -> JSQMessageData! {
+        
         return messages[indexPath.row]
     }
     
@@ -111,6 +153,7 @@ class chat: JSQMessagesViewController {
         return cell
     }
     
+    
     // メッセージの数
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return messages.count
@@ -133,36 +176,36 @@ class chat: JSQMessagesViewController {
         button.isEnabled = false
         self.view.endEditing(true)
     }
-    override func collectionView(_ collectionView: JSQMessagesCollectionView, attributedTextForCellTopLabelAt indexPath: IndexPath) -> NSAttributedString? {
-        /**
-         *  This logic should be consistent with what you return from `heightForCellTopLabelAtIndexPath:`
-         *  The other label text delegate methods should follow a similar pattern.
-         *
-         *  Show a timestamp for every 3rd message
-         */
-        if (indexPath.item % 3 == 0) {
-            let message = self.messages[indexPath.item]
-            return JSQMessagesTimestampFormatter.shared().attributedTimestamp(for: message.date)
-        }
-        
-        return nil
-    }
-    override func collectionView(_ collectionView: JSQMessagesCollectionView, layout collectionViewLayout: JSQMessagesCollectionViewFlowLayout, heightForCellTopLabelAt indexPath: IndexPath) -> CGFloat {
-        /**
-         *  Each label in a cell has a `height` delegate method that corresponds to its text dataSource method
-         */
-        
-        /**
-         *  This logic should be consistent with what you return from `attributedTextForCellTopLabelAtIndexPath:`
-         *  The other label height delegate methods should follow similarly
-         *
-         *  Show a timestamp for every 3rd message
-         */
-        if indexPath.item % 3 == 0 {
-            return kJSQMessagesCollectionViewCellLabelHeightDefault
-        }
-        
-        return 0.0
-    }
+//    override func collectionView(_ collectionView: JSQMessagesCollectionView, attributedTextForCellTopLabelAt indexPath: IndexPath) -> NSAttributedString? {
+//        /**
+//         *  This logic should be consistent with what you return from `heightForCellTopLabelAtIndexPath:`
+//         *  The other label text delegate methods should follow a similar pattern.
+//         *
+//         *  Show a timestamp for every 3rd message
+//         */
+//        if (indexPath.item % 1 == 0) {
+//            let message = self.messages[indexPath.item]
+//            return JSQMessagesTimestampFormatter.shared().attributedTimestamp(for: message.date)
+//        }
+//        
+//        return nil
+//    }
+//    override func collectionView(_ collectionView: JSQMessagesCollectionView, layout collectionViewLayout: JSQMessagesCollectionViewFlowLayout, heightForCellTopLabelAt indexPath: IndexPath) -> CGFloat {
+//        /**
+//         *  Each label in a cell has a `height` delegate method that corresponds to its text dataSource method
+//         */
+//        
+//        /**
+//         *  This logic should be consistent with what you return from `attributedTextForCellTopLabelAtIndexPath:`
+//         *  The other label height delegate methods should follow similarly
+//         *
+//         *  Show a timestamp for every 3rd message
+//         */
+//        if indexPath.item % 1 == 0 {
+//            return kJSQMessagesCollectionViewCellLabelHeightDefault
+//        }
+//        
+//        return 0.0
+//    }
     
 }
