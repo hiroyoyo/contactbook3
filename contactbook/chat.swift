@@ -22,7 +22,8 @@ class chat: JSQMessagesViewController {
         super.viewDidLoad()
         senderDisplayName = sendUser
         senderId = sendUser
-        title="もも組"
+        navigationItem.title="もも組"
+        
         
         
         
@@ -90,15 +91,9 @@ class chat: JSQMessagesViewController {
             self.collectionView.scrollToItem(at: indexPath, at: UICollectionViewScrollPosition.bottom, animated: false)
             
         }
-            
         )
-
-        
-        
-        
-        
-        
     }
+    
     override func collectionView(_ collectionView: JSQMessagesCollectionView,
                                  attributedTextForCellTopLabelAt indexPath: IndexPath) -> NSAttributedString? {
         
