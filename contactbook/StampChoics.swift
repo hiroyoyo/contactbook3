@@ -11,10 +11,11 @@ import UIKit
 class StampChoics: UIViewController ,UICollectionViewDataSource, UICollectionViewDelegate {
    
     let photos = ["icon_1", "icon_2","icon_3","icon_4","icon_5","icon_6","icon_7"]
+    var selectedImage: UIImage?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        print(photos[0])
         // Do any additional setup after loading the view.
     }
 
@@ -58,7 +59,46 @@ class StampChoics: UIViewController ,UICollectionViewDataSource, UICollectionVie
         return 7;
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        // [indexPath.row] から画像名を探し、UImage を設定
+        selectedImage = UIImage(named: photos[(indexPath as NSIndexPath).row])
+        if selectedImage != nil {
+            print(photos[(indexPath as NSIndexPath).row])
+            // SubViewController へ遷移するために Segue を呼び出す
+            let alert: UIAlertController = UIAlertController(title: "確認", message: photos[(indexPath as NSIndexPath).row]+"を押しますか？", preferredStyle:  UIAlertControllerStyle.actionSheet)
+            
+            // ② Actionの設定
+            // Action初期化時にタイトル, スタイル, 押された時に実行されるハンドラを指定する
+            // 第3引数のUIAlertActionStyleでボタンのスタイルを指定する
+            // OKボタン
+            let defaultAction: UIAlertAction = UIAlertAction(title: "押す", style: .default, handler:{
+                // ボタンが押された時の処理を書く（クロージャ実装）
+                (action: UIAlertAction!) -> Void in
+                print("OK")
+              
+               
+                
+               
+            })
+            // キャンセルボタン
+            let cancelAction: UIAlertAction = UIAlertAction(title: "キャンセル", style: UIAlertActionStyle.cancel, handler:{
+                // ボタンが押された時の処理を書く（クロージャ実装）
+                (action: UIAlertAction!) -> Void in
+                print("Cancel")
+            })
+            
+            // ③ UIAlertControllerにActionを追加
+            alert.addAction(cancelAction)
+            alert.addAction(defaultAction)
+            
+            // ④ Alertを表示
+            present(alert, animated: true, completion: nil)
+        }
+        
+    }
     
+ 
 
 
     /*

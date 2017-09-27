@@ -128,14 +128,14 @@
 		AC1BB7A81F5F80FE003BE03E /* contactbook */ = {
 			isa = PBXGroup;
 			children = (
-				A3BAA0EF1F7B4AF4003B384A /* stamoChoics.storyboard */,
-				A33BA3981F787B67008C111E /* stamp.swift */,
 				A36367311F70A97400A4D1A9 /* chat.swift */,
 				AC1BB7A91F5F80FE003BE03E /* AppDelegate.swift */,
 				AC1BB7AB1F5F80FE003BE03E /* HomeViewController.swift */,
 				AC1BB7D91F5FCA87003BE03E /* SettingViewController.swift */,
+				A33BA3981F787B67008C111E /* stamp.swift */,
 				A33BA39C1F788036008C111E /* stampHistory.swift */,
 				A33BA3A41F78A1DF008C111E /* StampChoics.swift */,
+				A3BAA0EF1F7B4AF4003B384A /* stamoChoics.storyboard */,
 				AC1BB7AD1F5F80FE003BE03E /* Main.storyboard */,
 				AC1BB7CD1F5F820A003BE03E /* chat.storyboard */,
 				AC1BB7CF1F5F821B003BE03E /* setting.storyboard */,

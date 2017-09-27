@@ -14,7 +14,7 @@
         <!--Stamp-->
         <scene sceneID="nhL-rv-Qci">
             <objects>
-                <viewController id="nRh-6x-NKM" customClass="stamp" customModule="contactbook" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="stamp" useStoryboardIdentifierAsRestorationIdentifier="YES" id="nRh-6x-NKM" customClass="stamp" customModule="contactbook" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Kap-V8-3rD"/>
                         <viewControllerLayoutGuide type="bottom" id="EJK-j6-y81"/>
@@ -23,14 +23,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MCk-7s-MLH">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MCk-7s-MLH" userLabel="Stamp Btn">
                                 <rect key="frame" x="56" y="177.5" width="263" height="263"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="MCk-7s-MLH" secondAttribute="height" multiplier="1:1" id="fqW-et-Jjv"/>
                                 </constraints>
                                 <state key="normal" title="スタンプ押す"/>
                                 <connections>
-                                    <action selector="stampAdd:" destination="nRh-6x-NKM" eventType="touchUpInside" id="Kyo-jJ-ksV"/>
                                     <segue destination="UOg-Vl-vNq" kind="show" id="dkE-DR-Nvm"/>
                                 </connections>
                             </button>
@@ -59,7 +58,7 @@
                     <navigationItem key="navigationItem" id="RV3-cO-OS3"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="stompBtn" destination="MCk-7s-MLH" id="rHI-Nx-LOQ"/>
+                        <outlet property="stampBtn" destination="MCk-7s-MLH" id="yex-we-qDG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lE7-SW-bo7" userLabel="First Responder" sceneMemberID="firstResponder"/>

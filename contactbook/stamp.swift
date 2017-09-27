@@ -9,14 +9,20 @@
 import UIKit
 
 class stamp: UIViewController , UIImagePickerControllerDelegate, UINavigationControllerDelegate{
-
-    @IBOutlet weak var stompBtn: UIButton!
+    
+    @IBOutlet weak var stampBtn: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        stompBtn.layer.borderWidth = 2.0
-        stompBtn.layer.borderColor = UIColor.black.cgColor
-        stompBtn.layer.cornerRadius = 10.0
+        stampBtn.layer.borderWidth = 2.0
+        stampBtn.layer.borderColor = UIColor.black.cgColor
+        stampBtn.layer.cornerRadius = 10.0
         // Do any additional setup afer loading the view.
+        
+        
+        // 画像のアスペクト比を維持しUIImageViewサイズに収まるように表示
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -24,10 +30,8 @@ class stamp: UIViewController , UIImagePickerControllerDelegate, UINavigationCon
         // Dispose of any resources that can be recreated.
     }
  
-    @IBAction func stampAdd(_ sender: Any) {
-        
-    }
     
+  
 
     /*
     // MARK: - Navigation
