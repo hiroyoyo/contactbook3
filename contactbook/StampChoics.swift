@@ -76,8 +76,6 @@ class StampChoics: UIViewController ,UICollectionViewDataSource, UICollectionVie
                 // ボタンが押された時の処理を書く（クロージャ実装）
                 (action: UIAlertAction!) -> Void in
                 print("OK")
-              
-               
                 
                
             })
