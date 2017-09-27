@@ -33,10 +33,12 @@ class chat: JSQMessagesViewController {
                 Dictionary<String, AnyObject> else {
                 return
             }
+            
             guard let post = dic["talks"] as?
                 Dictionary<String, Dictionary<String, AnyObject>> else {
                 return
             }
+            
             guard let posts = post[self.sendUser] as?
                 Dictionary<String, Dictionary<String, AnyObject>> else {
                 return

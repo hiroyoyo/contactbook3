@@ -28,7 +28,11 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="MCk-7s-MLH" secondAttribute="height" multiplier="1:1" id="fqW-et-Jjv"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="スタンプ押す"/>
+                                <connections>
+                                    <action selector="stampAdd:" destination="nRh-6x-NKM" eventType="touchUpInside" id="Kyo-jJ-ksV"/>
+                                    <segue destination="UOg-Vl-vNq" kind="show" id="dkE-DR-Nvm"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jVg-RP-9nW">
                                 <rect key="frame" x="236" y="568" width="123" height="30"/>
@@ -54,15 +58,26 @@
                     <extendedEdge key="edgesForExtendedLayout" top="YES"/>
                     <navigationItem key="navigationItem" id="RV3-cO-OS3"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="stompBtn" destination="MCk-7s-MLH" id="rHI-Nx-LOQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lE7-SW-bo7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="796" y="162"/>
         </scene>
-        <!--Storyboard Reference-->
+        <!--stamoChoics-->
+        <scene sceneID="2RO-bT-rkA">
+            <objects>
+                <viewControllerPlaceholder storyboardName="stamoChoics" id="UOg-Vl-vNq" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NgF-dp-lrd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1510" y="94"/>
+        </scene>
+        <!--stampHistory-->
         <scene sceneID="O99-bv-dle">
             <objects>
-                <viewControllerPlaceholder id="fHT-D5-g8G" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="stampHistory" id="fHT-D5-g8G" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mXz-NJ-rn6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1447" y="174"/>
