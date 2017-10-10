@@ -12,7 +12,7 @@
         <!--Stamp Choics-->
         <scene sceneID="quZ-B6-JL0">
             <objects>
-                <viewController id="tgz-sN-xmC" customClass="StampChoics" customModule="contactbook" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="StampChoics" useStoryboardIdentifierAsRestorationIdentifier="YES" id="tgz-sN-xmC" customClass="StampChoics" customModule="contactbook" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="BNJ-9k-rT4"/>
                         <viewControllerLayoutGuide type="bottom" id="tHL-nt-Sh6"/>
@@ -66,10 +66,21 @@
                             <constraint firstItem="sEb-BA-Eb1" firstAttribute="top" secondItem="tIV-To-8aj" secondAttribute="top" id="oRQ-PY-etu"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <segue destination="MDD-Od-qN1" kind="show" identifier="Stamp" action="showDetailViewController:sender:" id="LVE-LB-RQO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z0W-e4-tz7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="64.799999999999997" y="119.1904047976012"/>
+        </scene>
+        <!--stamp-->
+        <scene sceneID="UrQ-oV-ILr">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W2d-Bq-h8L" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="stamp" id="MDD-Od-qN1" sceneMemberID="viewController"/>
+            </objects>
+            <point key="canvasLocation" x="878" y="157"/>
         </scene>
     </scenes>
 </document>

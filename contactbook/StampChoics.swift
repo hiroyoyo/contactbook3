@@ -8,16 +8,20 @@
 
 import UIKit
 
-class StampChoics: UIViewController ,UICollectionViewDataSource, UICollectionViewDelegate {
+class StampChoics: UIViewController ,UICollectionViewDataSource, UICollectionViewDelegate ,UINavigationControllerDelegate{
    
-    let photos = ["icon_1", "icon_2","icon_3","icon_4","icon_5","icon_6","icon_7"]
+    let photos =  ["icon_1", "icon_2","icon_3","icon_4","icon_5","icon_6","icon_7"]
     var selectedImage: UIImage?
-
+    var choicsBtnImg :String = ""
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(photos[0])
+        navigationController?.delegate = self
+        
         // Do any additional setup after loading the view.
     }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -31,7 +35,7 @@ class StampChoics: UIViewController ,UICollectionViewDataSource, UICollectionVie
         // Tag番号を使ってImageViewのインスタンス生成
         let imageView = Cell.contentView.viewWithTag(1) as! UIImageView
         // 画像配列の番号で指定された要素の名前の画像をUIImageとする
-        let cellImage = UIImage(named: photos[(indexPath as NSIndexPath).row])
+        let cellImage = UIImage(named:photos[(indexPath as NSIndexPath).row])
         // UIImageをUIImageViewのimageとして設定
         imageView.image = cellImage
         
@@ -65,6 +69,7 @@ class StampChoics: UIViewController ,UICollectionViewDataSource, UICollectionVie
         selectedImage = UIImage(named: photos[(indexPath as NSIndexPath).row])
         if selectedImage != nil {
             print(photos[(indexPath as NSIndexPath).row])
+            choicsBtnImg = photos[(indexPath as NSIndexPath).row]
             // SubViewController へ遷移するために Segue を呼び出す
             let alert: UIAlertController = UIAlertController(title: "確認", message: photos[(indexPath as NSIndexPath).row]+"を押しますか？", preferredStyle:  UIAlertControllerStyle.actionSheet)
             
@@ -76,9 +81,12 @@ class StampChoics: UIViewController ,UICollectionViewDataSource, UICollectionVie
                 // ボタンが押された時の処理を書く（クロージャ実装）
                 (action: UIAlertAction!) -> Void in
                 print("OK")
+                self.choicsBtnImg =  self.photos[(indexPath as NSIndexPath).row]
+                self.navigationController?.popViewController(animated: true)
                 
-               
             })
+            
+
             // キャンセルボタン
             let cancelAction: UIAlertAction = UIAlertAction(title: "キャンセル", style: UIAlertActionStyle.cancel, handler:{
                 // ボタンが押された時の処理を書く（クロージャ実装）
@@ -95,8 +103,21 @@ class StampChoics: UIViewController ,UICollectionViewDataSource, UICollectionVie
         }
         
     }
+  
+
+
+
+   func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
     
- 
+        if let controller = viewController as? Stamp {
+            if choicsBtnImg != ""{
+                controller.text1 = choicsBtnImg
+            }
+        }
+    }
+    
+    
+
 
 
     /*

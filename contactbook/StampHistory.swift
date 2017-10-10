@@ -1,5 +1,5 @@
 //
-//  stamp.swift
+//  stampHistory.swift
 //  contactbook
 //
 //  Created by ryota on 2017/09/25.
@@ -8,30 +8,19 @@
 
 import UIKit
 
-class stamp: UIViewController , UIImagePickerControllerDelegate, UINavigationControllerDelegate{
-    
-    @IBOutlet weak var stampBtn: UIButton!
-    
+class StampHistory: UIViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        stampBtn.layer.borderWidth = 2.0
-        stampBtn.layer.borderColor = UIColor.black.cgColor
-        stampBtn.layer.cornerRadius = 10.0
-        // Do any additional setup afer loading the view.
-        
-        
-        // 画像のアスペクト比を維持しUIImageViewサイズに収まるように表示
-        
-        
+
+        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
- 
     
-  
 
     /*
     // MARK: - Navigation

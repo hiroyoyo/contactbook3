@@ -8,9 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		5014133F9F0E73A013123C3D /* Pods_contactbook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 677677C188E847FE92FA57FA /* Pods_contactbook.framework */; };
-		A33BA3991F787B67008C111E /* stamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33BA3981F787B67008C111E /* stamp.swift */; };
+		A33BA3991F787B67008C111E /* Stamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33BA3981F787B67008C111E /* Stamp.swift */; };
 		A33BA39B1F787C54008C111E /* stampHistory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A33BA39A1F787C54008C111E /* stampHistory.storyboard */; };
-		A33BA39D1F788036008C111E /* stampHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33BA39C1F788036008C111E /* stampHistory.swift */; };
+		A33BA39D1F788036008C111E /* StampHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33BA39C1F788036008C111E /* StampHistory.swift */; };
 		A33BA3A31F78A115008C111E /* Stamp.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A33BA3A21F78A115008C111E /* Stamp.xcassets */; };
 		A33BA3A51F78A1DF008C111E /* StampChoics.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33BA3A41F78A1DF008C111E /* StampChoics.swift */; };
 		A36367301F70A94B00A4D1A9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A363672F1F70A94B00A4D1A9 /* GoogleService-Info.plist */; };
@@ -48,9 +48,9 @@
 		677677C188E847FE92FA57FA /* Pods_contactbook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_contactbook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7021DA337BBF59D9F891C424 /* Pods-contactbookTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-contactbookTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-contactbookTests/Pods-contactbookTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8DB16390574859BAD983EC77 /* Pods-contactbook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-contactbook.release.xcconfig"; path = "Pods/Target Support Files/Pods-contactbook/Pods-contactbook.release.xcconfig"; sourceTree = "<group>"; };
-		A33BA3981F787B67008C111E /* stamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = stamp.swift; sourceTree = "<group>"; };
+		A33BA3981F787B67008C111E /* Stamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stamp.swift; sourceTree = "<group>"; };
 		A33BA39A1F787C54008C111E /* stampHistory.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = stampHistory.storyboard; sourceTree = "<group>"; };
-		A33BA39C1F788036008C111E /* stampHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = stampHistory.swift; sourceTree = "<group>"; };
+		A33BA39C1F788036008C111E /* StampHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StampHistory.swift; sourceTree = "<group>"; };
 		A33BA3A21F78A115008C111E /* Stamp.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Stamp.xcassets; sourceTree = "<group>"; };
 		A33BA3A41F78A1DF008C111E /* StampChoics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StampChoics.swift; sourceTree = "<group>"; };
 		A363672F1F70A94B00A4D1A9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -132,11 +132,11 @@
 				AC1BB7A91F5F80FE003BE03E /* AppDelegate.swift */,
 				AC1BB7AB1F5F80FE003BE03E /* HomeViewController.swift */,
 				AC1BB7D91F5FCA87003BE03E /* SettingViewController.swift */,
-				A33BA3981F787B67008C111E /* stamp.swift */,
-				A33BA39C1F788036008C111E /* stampHistory.swift */,
+				A33BA3981F787B67008C111E /* Stamp.swift */,
+				A33BA39C1F788036008C111E /* StampHistory.swift */,
 				A33BA3A41F78A1DF008C111E /* StampChoics.swift */,
-				A3BAA0EF1F7B4AF4003B384A /* stamoChoics.storyboard */,
 				AC1BB7AD1F5F80FE003BE03E /* Main.storyboard */,
+				A3BAA0EF1F7B4AF4003B384A /* stamoChoics.storyboard */,
 				AC1BB7CD1F5F820A003BE03E /* chat.storyboard */,
 				AC1BB7CF1F5F821B003BE03E /* setting.storyboard */,
 				AC1BB7D11F5F8230003BE03E /* contactbook.storyboard */,
@@ -387,13 +387,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A33BA39D1F788036008C111E /* stampHistory.swift in Sources */,
+				A33BA39D1F788036008C111E /* StampHistory.swift in Sources */,
 				AC1BB7AC1F5F80FE003BE03E /* HomeViewController.swift in Sources */,
 				A33BA3A51F78A1DF008C111E /* StampChoics.swift in Sources */,
 				A36367321F70A97400A4D1A9 /* chat.swift in Sources */,
 				AC1BB7AA1F5F80FE003BE03E /* AppDelegate.swift in Sources */,
 				AC1BB7DA1F5FCA87003BE03E /* SettingViewController.swift in Sources */,
-				A33BA3991F787B67008C111E /* stamp.swift in Sources */,
+				A33BA3991F787B67008C111E /* Stamp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
