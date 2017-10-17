@@ -15,6 +15,7 @@
 		A33BA3A51F78A1DF008C111E /* StampChoics.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33BA3A41F78A1DF008C111E /* StampChoics.swift */; };
 		A36367301F70A94B00A4D1A9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A363672F1F70A94B00A4D1A9 /* GoogleService-Info.plist */; };
 		A36367321F70A97400A4D1A9 /* chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36367311F70A97400A4D1A9 /* chat.swift */; };
+		A39E67D31F8F268B00ABDA1B /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39E67D21F8F268B00ABDA1B /* TableViewCell.swift */; };
 		A3BAA0F01F7B4AF4003B384A /* stamoChoics.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3BAA0EF1F7B4AF4003B384A /* stamoChoics.storyboard */; };
 		A8180D90E934AD9605F692E4 /* Pods_contactbookTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2054808D749649FA6B00CA95 /* Pods_contactbookTests.framework */; };
 		AC1BB7AA1F5F80FE003BE03E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1BB7A91F5F80FE003BE03E /* AppDelegate.swift */; };
@@ -55,6 +56,7 @@
 		A33BA3A41F78A1DF008C111E /* StampChoics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StampChoics.swift; sourceTree = "<group>"; };
 		A363672F1F70A94B00A4D1A9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A36367311F70A97400A4D1A9 /* chat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = chat.swift; sourceTree = "<group>"; };
+		A39E67D21F8F268B00ABDA1B /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		A3BAA0EF1F7B4AF4003B384A /* stamoChoics.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = stamoChoics.storyboard; sourceTree = "<group>"; };
 		AC1BB7A61F5F80FE003BE03E /* contactbook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = contactbook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC1BB7A91F5F80FE003BE03E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 				A33BA3981F787B67008C111E /* Stamp.swift */,
 				A33BA39C1F788036008C111E /* StampHistory.swift */,
 				A33BA3A41F78A1DF008C111E /* StampChoics.swift */,
+				A39E67D21F8F268B00ABDA1B /* TableViewCell.swift */,
 				AC1BB7AD1F5F80FE003BE03E /* Main.storyboard */,
 				A3BAA0EF1F7B4AF4003B384A /* stamoChoics.storyboard */,
 				AC1BB7CD1F5F820A003BE03E /* chat.storyboard */,
@@ -388,6 +391,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A33BA39D1F788036008C111E /* StampHistory.swift in Sources */,
+				A39E67D31F8F268B00ABDA1B /* TableViewCell.swift in Sources */,
 				AC1BB7AC1F5F80FE003BE03E /* HomeViewController.swift in Sources */,
 				A33BA3A51F78A1DF008C111E /* StampChoics.swift in Sources */,
 				A36367321F70A97400A4D1A9 /* chat.swift in Sources */,

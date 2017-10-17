@@ -23,7 +23,7 @@
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="sEb-BA-Eb1">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="1" green="0.83955208349999999" blue="0.83834524369999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="2" id="KId-fj-rCd">
                                     <size key="itemSize" width="113" height="104"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -43,6 +43,7 @@
                                                 </imageView>
                                             </subviews>
                                         </view>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="hf8-4m-oS0" secondAttribute="trailing" id="9Gu-de-ok1"/>
                                             <constraint firstAttribute="bottom" secondItem="hf8-4m-oS0" secondAttribute="bottom" id="OQZ-TZ-id7"/>
@@ -58,12 +59,11 @@
                                 </connections>
                             </collectionView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="sEb-BA-Eb1" firstAttribute="top" secondItem="tIV-To-8aj" secondAttribute="top" id="8bw-00-dWL"/>
                             <constraint firstAttribute="trailing" secondItem="sEb-BA-Eb1" secondAttribute="trailing" id="Vw6-d3-D8E"/>
                             <constraint firstItem="sEb-BA-Eb1" firstAttribute="leading" secondItem="tIV-To-8aj" secondAttribute="leading" id="YgB-hz-ABj"/>
                             <constraint firstItem="tHL-nt-Sh6" firstAttribute="top" secondItem="sEb-BA-Eb1" secondAttribute="bottom" id="mZL-5b-ASO"/>
-                            <constraint firstItem="sEb-BA-Eb1" firstAttribute="top" secondItem="tIV-To-8aj" secondAttribute="top" id="oRQ-PY-etu"/>
                         </constraints>
                     </view>
                     <connections>

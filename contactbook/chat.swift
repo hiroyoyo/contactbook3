@@ -23,7 +23,7 @@ class chat: JSQMessagesViewController {
         senderDisplayName = sendUser
         senderId = sendUser
         navigationItem.title="もも組"
-        
+        self.collectionView.backgroundColor = UIColor(red: 1, green: 165/255, blue: 10/255, alpha: 0.5)
         
         
         

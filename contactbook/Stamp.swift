@@ -10,25 +10,33 @@ import UIKit
 
 class Stamp: UIViewController , UIImagePickerControllerDelegate, UINavigationControllerDelegate{
     
+    @IBOutlet weak var historyBtn: UIButton!
     @IBOutlet weak var stampBtn: UIButton!
+    @IBOutlet weak var themeLbl: UILabel!
     var text1:String = ""
     
-    let systemBlueColor = UIColor(red: 0, green: 122 / 255, blue: 1, alpha: 1)
     override func viewDidLoad() {
         super.viewDidLoad()
         stampBtn.layer.borderWidth = 2.0
         stampBtn.layer.borderColor = UIColor.black.cgColor
         stampBtn.layer.cornerRadius = 10.0
         
-        stampBtn.setTitleColor(systemBlueColor, for: .normal)
-
+        historyBtn.layer.borderWidth = 1.0
+        historyBtn.layer.borderColor = UIColor.black.cgColor
+        historyBtn.layer.cornerRadius = 10.0
         
+        themeLbl.text = "本を５冊よめたらスタンプを押そう!!"
+        
+        themeLbl.numberOfLines = 0 //折り返し
+        themeLbl.sizeToFit()
+        themeLbl.lineBreakMode = NSLineBreakMode.byCharWrapping
         
     }
 
     override func viewWillLayoutSubviews() {
         if text1 != ""{
             let img:UIImage = UIImage(named:text1)!
+            stampBtn.backgroundColor = UIColor.white
             stampBtn.setImage(img, for: .normal)
             stampBtn.setTitle("", for: .normal)
         }
