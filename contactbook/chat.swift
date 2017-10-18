@@ -22,19 +22,25 @@ class chat: JSQMessagesViewController {
         super.viewDidLoad()
         senderDisplayName = sendUser
         senderId = sendUser
-        title="もも組"
+        navigationItem.title="もも組"
+        
         
         
         
         let ref = Database.database().reference()
         ref.observe(.value, with: { snapshot in
-            guard let dic = snapshot.value as? Dictionary<String, AnyObject> else {
+            guard let dic = snapshot.value as?
+                Dictionary<String, AnyObject> else {
                 return
             }
-            guard let post = dic["talks"] as? Dictionary<String, Dictionary<String, AnyObject>> else {
+            
+            guard let post = dic["talks"] as?
+                Dictionary<String, Dictionary<String, AnyObject>> else {
                 return
             }
-            guard let posts = post[self.sendUser] as? Dictionary<String, Dictionary<String, AnyObject>> else {
+            
+            guard let posts = post[self.sendUser] as?
+                Dictionary<String, Dictionary<String, AnyObject>> else {
                 return
             }
             
@@ -60,12 +66,16 @@ class chat: JSQMessagesViewController {
                         let dateStr: String = formatter.string(from: date as Date)
 
                         let date_formatter: DateFormatter = DateFormatter()
-                        date_formatter.locale     = NSLocale(localeIdentifier: "ja") as Locale!//日本時間に設定
+                        date_formatter.locale     = NSLocale(localeIdentifier: "ja") as Locale//日本時間に設定
                         date_formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
-                        let testDate = date_formatter.date(from: dateStr)//StringからDateに変換
+                        let jpDate = date_formatter.date(from: dateStr)//StringからDateに変換
                   
     
-                        preMessages.append(JSQMessage(senderId: senderId, displayName: displayName, date: testDate, text: text))
+                        preMessages.append(JSQMessage(senderId: senderId,
+                                                   displayName: displayName,
+                                                          date: jpDate,
+                                                          text: text))
+                       
                     }
                 }
             }
@@ -77,22 +87,65 @@ class chat: JSQMessagesViewController {
             self.messages = preMessages
             
             self.collectionView.reloadData()
+            
+            //最新欄に移動
+            let indexPath = IndexPath(row: self.messages.endIndex-1, section: 0)
+            self.collectionView.scrollToItem(at: indexPath, at: UICollectionViewScrollPosition.bottom, animated: false)
+            
         }
         )
-        
-        
     }
-    func setupBackButton() {
-        self.navigationItem.title = "もも組"
+    
+    override func collectionView(_ collectionView: JSQMessagesCollectionView,
+                                 attributedTextForCellTopLabelAt indexPath: IndexPath) -> NSAttributedString? {
+        
+        let message = self.messages[indexPath.item]
+        if indexPath.item == 0 {
+            return JSQMessagesTimestampFormatter.shared().attributedTimestamp(for: message.date)
+        }
+        
+        if indexPath.item -  1 > 0{
+            let previousMessage = self.messages[indexPath.item - 1 ]
+            
+            if  ( ( message.date.timeIntervalSince(previousMessage.date) / 60 ) > 1){
+                return JSQMessagesTimestampFormatter.shared().attributedTimestamp(for: message.date)
+            }
+        }
+        
+        return nil
+    }
+    
+    override func collectionView(_ collectionView: JSQMessagesCollectionView,
+                                 layout collectionViewLayout: JSQMessagesCollectionViewFlowLayout,
+                                 heightForCellTopLabelAt indexPath: IndexPath) -> CGFloat {
+        
+        if indexPath.item == 0 {
+            
+            return kJSQMessagesCollectionViewCellLabelHeightDefault
+        }
+        
+        if indexPath.item -  1 > 0{
+            let message = self.messages[indexPath.item]
+            let previousMessage = self.messages[indexPath.item - 1 ]
+            
+            if  ( ( message.date.timeIntervalSince(previousMessage.date) / 60 ) > 1){
+                return kJSQMessagesCollectionViewCellLabelHeightDefault
+            }
+        }
+        return 0.0
     }
     
     
-    override func collectionView(_ collectionView: JSQMessagesCollectionView!, messageDataForItemAt indexPath: IndexPath!) -> JSQMessageData! {
+    
+    override func collectionView(_ collectionView: JSQMessagesCollectionView!,
+                                 messageDataForItemAt indexPath: IndexPath!) -> JSQMessageData! {
+        
         return messages[indexPath.row]
     }
     
     // コメントの背景色の指定
-    override func collectionView(_ collectionView: JSQMessagesCollectionView!, messageBubbleImageDataForItemAt indexPath: IndexPath!) -> JSQMessageBubbleImageDataSource! {
+    override func collectionView(_ collectionView: JSQMessagesCollectionView!,
+                                 messageBubbleImageDataForItemAt indexPath: IndexPath!) -> JSQMessageBubbleImageDataSource! {
         if messages[indexPath.row].senderId == senderId {
             return JSQMessagesBubbleImageFactory().outgoingMessagesBubbleImage(with: UIColor(red: 112/255, green: 192/255, blue:  75/255, alpha: 1))
         } else {
@@ -101,7 +154,8 @@ class chat: JSQMessagesViewController {
     }
     
     // コメントの文字色の指定
-    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    override func collectionView(_ collectionView: UICollectionView,
+                                 cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = super.collectionView(collectionView, cellForItemAt: indexPath) as! JSQMessagesCollectionViewCell
         if messages[indexPath.row].senderId == senderId {
             cell.textView.textColor = UIColor.white
@@ -111,13 +165,16 @@ class chat: JSQMessagesViewController {
         return cell
     }
     
+    
     // メッセージの数
-    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    override func collectionView(_ collectionView: UICollectionView,
+                                 numberOfItemsInSection section: Int) -> Int {
         return messages.count
     }
     
     // ユーザのアバターの設定
-    override func collectionView(_ collectionView: JSQMessagesCollectionView!, avatarImageDataForItemAt indexPath: IndexPath!) -> JSQMessageAvatarImageDataSource! {
+    override func collectionView(_ collectionView: JSQMessagesCollectionView!,
+                                 avatarImageDataForItemAt indexPath: IndexPath!) -> JSQMessageAvatarImageDataSource! {
         return JSQMessagesAvatarImageFactory.avatarImage(
             withUserInitials: messages[indexPath.row].senderDisplayName,
             backgroundColor: UIColor.lightGray,
@@ -126,43 +183,19 @@ class chat: JSQMessagesViewController {
             diameter: 30)
     }
     // 送信ボタンを押した時の処理
-    override func didPressSend(_ button: UIButton!, withMessageText text: String!, senderId: String!, senderDisplayName: String!, date: Date!) {
+    override func didPressSend(_ button: UIButton!,
+                   withMessageText text: String!,
+                               senderId: String!,
+                      senderDisplayName: String!,
+                                   date: Date!) {
         inputToolbar.contentView.textView.text = ""
         let ref = Database.database().reference()
-        ref.child("talks").child(senderId).childByAutoId().setValue(["senderId": senderId, "text": text, "displayName": senderDisplayName,"date":[".sv": "timestamp"]])
+        ref.child("talks").child(senderId).childByAutoId().setValue(["senderId": senderId,
+                                                                         "text": text,
+                                                                  "displayName": senderDisplayName,
+                                                                  "date":[".sv": "timestamp"]])
         button.isEnabled = false
         self.view.endEditing(true)
     }
-    override func collectionView(_ collectionView: JSQMessagesCollectionView, attributedTextForCellTopLabelAt indexPath: IndexPath) -> NSAttributedString? {
-        /**
-         *  This logic should be consistent with what you return from `heightForCellTopLabelAtIndexPath:`
-         *  The other label text delegate methods should follow a similar pattern.
-         *
-         *  Show a timestamp for every 3rd message
-         */
-        if (indexPath.item % 3 == 0) {
-            let message = self.messages[indexPath.item]
-            return JSQMessagesTimestampFormatter.shared().attributedTimestamp(for: message.date)
-        }
-        
-        return nil
-    }
-    override func collectionView(_ collectionView: JSQMessagesCollectionView, layout collectionViewLayout: JSQMessagesCollectionViewFlowLayout, heightForCellTopLabelAt indexPath: IndexPath) -> CGFloat {
-        /**
-         *  Each label in a cell has a `height` delegate method that corresponds to its text dataSource method
-         */
-        
-        /**
-         *  This logic should be consistent with what you return from `attributedTextForCellTopLabelAtIndexPath:`
-         *  The other label height delegate methods should follow similarly
-         *
-         *  Show a timestamp for every 3rd message
-         */
-        if indexPath.item % 3 == 0 {
-            return kJSQMessagesCollectionViewCellLabelHeightDefault
-        }
-        
-        return 0.0
-    }
-    
+
 }
