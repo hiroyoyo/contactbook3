@@ -1,0 +1,31 @@
+//
+//  NotificationDetailViewController.swift
+//  contactbook
+//
+//  Created by 佐野浩代 on 2017/10/19.
+//  Copyright © 2017年 佐野浩代. All rights reserved.
+//
+
+import UIKit
+
+class NotificationDetailViewController: UIViewController{
+
+    //見たい記事がクリックされた時の遷移先の設定
+    @IBOutlet weak var UiLabel: UILabel!
+    @IBOutlet weak var UiTextView: UITextView!
+
+    var item:Item!
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        self.UiLabel.text = self.item.getTitle()
+        self.UiTextView.text = self.item.getText()
+
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+}
+
