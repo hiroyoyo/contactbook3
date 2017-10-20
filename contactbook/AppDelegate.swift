@@ -8,14 +8,43 @@
 
 import UIKit
 import Firebase
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
-
+    var id: String? = nil
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        var flg = true
+        
+        //名前を指定して Storyboard を取得する(Main.storyboard の場合)
+        let storybord = UIStoryboard(name: "Main", bundle: nil)
+        //「is initial view controller」が設定されている ViewController を取得する
+        var viewController = storybord.instantiateInitialViewController()
+        
+        //
+        if (id != nil) {
+            //ホーム画面に遷移
+            flg = true
+        } else {
+            flg = false
+        }
+        
+        if flg {
+            
+            let main_storybord = UIStoryboard(name: "Main", bundle: nil)
+            viewController = main_storybord.instantiateInitialViewController()
+            
+        } else {
+            let registration_storybord = UIStoryboard(name: "registration", bundle: nil)
+            viewController = registration_storybord.instantiateInitialViewController()
+        }
+        window?.rootViewController = viewController
+        window?.makeKeyAndVisible()
+        
         FirebaseApp.configure()
         return true
     }

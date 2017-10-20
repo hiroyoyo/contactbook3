@@ -15,5 +15,10 @@ pod 'Firebase/Database'
     inherit! :search_paths
     # Pods for testing
   end
+pod ’SwiftyJSON’
+    target 'contactbook' do
+    inherit! :search_paths
+    # Pods for testing
+  end
 
 end
