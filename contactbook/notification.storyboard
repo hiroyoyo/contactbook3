@@ -7,10 +7,11 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--園からのお知らせだお-->
+        <!--園からのお知らせ-->
         <scene sceneID="R2t-dU-koj">
             <objects>
                 <viewController id="X9z-zT-2ZS" customClass="NotificationViewController" customModule="contactbook" customModuleProvider="target" sceneMemberID="viewController">
@@ -58,18 +59,89 @@
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" top="YES"/>
-                    <tabBarItem key="tabBarItem" title="園からのお知らせだお" image="!" id="WlX-nt-mIO"/>
+                    <tabBarItem key="tabBarItem" title="園からのお知らせ" image="!" id="WlX-nt-mIO"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="tableView" destination="qgc-kd-697" id="7U8-nV-FUk"/>
+                        <segue destination="Gai-dp-nBr" kind="presentation" identifier="NotificationDetail" id="Eg4-I4-elz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jj2-AA-q4X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="96.799999999999997" y="162.3688155922039"/>
         </scene>
+        <!--Notification Detail View Controller-->
+        <scene sceneID="Lmg-m7-Zhm">
+            <objects>
+                <viewController id="Gai-dp-nBr" customClass="NotificationDetailViewController" customModule="contactbook" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="E6t-Wc-zVJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hWa-8L-fwL">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <items>
+                                    <navigationItem id="gxG-tS-57s">
+                                        <barButtonItem key="leftBarButtonItem" title="←" id="LTb-Px-9Kd">
+                                            <connections>
+                                                <action selector="BackButton:" destination="Gai-dp-nBr" id="AuG-we-apH"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xB9-gN-KWF">
+                                <rect key="frame" x="163.5" y="88" width="48" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xgc-Q1-VBa">
+                                <rect key="frame" x="10" y="132" width="355" height="491"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="illust.png" translatesAutoresizingMaskIntoConstraints="NO" id="JAR-M8-DYm">
+                                        <rect key="frame" x="0.0" y="0.0" width="355" height="491"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="aMi-Fa-46i">
+                                        <rect key="frame" x="0.0" y="0.0" width="355" height="491"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xB9-gN-KWF" firstAttribute="centerX" secondItem="E6t-Wc-zVJ" secondAttribute="centerX" id="8CZ-gt-K4n"/>
+                            <constraint firstItem="hWa-8L-fwL" firstAttribute="top" secondItem="EHP-1F-dxh" secondAttribute="top" id="8Y3-gf-we6"/>
+                            <constraint firstItem="Xgc-Q1-VBa" firstAttribute="top" secondItem="xB9-gN-KWF" secondAttribute="bottom" constant="20" id="Glc-gE-ipd"/>
+                            <constraint firstItem="Xgc-Q1-VBa" firstAttribute="leading" secondItem="EHP-1F-dxh" secondAttribute="leading" constant="10" id="KUU-Mr-2Pq"/>
+                            <constraint firstItem="EHP-1F-dxh" firstAttribute="trailing" secondItem="Xgc-Q1-VBa" secondAttribute="trailing" constant="10" id="LEA-ow-aPa"/>
+                            <constraint firstItem="xB9-gN-KWF" firstAttribute="top" secondItem="hWa-8L-fwL" secondAttribute="bottom" constant="24" id="MQk-qV-1Fx"/>
+                            <constraint firstItem="hWa-8L-fwL" firstAttribute="leading" secondItem="EHP-1F-dxh" secondAttribute="leading" id="dV0-9b-JNq"/>
+                            <constraint firstItem="hWa-8L-fwL" firstAttribute="trailing" secondItem="EHP-1F-dxh" secondAttribute="trailing" id="jSr-U5-7y2"/>
+                            <constraint firstItem="Xgc-Q1-VBa" firstAttribute="bottom" secondItem="EHP-1F-dxh" secondAttribute="bottom" id="z46-pS-C7z"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="EHP-1F-dxh"/>
+                    </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="UiLabel" destination="xB9-gN-KWF" id="Yc6-U1-oCI"/>
+                        <outlet property="UiTextView" destination="aMi-Fa-46i" id="u2u-UD-PaU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FXV-9m-AV6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="797.60000000000002" y="161.46926536731635"/>
+        </scene>
     </scenes>
     <resources>
         <image name="!" width="32" height="32"/>
+        <image name="illust.png" width="1137" height="1593"/>
     </resources>
 </document>

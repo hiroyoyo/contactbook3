@@ -14,6 +14,11 @@ class NotificationDetailViewController: UIViewController{
     @IBOutlet weak var UiLabel: UILabel!
     @IBOutlet weak var UiTextView: UITextView!
 
+    
+    @IBAction func BackButton(_ sender: Any) {
+        self.dismiss(animated: true,completion: nil)
+    }
+    
     var item:Item!
 
     override func viewDidLoad() {
@@ -23,9 +28,9 @@ class NotificationDetailViewController: UIViewController{
         self.UiTextView.text = self.item.getText()
 
     }
-
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
 }
-

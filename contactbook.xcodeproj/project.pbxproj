@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 48;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -24,7 +24,6 @@
 		AC1BB7B11F5F80FE003BE03E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC1BB7B01F5F80FE003BE03E /* Assets.xcassets */; };
 		AC1BB7B41F5F80FE003BE03E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC1BB7B21F5F80FE003BE03E /* LaunchScreen.storyboard */; };
 		AC1BB7BF1F5F80FE003BE03E /* contactbookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1BB7BE1F5F80FE003BE03E /* contactbookTests.swift */; };
-		AC1BB7CC1F5F818C003BE03E /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC1BB7CB1F5F818C003BE03E /* Media.xcassets */; };
 		AC1BB7CE1F5F820A003BE03E /* chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC1BB7CD1F5F820A003BE03E /* chat.storyboard */; };
 		AC1BB7D01F5F821B003BE03E /* setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC1BB7CF1F5F821B003BE03E /* setting.storyboard */; };
 		AC1BB7D21F5F8230003BE03E /* contactbook.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC1BB7D11F5F8230003BE03E /* contactbook.storyboard */; };
@@ -33,7 +32,6 @@
 		AC1BB7DA1F5FCA87003BE03E /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1BB7D91F5FCA87003BE03E /* SettingViewController.swift */; };
 		AC27F9571F9746FF00F938B7 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC27F9561F9746F800F938B7 /* NotificationViewController.swift */; };
 		AC27F9591F98269100F938B7 /* NotificationDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC27F9581F98269100F938B7 /* NotificationDetailViewController.swift */; };
-		AC27F95B1F9826CC00F938B7 /* NotificationDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC27F95A1F9826CC00F938B7 /* NotificationDetail.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,7 +69,6 @@
 		AC1BB7BA1F5F80FE003BE03E /* contactbookTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = contactbookTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC1BB7BE1F5F80FE003BE03E /* contactbookTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = contactbookTests.swift; sourceTree = "<group>"; };
 		AC1BB7C01F5F80FE003BE03E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AC1BB7CB1F5F818C003BE03E /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		AC1BB7CD1F5F820A003BE03E /* chat.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = chat.storyboard; sourceTree = "<group>"; };
 		AC1BB7CF1F5F821B003BE03E /* setting.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = setting.storyboard; sourceTree = "<group>"; };
 		AC1BB7D11F5F8230003BE03E /* contactbook.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = contactbook.storyboard; sourceTree = "<group>"; };
@@ -80,7 +77,8 @@
 		AC1BB7D91F5FCA87003BE03E /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingViewController.swift; path = ../SettingViewController.swift; sourceTree = "<group>"; };
 		AC27F9561F9746F800F938B7 /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NotificationViewController.swift; path = ../NotificationViewController.swift; sourceTree = "<group>"; };
 		AC27F9581F98269100F938B7 /* NotificationDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationDetailViewController.swift; sourceTree = "<group>"; };
-		AC27F95A1F9826CC00F938B7 /* NotificationDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NotificationDetail.storyboard; sourceTree = "<group>"; };
+		AC68D35B1F9EC79B008D1ECD /* illust.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = illust.png; sourceTree = "<group>"; };
+		AC68D35C1F9EC7F9008D1ECD /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Media.xcassets; path = "../../../卒業制作 2/contactbook/contactbook/Media.xcassets"; sourceTree = "<group>"; };
 		F76078BF55A90BCB5425EE6E /* Pods-contactbook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-contactbook.debug.xcconfig"; path = "Pods/Target Support Files/Pods-contactbook/Pods-contactbook.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -154,11 +152,11 @@
 				AC27F9561F9746F800F938B7 /* NotificationViewController.swift */,
 				AC1774F01F98360A00EE6B12 /* NotificationItem.swift */,
 				AC27F9581F98269100F938B7 /* NotificationDetailViewController.swift */,
-				AC27F95A1F9826CC00F938B7 /* NotificationDetail.storyboard */,
 				A363672F1F70A94B00A4D1A9 /* GoogleService-Info.plist */,
 				A33BA3A21F78A115008C111E /* Stamp.xcassets */,
-				AC1BB7CB1F5F818C003BE03E /* Media.xcassets */,
+				AC68D35C1F9EC7F9008D1ECD /* Media.xcassets */,
 				AC1BB7B01F5F80FE003BE03E /* Assets.xcassets */,
+				AC68D35B1F9EC79B008D1ECD /* illust.png */,
 				AC1BB7B21F5F80FE003BE03E /* LaunchScreen.storyboard */,
 				AC1BB7B51F5F80FE003BE03E /* Info.plist */,
 			);
@@ -253,7 +251,7 @@
 				};
 			};
 			buildConfigurationList = AC1BB7A11F5F80FE003BE03E /* Build configuration list for PBXProject "contactbook" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -276,7 +274,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC1BB7CC1F5F818C003BE03E /* Media.xcassets in Resources */,
 				AC1BB7B41F5F80FE003BE03E /* LaunchScreen.storyboard in Resources */,
 				A3BAA0F01F7B4AF4003B384A /* stamoChoics.storyboard in Resources */,
 				AC1BB7D61F5F8254003BE03E /* stamp.storyboard in Resources */,
@@ -288,7 +285,6 @@
 				AC1BB7D01F5F821B003BE03E /* setting.storyboard in Resources */,
 				A33BA39B1F787C54008C111E /* stampHistory.storyboard in Resources */,
 				A36367301F70A94B00A4D1A9 /* GoogleService-Info.plist in Resources */,
-				AC27F95B1F9826CC00F938B7 /* NotificationDetail.storyboard in Resources */,
 				AC1BB7CE1F5F820A003BE03E /* chat.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
