@@ -20,6 +20,8 @@ class Stamp: UIViewController , UIImagePickerControllerDelegate, UINavigationCon
         stampBtn.layer.borderWidth = 2.0
         stampBtn.layer.borderColor = UIColor.black.cgColor
         stampBtn.layer.cornerRadius = 10.0
+
+        
         
         historyBtn.layer.borderWidth = 1.0
         historyBtn.layer.borderColor = UIColor.black.cgColor
@@ -36,7 +38,7 @@ class Stamp: UIViewController , UIImagePickerControllerDelegate, UINavigationCon
     override func viewWillLayoutSubviews() {
         if text1 != ""{
             let img:UIImage = UIImage(named:text1)!
-            stampBtn.backgroundColor = UIColor.white
+
             stampBtn.setImage(img, for: .normal)
             stampBtn.setTitle("", for: .normal)
         }

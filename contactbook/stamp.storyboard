@@ -23,15 +23,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MCk-7s-MLH" userLabel="Stamp Btn">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MCk-7s-MLH" userLabel="Stamp Btn">
                                 <rect key="frame" x="60" y="196.66666666666663" width="294" height="294"/>
-                                <color key="backgroundColor" red="1" green="0.83955208349999999" blue="0.83834524369999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="MCk-7s-MLH" secondAttribute="height" multiplier="1:1" id="fqW-et-Jjv"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="35"/>
-                                <state key="normal" title="スタンプ押す">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" backgroundImage="background">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="スタプン押す">
+                                            <attributes>
+                                                <color key="NSColor" red="0.32787054877389582" green="0.51082228638584393" blue="0.96620899438858032" alpha="0.94903146404109584" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <font key="NSFont" size="32" name="HiraginoSans-W6"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
                                 </state>
                                 <connections>
                                     <segue destination="UOg-Vl-vNq" kind="show" id="dkE-DR-Nvm"/>
@@ -127,6 +134,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="background" width="349" height="349"/>
         <image name="star" width="21" height="21"/>
     </resources>
 </document>

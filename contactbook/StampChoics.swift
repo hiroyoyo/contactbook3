@@ -10,7 +10,7 @@ import UIKit
 
 class StampChoics: UIViewController ,UICollectionViewDataSource, UICollectionViewDelegate ,UINavigationControllerDelegate, UICollectionViewDelegateFlowLayout{
    
-    let photos =  ["icon_1", "icon_2","icon_3","icon_4","icon_5","icon_6","icon_7"]
+    let photos =  ["icon_1", "icon_2","icon_3","icon_4","icon_5","icon_6","icon_7","RAION完"]
     var selectedImage: UIImage?
     var choicsBtnImg :String = ""
     let linePoint: CGFloat = 5     // 罫線の太さ
@@ -127,7 +127,7 @@ class StampChoics: UIViewController ,UICollectionViewDataSource, UICollectionVie
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // 要素数を入れる、要素以上の数字を入れると表示でエラーとなる
-        return 7;
+        return 8;
     }
 
 
