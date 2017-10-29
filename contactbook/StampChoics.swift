@@ -127,7 +127,7 @@ class StampChoics: UIViewController ,UICollectionViewDataSource, UICollectionVie
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // 要素数を入れる、要素以上の数字を入れると表示でエラーとなる
-        return 8;
+        return photos.count
     }
 
 

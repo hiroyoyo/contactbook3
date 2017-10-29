@@ -14,7 +14,8 @@ class Stamp: UIViewController , UIImagePickerControllerDelegate, UINavigationCon
     @IBOutlet weak var stampBtn: UIButton!
     @IBOutlet weak var themeLbl: UILabel!
     var text1:String = ""
-    
+    var text2:String!
+    var childrenGrade :String = "4"
     override func viewDidLoad() {
         super.viewDidLoad()
         stampBtn.layer.borderWidth = 2.0
@@ -27,31 +28,78 @@ class Stamp: UIViewController , UIImagePickerControllerDelegate, UINavigationCon
         historyBtn.layer.borderColor = UIColor.black.cgColor
         historyBtn.layer.cornerRadius = 10.0
         
-        themeLbl.text = "本を５冊よめたらスタンプを押そう!!"
+
         
         themeLbl.numberOfLines = 0 //折り返し
         themeLbl.sizeToFit()
         themeLbl.lineBreakMode = NSLineBreakMode.byCharWrapping
         
+        search()
+       
     }
 
     override func viewWillLayoutSubviews() {
+        
         if text1 != ""{
             let img:UIImage = UIImage(named:text1)!
 
             stampBtn.setImage(img, for: .normal)
-            stampBtn.setTitle("", for: .normal)
+            stampBtn.titleLabel?.text = ""
+          
         }
+       
 
         super.viewWillLayoutSubviews()
     }
+   
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
  
+    func search(){
+        let session = URLSession.shared
+        //APIのURL
+        let urlStr = "https://electric-contact-book-swill.c9users.io/stampApi.php?grade="
+        if let url = URL(string: urlStr + childrenGrade){
+            print(urlStr)
+            let request = URLRequest(url: url)
+            //リクエストを送信
+            let task =  session.dataTask(with: request, completionHandler: self.onResponse)
+            task.resume()
+        }
+    }
     
-  
+    func onResponse(data:Data?, response:URLResponse?, error:Error?)
+    {
+        //データが存在するかチェック
+        guard let data = data else{
+            print("データなし")
+            return
+        }
+        //JSON型からDictionary型に変換
+        guard let jsonData = try! JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.allowFragments) as? [[String:String]] else{
+            return
+        }
+        
+        //データの解析
+        self.parseData(src: jsonData)
+    }
+    func parseData(src:[Any]){
+        //キー”forecastsの値を取得”
+        print(src)
+        for val in src {
+            let result = val as! [String:String]
+            print(result["info"] as Any )
+            DispatchQueue.main.async {
+                self.themeLbl.text = result["info"]
+            }
+        }
+        //tableviewの更新
+        
+    }
+
 
     /*
     // MARK: - Navigation

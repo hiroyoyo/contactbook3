@@ -31,7 +31,7 @@
                                 </constraints>
                                 <state key="normal" backgroundImage="background">
                                     <attributedString key="attributedTitle">
-                                        <fragment content="スタプン押す">
+                                        <fragment content="スタンプ押す">
                                             <attributes>
                                                 <color key="NSColor" red="0.32787054877389582" green="0.51082228638584393" blue="0.96620899438858032" alpha="0.94903146404109584" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <font key="NSFont" size="32" name="HiraginoSans-W6"/>
@@ -58,7 +58,7 @@
                                     <segue destination="fHT-D5-g8G" kind="show" id="5ks-jT-SLk"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8b3-Rc-4vO">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="読み込み中" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8b3-Rc-4vO">
                                 <rect key="frame" x="20" y="72" width="374" height="99"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
