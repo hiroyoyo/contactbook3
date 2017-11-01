@@ -15,7 +15,7 @@ class Stamp: UIViewController , UIImagePickerControllerDelegate, UINavigationCon
     @IBOutlet weak var themeLbl: UILabel!
     var text1:String = ""
     var text2:String!
-    var childrenGrade :String = "4"
+    var childrenGrade :String = "?grade=4"
     override func viewDidLoad() {
         super.viewDidLoad()
         stampBtn.layer.borderWidth = 2.0
@@ -61,7 +61,7 @@ class Stamp: UIViewController , UIImagePickerControllerDelegate, UINavigationCon
     func search(){
         let session = URLSession.shared
         //APIのURL
-        let urlStr = "https://electric-contact-book-swill.c9users.io/stampApi.php?grade="
+        let urlStr = "https://electric-contact-book-swill.c9users.io/API/stampApi.php"
         if let url = URL(string: urlStr + childrenGrade){
             print(urlStr)
             let request = URLRequest(url: url)

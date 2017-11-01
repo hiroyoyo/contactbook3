@@ -10,7 +10,7 @@ import UIKit
 
 class StampChoics: UIViewController ,UICollectionViewDataSource, UICollectionViewDelegate ,UINavigationControllerDelegate, UICollectionViewDelegateFlowLayout{
    
-    let photos =  ["icon_1", "icon_2","icon_3","icon_4","icon_5","icon_6","icon_7","RAION完"]
+    let photos =  ["NEKO完", "OINU完","USAGI完","RAION完"]
     var selectedImage: UIImage?
     var choicsBtnImg :String = ""
     let linePoint: CGFloat = 5     // 罫線の太さ
