@@ -12,9 +12,11 @@ class TableViewCell: UITableViewCell {
 
     @IBOutlet weak var stampImg: UIImageView!
     @IBOutlet weak var themeLbl: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

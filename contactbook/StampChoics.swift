@@ -10,7 +10,7 @@ import UIKit
 
 class StampChoics: UIViewController ,UICollectionViewDataSource, UICollectionViewDelegate ,UINavigationControllerDelegate, UICollectionViewDelegateFlowLayout{
    
-    let photos =  ["NEKO完", "OINU完","USAGI完","RAION完"]
+    let photos =  ["NEKO", "OINU","USAGI","RAION"]
     var selectedImage: UIImage?
     var choicsBtnImg :String = ""
     let linePoint: CGFloat = 5     // 罫線の太さ
@@ -72,7 +72,7 @@ class StampChoics: UIViewController ,UICollectionViewDataSource, UICollectionVie
                 print("OK")
                 self.choicsBtnImg =  self.photos[(indexPath as NSIndexPath).row]
                 self.navigationController?.popViewController(animated: true)
-                
+                self.seter()
             })
             
 
@@ -130,7 +130,20 @@ class StampChoics: UIViewController ,UICollectionViewDataSource, UICollectionVie
         return photos.count
     }
 
-
+    func seter(){
+        let session = URLSession.shared
+        //APIのURL
+        let urlStr = "https://electric-contact-book-swill.c9users.io/API/stampSetApi.php"
+        let selectData = "?goal_id=\(Stamp.childrenGrade)&child_id=\(StampHistory.child_id)&stamp=\(self.choicsBtnImg)"
+        print(selectData)
+        if let url = URL(string:urlStr + selectData){
+            print(url)
+            print("1")
+            let request = URLRequest(url: url)
+            let task =  session.dataTask(with: request)
+            task.resume()
+        }
+    }
 
     /*
     // MARK: - Navigation

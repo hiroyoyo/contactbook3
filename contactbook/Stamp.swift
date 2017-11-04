@@ -14,8 +14,14 @@ class Stamp: UIViewController , UIImagePickerControllerDelegate, UINavigationCon
     @IBOutlet weak var stampBtn: UIButton!
     @IBOutlet weak var themeLbl: UILabel!
     var text1:String = ""
-    var text2:String!
-    var childrenGrade :String = "?grade=4"
+    var goalId:String = ""
+    var date:String = ""
+    var info:String = ""
+    var useDefauls = UserDefaults.standard
+    static var childrenGrade :String = "4"
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         stampBtn.layer.borderWidth = 2.0
@@ -34,8 +40,17 @@ class Stamp: UIViewController , UIImagePickerControllerDelegate, UINavigationCon
         themeLbl.sizeToFit()
         themeLbl.lineBreakMode = NSLineBreakMode.byCharWrapping
         
-        search()
-       
+        let now = Date()
+        let dateFomatter = DateFormatter()
+        dateFomatter.dateFormat = "yyyy-MM-01"
+        let dateString = dateFomatter.string(from: now)
+
+        
+        if (useDefauls.dictionary(forKey: "stampDt")) != nil{
+//            あったらここに入る　はず
+        }else{
+            search()
+        }
     }
 
     override func viewWillLayoutSubviews() {
@@ -61,8 +76,8 @@ class Stamp: UIViewController , UIImagePickerControllerDelegate, UINavigationCon
     func search(){
         let session = URLSession.shared
         //APIのURL
-        let urlStr = "https://electric-contact-book-swill.c9users.io/API/stampApi.php"
-        if let url = URL(string: urlStr + childrenGrade){
+        let urlStr = "https://electric-contact-book-swill.c9users.io/API/stampGetApi.php?grade="
+        if let url = URL(string: urlStr + Stamp.childrenGrade){
             print(urlStr)
             let request = URLRequest(url: url)
             //リクエストを送信
@@ -91,14 +106,28 @@ class Stamp: UIViewController , UIImagePickerControllerDelegate, UINavigationCon
         print(src)
         for val in src {
             let result = val as! [String:String]
-            print(result["info"] as Any )
+            goalId = result["goal_id"]!
+            date = result["date"]!
+            info = result["info"]!
+            
+            
+            
             DispatchQueue.main.async {
-                self.themeLbl.text = result["info"]
+                self.themeLbl.text = self.info
             }
+            
         }
         //tableviewの更新
-        
+        saveData(senddate: date, sendinfo: info)
     }
+    func saveData(senddate: String,sendinfo : String){
+        
+        // Keyを指定して保存
+        
+        useDefauls.setPersistentDomain(["date":senddate,"info":sendinfo], forName: "stampDt")
+        useDefauls.synchronize()
+        print(useDefauls.persistentDomain(forName: "stampDt") ?? "date")
+        }
 
 
     /*
