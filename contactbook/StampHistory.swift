@@ -13,7 +13,8 @@ class StampHistory: UIViewController,UITableViewDataSource, UITableViewDelegate 
     @IBOutlet weak var table: UITableView!
     static var child_id:String="2017002"
     var stampHst:[StampHistoryItem]=[]
-    
+    var formatter = DateFormatter()
+    let useDefauls = UserDefaults.standard
     func tableView(_ table: UITableView, numberOfRowsInSection section: Int) -> Int {
         return stampHst.count
     }
@@ -21,13 +22,11 @@ class StampHistory: UIViewController,UITableViewDataSource, UITableViewDelegate 
     func tableView(_ table: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = table.dequeueReusableCell(withIdentifier: "cell") as! TableViewCell
         let reversedStampHst:[StampHistoryItem] = stampHst.reversed()
+        cell.themeLbl.numberOfLines = 0
         for _ in 0..<reversedStampHst.count{
             if reversedStampHst.count > 0{
                 cell.stampImg.image = UIImage(named:reversedStampHst[indexPath.row].img)
-                print(reversedStampHst[indexPath.row].img)
-//            cell.stampImg.image=UIImage(named:stampHst[indexPath.row)
-                cell.themeLbl.text = reversedStampHst[indexPath.row].info
-                print(reversedStampHst[0])
+                cell.themeLbl.text = setDete(setDt: reversedStampHst[indexPath.row].date) + reversedStampHst[indexPath.row].info + "aa\naaaaaaaaaaaaaaaaaaaaaaaaa"
                 return cell
             }
         }
@@ -88,23 +87,22 @@ class StampHistory: UIViewController,UITableViewDataSource, UITableViewDelegate 
             let result = val as! [String:String]
             
             let stampHistoryItem = StampHistoryItem(imgSet: result["stamp"]!, infoSet: result["info"]!, dateSet: result["date"]!)
-//            stampHistoryItem.info = result["info"]!
-//            stampHistoryItem.date = result["date"]!
-//            stampHistoryItem.img = result["stamp"]!
+
             stampHst.append(stampHistoryItem)
-//            stampArray=result
-//            tableView(table, cellForRowAt: src)
+
         }
         DispatchQueue.main.async {
             self.table.reloadData()
         }
-        print("________________")
-        print((stampHst[0]).img)
-//        print(test.img)
-        //tableviewの更新
-//        contactbook.StampHistoryItem.childID
-    }
 
+    }
+    
+     func setDete(setDt:String) -> String{
+        let str : String = setDt
+        let test1 = str[..<str.index(str.startIndex, offsetBy: 7)]
+        let test2 = test1.replacingOccurrences(of:"-", with:"年")
+        return test2 + "月　"
+    }
     /*
     // MARK: - Navigation
 

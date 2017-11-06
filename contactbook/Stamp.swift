@@ -46,9 +46,15 @@ class Stamp: UIViewController , UIImagePickerControllerDelegate, UINavigationCon
         let dateString = dateFomatter.string(from: now)
 
         
-        if (useDefauls.dictionary(forKey: "stampDt")) != nil{
-//            あったらここに入る　はず
+        if (useDefauls.persistentDomain(forName: "stampDt")) != nil{
+            if useDefauls.persistentDomain(forName: "stampDt")?["date"]as? String == dateString{
+                print("データ有り")
+                themeLbl.text = useDefauls.persistentDomain(forName: "stampDt")?["info"]as? String
+            }else{
+                search()
+            }
         }else{
+            print("データなし")
             search()
         }
     }
@@ -113,7 +119,7 @@ class Stamp: UIViewController , UIImagePickerControllerDelegate, UINavigationCon
             
             
             DispatchQueue.main.async {
-                self.themeLbl.text = self.info
+                self.themeLbl.text =  self.info
             }
             
         }
@@ -126,7 +132,7 @@ class Stamp: UIViewController , UIImagePickerControllerDelegate, UINavigationCon
         
         useDefauls.setPersistentDomain(["date":senddate,"info":sendinfo], forName: "stampDt")
         useDefauls.synchronize()
-        print(useDefauls.persistentDomain(forName: "stampDt") ?? "date")
+        print(useDefauls.persistentDomain(forName: "stampDt")?["date"]as! String)
         }
 
 
