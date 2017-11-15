@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="3dL-Vp-Axj">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="3dL-Vp-Axj">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,13 +18,10 @@
                         <viewControllerLayoutGuide type="top" id="9TV-tg-qqY"/>
                         <viewControllerLayoutGuide type="bottom" id="PWz-jR-lUf"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" misplaced="YES" id="oQH-hx-xr2">
+                    <view key="view" contentMode="scaleToFill" id="oQH-hx-xr2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="坊や3.png" translatesAutoresizingMaskIntoConstraints="NO" id="f6i-ml-2Ke">
-                                <rect key="frame" x="67" y="213" width="240" height="289"/>
-                            </imageView>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8nJ-Vd-tOW">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <items>
@@ -32,35 +29,79 @@
                                         <barButtonItem key="rightBarButtonItem" image="setting" id="8K7-Hq-sGL">
                                             <connections>
                                                 <action selector="button:" destination="auY-Ch-wSC" id="XJf-pd-PgH"/>
+                                                <segue destination="Llw-Nq-0fx" kind="showDetail" id="mtC-pR-N9W"/>
                                             </connections>
                                         </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ホーム画面です" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0be-oN-bMk">
+                                <rect key="frame" x="125" y="299" width="124" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0be-oN-bMk" firstAttribute="leading" secondItem="oQH-hx-xr2" secondAttribute="leadingMargin" constant="109" id="Tob-n1-rsF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="0be-oN-bMk" secondAttribute="trailing" constant="110" id="VmH-On-c4m"/>
+                            <constraint firstItem="8nJ-Vd-tOW" firstAttribute="top" secondItem="9TV-tg-qqY" secondAttribute="bottom" id="f6o-Pm-15O"/>
+                            <constraint firstItem="8nJ-Vd-tOW" firstAttribute="leading" secondItem="oQH-hx-xr2" secondAttribute="leading" id="p9C-CE-dJa"/>
+                            <constraint firstItem="0be-oN-bMk" firstAttribute="top" secondItem="8nJ-Vd-tOW" secondAttribute="bottom" constant="235" id="puh-2K-lRE"/>
+                            <constraint firstAttribute="trailing" secondItem="8nJ-Vd-tOW" secondAttribute="trailing" id="r5w-7P-806"/>
+                            <constraint firstItem="PWz-jR-lUf" firstAttribute="top" secondItem="0be-oN-bMk" secondAttribute="bottom" constant="298" id="zYa-pq-iru"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
+                    <tabBarItem key="tabBarItem" title="ホーム" image="home" selectedImage="home" id="An1-Ep-hxa"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NDF-5u-a7x" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="560.79999999999995" y="-60.719640179910051"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="bQa-dt-XlZ">
+            <objects>
+                <viewController id="Llw-Nq-0fx" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hkG-rg-f9z"/>
+                        <viewControllerLayoutGuide type="bottom" id="iN8-tG-lT6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="JHi-gW-o9e">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XUo-fy-Qme">
+                                <rect key="frame" x="149" y="318" width="77" height="30"/>
+                                <state key="normal" title="ログアウト"/>
+                            </button>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UgH-ur-lVK">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="設定" id="OP7-Oq-h9G">
+                                        <barButtonItem key="leftBarButtonItem" title="←" id="ffb-1d-Gfb"/>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="f6i-ml-2Ke" firstAttribute="top" secondItem="9TV-tg-qqY" secondAttribute="bottom" constant="193" id="I8U-CU-n8W"/>
-                            <constraint firstItem="PWz-jR-lUf" firstAttribute="top" secondItem="f6i-ml-2Ke" secondAttribute="bottom" constant="165" id="IOH-Og-zoz"/>
-                            <constraint firstItem="8nJ-Vd-tOW" firstAttribute="top" secondItem="9TV-tg-qqY" secondAttribute="bottom" id="f6o-Pm-15O"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="f6i-ml-2Ke" secondAttribute="trailing" constant="52" id="juV-1d-ioy"/>
-                            <constraint firstItem="f6i-ml-2Ke" firstAttribute="leading" secondItem="oQH-hx-xr2" secondAttribute="leadingMargin" constant="51" id="mWA-NQ-S8f"/>
-                            <constraint firstItem="8nJ-Vd-tOW" firstAttribute="leading" secondItem="oQH-hx-xr2" secondAttribute="leading" id="p9C-CE-dJa"/>
-                            <constraint firstAttribute="trailing" secondItem="8nJ-Vd-tOW" secondAttribute="trailing" id="r5w-7P-806"/>
+                            <constraint firstItem="XUo-fy-Qme" firstAttribute="centerX" secondItem="JHi-gW-o9e" secondAttribute="centerX" id="Q0A-2e-ZNr"/>
+                            <constraint firstItem="XUo-fy-Qme" firstAttribute="centerY" secondItem="JHi-gW-o9e" secondAttribute="centerY" id="yBH-7Y-RZd"/>
                         </constraints>
                     </view>
-                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
-                    <tabBarItem key="tabBarItem" title="ホーム" image="home" id="An1-Ep-hxa"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="NDF-5u-a7x" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Ii-e2-yfc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="562" y="-60"/>
+            <point key="canvasLocation" x="1607" y="-61"/>
         </scene>
         <!--contactbook-->
         <scene sceneID="1xo-Jr-3F3">
             <objects>
                 <viewControllerPlaceholder storyboardName="contactbook" id="cbi-hk-DHA" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="MWL-PI-TQ9"/>
+                    <tabBarItem key="tabBarItem" title="Item" selectedImage="book" id="MWL-PI-TQ9"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wWA-dw-yxA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -70,7 +111,7 @@
         <scene sceneID="iI5-L6-Nkf">
             <objects>
                 <viewControllerPlaceholder storyboardName="chat" id="8aG-nv-1cy" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="wNV-D1-6o0"/>
+                    <tabBarItem key="tabBarItem" title="Item" selectedImage="talk" id="wNV-D1-6o0"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rq6-bh-cka" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -80,7 +121,7 @@
         <scene sceneID="wIH-gG-oT5">
             <objects>
                 <viewControllerPlaceholder storyboardName="stamp" id="xcc-12-AbK" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="QtM-qi-rDP"/>
+                    <tabBarItem key="tabBarItem" title="Item" selectedImage="star" id="QtM-qi-rDP"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yNT-MF-C6M" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -90,7 +131,7 @@
         <scene sceneID="pyH-eK-Fdg">
             <objects>
                 <viewControllerPlaceholder storyboardName="notification" id="hjf-j6-so3" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="tGk-T9-7CR"/>
+                    <tabBarItem key="tabBarItem" title="Item" selectedImage="!" id="tGk-T9-7CR"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bMa-hH-Ivm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -119,8 +160,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="!" width="32" height="32"/>
+        <image name="book" width="32" height="32"/>
         <image name="home" width="32" height="32"/>
         <image name="setting" width="32" height="32"/>
-        <image name="坊や3.png" width="800" height="800"/>
+        <image name="star" width="32" height="32"/>
+        <image name="talk" width="32" height="32"/>
     </resources>
 </document>

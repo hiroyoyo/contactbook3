@@ -14,11 +14,6 @@ public class Item{
     private var title:String = ""
     private var text: String = ""
     
-//    public init (date:String, title:String, text:String){
-//        self.date = date
-//        self.title = title
-//        self.text = text
-//    }
     
     public func getDate() -> String{
         return self.date

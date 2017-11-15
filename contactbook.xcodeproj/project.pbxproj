@@ -32,6 +32,7 @@
 		AC1BB7DA1F5FCA87003BE03E /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1BB7D91F5FCA87003BE03E /* SettingViewController.swift */; };
 		AC27F9571F9746FF00F938B7 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC27F9561F9746F800F938B7 /* NotificationViewController.swift */; };
 		AC27F9591F98269100F938B7 /* NotificationDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC27F9581F98269100F938B7 /* NotificationDetailViewController.swift */; };
+		ACAA1CFC1FA98A9E00EC3808 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACAA1CFB1FA98A9E00EC3808 /* Media.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,7 +79,7 @@
 		AC27F9561F9746F800F938B7 /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NotificationViewController.swift; path = ../NotificationViewController.swift; sourceTree = "<group>"; };
 		AC27F9581F98269100F938B7 /* NotificationDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationDetailViewController.swift; sourceTree = "<group>"; };
 		AC68D35B1F9EC79B008D1ECD /* illust.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = illust.png; sourceTree = "<group>"; };
-		AC68D35C1F9EC7F9008D1ECD /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Media.xcassets; path = "../../../卒業制作 2/contactbook/contactbook/Media.xcassets"; sourceTree = "<group>"; };
+		ACAA1CFB1FA98A9E00EC3808 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		F76078BF55A90BCB5425EE6E /* Pods-contactbook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-contactbook.debug.xcconfig"; path = "Pods/Target Support Files/Pods-contactbook/Pods-contactbook.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -153,8 +154,8 @@
 				AC1774F01F98360A00EE6B12 /* NotificationItem.swift */,
 				AC27F9581F98269100F938B7 /* NotificationDetailViewController.swift */,
 				A363672F1F70A94B00A4D1A9 /* GoogleService-Info.plist */,
+				ACAA1CFB1FA98A9E00EC3808 /* Media.xcassets */,
 				A33BA3A21F78A115008C111E /* Stamp.xcassets */,
-				AC68D35C1F9EC7F9008D1ECD /* Media.xcassets */,
 				AC1BB7B01F5F80FE003BE03E /* Assets.xcassets */,
 				AC68D35B1F9EC79B008D1ECD /* illust.png */,
 				AC1BB7B21F5F80FE003BE03E /* LaunchScreen.storyboard */,
@@ -276,6 +277,7 @@
 			files = (
 				AC1BB7B41F5F80FE003BE03E /* LaunchScreen.storyboard in Resources */,
 				A3BAA0F01F7B4AF4003B384A /* stamoChoics.storyboard in Resources */,
+				ACAA1CFC1FA98A9E00EC3808 /* Media.xcassets in Resources */,
 				AC1BB7D61F5F8254003BE03E /* stamp.storyboard in Resources */,
 				AC1BB7B11F5F80FE003BE03E /* Assets.xcassets in Resources */,
 				AC1BB7AF1F5F80FE003BE03E /* Main.storyboard in Resources */,
