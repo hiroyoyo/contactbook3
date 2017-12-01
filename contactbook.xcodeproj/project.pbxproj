@@ -8,14 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		5014133F9F0E73A013123C3D /* Pods_contactbook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 677677C188E847FE92FA57FA /* Pods_contactbook.framework */; };
-		A33BA3991F787B67008C111E /* stamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33BA3981F787B67008C111E /* stamp.swift */; };
+		A332FC4F1FBD10B300CFE6D8 /* HistoryUserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = A332FC4E1FBD10B300CFE6D8 /* HistoryUserDefault.swift */; };
+		A33BA3991F787B67008C111E /* Stamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33BA3981F787B67008C111E /* Stamp.swift */; };
 		A33BA39B1F787C54008C111E /* stampHistory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A33BA39A1F787C54008C111E /* stampHistory.storyboard */; };
-		A33BA39D1F788036008C111E /* stampHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33BA39C1F788036008C111E /* stampHistory.swift */; };
+		A33BA39D1F788036008C111E /* StampHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33BA39C1F788036008C111E /* StampHistory.swift */; };
 		A33BA3A31F78A115008C111E /* Stamp.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A33BA3A21F78A115008C111E /* Stamp.xcassets */; };
 		A33BA3A51F78A1DF008C111E /* StampChoics.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33BA3A41F78A1DF008C111E /* StampChoics.swift */; };
 		A36367301F70A94B00A4D1A9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A363672F1F70A94B00A4D1A9 /* GoogleService-Info.plist */; };
 		A36367321F70A97400A4D1A9 /* chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36367311F70A97400A4D1A9 /* chat.swift */; };
+		A39E67D31F8F268B00ABDA1B /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39E67D21F8F268B00ABDA1B /* TableViewCell.swift */; };
 		A3BAA0F01F7B4AF4003B384A /* stamoChoics.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3BAA0EF1F7B4AF4003B384A /* stamoChoics.storyboard */; };
+		A3C55F221FAA9DD600A09783 /* StampHistoryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C55F211FAA9DD600A09783 /* StampHistoryItem.swift */; };
 		A8180D90E934AD9605F692E4 /* Pods_contactbookTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2054808D749649FA6B00CA95 /* Pods_contactbookTests.framework */; };
 		AC1BB7AA1F5F80FE003BE03E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1BB7A91F5F80FE003BE03E /* AppDelegate.swift */; };
 		AC1BB7AC1F5F80FE003BE03E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1BB7AB1F5F80FE003BE03E /* HomeViewController.swift */; };
@@ -48,14 +51,17 @@
 		677677C188E847FE92FA57FA /* Pods_contactbook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_contactbook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7021DA337BBF59D9F891C424 /* Pods-contactbookTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-contactbookTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-contactbookTests/Pods-contactbookTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8DB16390574859BAD983EC77 /* Pods-contactbook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-contactbook.release.xcconfig"; path = "Pods/Target Support Files/Pods-contactbook/Pods-contactbook.release.xcconfig"; sourceTree = "<group>"; };
-		A33BA3981F787B67008C111E /* stamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = stamp.swift; sourceTree = "<group>"; };
+		A332FC4E1FBD10B300CFE6D8 /* HistoryUserDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryUserDefault.swift; sourceTree = "<group>"; };
+		A33BA3981F787B67008C111E /* Stamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stamp.swift; sourceTree = "<group>"; };
 		A33BA39A1F787C54008C111E /* stampHistory.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = stampHistory.storyboard; sourceTree = "<group>"; };
-		A33BA39C1F788036008C111E /* stampHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = stampHistory.swift; sourceTree = "<group>"; };
+		A33BA39C1F788036008C111E /* StampHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StampHistory.swift; sourceTree = "<group>"; };
 		A33BA3A21F78A115008C111E /* Stamp.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Stamp.xcassets; sourceTree = "<group>"; };
 		A33BA3A41F78A1DF008C111E /* StampChoics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StampChoics.swift; sourceTree = "<group>"; };
 		A363672F1F70A94B00A4D1A9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A36367311F70A97400A4D1A9 /* chat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = chat.swift; sourceTree = "<group>"; };
+		A39E67D21F8F268B00ABDA1B /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		A3BAA0EF1F7B4AF4003B384A /* stamoChoics.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = stamoChoics.storyboard; sourceTree = "<group>"; };
+		A3C55F211FAA9DD600A09783 /* StampHistoryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StampHistoryItem.swift; sourceTree = "<group>"; };
 		AC1BB7A61F5F80FE003BE03E /* contactbook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = contactbook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC1BB7A91F5F80FE003BE03E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AC1BB7AB1F5F80FE003BE03E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -128,15 +134,18 @@
 		AC1BB7A81F5F80FE003BE03E /* contactbook */ = {
 			isa = PBXGroup;
 			children = (
+				A332FC4E1FBD10B300CFE6D8 /* HistoryUserDefault.swift */,
 				A36367311F70A97400A4D1A9 /* chat.swift */,
 				AC1BB7A91F5F80FE003BE03E /* AppDelegate.swift */,
 				AC1BB7AB1F5F80FE003BE03E /* HomeViewController.swift */,
 				AC1BB7D91F5FCA87003BE03E /* SettingViewController.swift */,
-				A33BA3981F787B67008C111E /* stamp.swift */,
-				A33BA39C1F788036008C111E /* stampHistory.swift */,
+				A33BA3981F787B67008C111E /* Stamp.swift */,
+				A33BA39C1F788036008C111E /* StampHistory.swift */,
+				A3C55F211FAA9DD600A09783 /* StampHistoryItem.swift */,
 				A33BA3A41F78A1DF008C111E /* StampChoics.swift */,
-				A3BAA0EF1F7B4AF4003B384A /* stamoChoics.storyboard */,
+				A39E67D21F8F268B00ABDA1B /* TableViewCell.swift */,
 				AC1BB7AD1F5F80FE003BE03E /* Main.storyboard */,
+				A3BAA0EF1F7B4AF4003B384A /* stamoChoics.storyboard */,
 				AC1BB7CD1F5F820A003BE03E /* chat.storyboard */,
 				AC1BB7CF1F5F821B003BE03E /* setting.storyboard */,
 				AC1BB7D11F5F8230003BE03E /* contactbook.storyboard */,
@@ -296,9 +305,18 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-contactbook/Pods-contactbook-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/JSQMessagesViewController/JSQMessagesViewController.framework",
+				"${BUILT_PRODUCTS_DIR}/JSQSystemSoundPlayer/JSQSystemSoundPlayer.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSQMessagesViewController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSQSystemSoundPlayer.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -311,13 +329,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-contactbook-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C93786921A4E50802D8A7BA3 /* [CP] Copy Pods Resources */ = {
@@ -356,13 +377,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-contactbookTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F6CAA9114530B35FEF8F6BEC /* [CP] Copy Pods Resources */ = {
@@ -387,13 +411,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A33BA39D1F788036008C111E /* stampHistory.swift in Sources */,
+				A33BA39D1F788036008C111E /* StampHistory.swift in Sources */,
+				A39E67D31F8F268B00ABDA1B /* TableViewCell.swift in Sources */,
 				AC1BB7AC1F5F80FE003BE03E /* HomeViewController.swift in Sources */,
 				A33BA3A51F78A1DF008C111E /* StampChoics.swift in Sources */,
 				A36367321F70A97400A4D1A9 /* chat.swift in Sources */,
+				A3C55F221FAA9DD600A09783 /* StampHistoryItem.swift in Sources */,
 				AC1BB7AA1F5F80FE003BE03E /* AppDelegate.swift in Sources */,
 				AC1BB7DA1F5FCA87003BE03E /* SettingViewController.swift in Sources */,
-				A33BA3991F787B67008C111E /* stamp.swift in Sources */,
+				A33BA3991F787B67008C111E /* Stamp.swift in Sources */,
+				A332FC4F1FBD10B300CFE6D8 /* HistoryUserDefault.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
