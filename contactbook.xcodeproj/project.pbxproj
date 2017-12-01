@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5014133F9F0E73A013123C3D /* Pods_contactbook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 677677C188E847FE92FA57FA /* Pods_contactbook.framework */; };
+		A332FC4F1FBD10B300CFE6D8 /* HistoryUserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = A332FC4E1FBD10B300CFE6D8 /* HistoryUserDefault.swift */; };
 		A33BA3991F787B67008C111E /* Stamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33BA3981F787B67008C111E /* Stamp.swift */; };
 		A33BA39B1F787C54008C111E /* stampHistory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A33BA39A1F787C54008C111E /* stampHistory.storyboard */; };
 		A33BA39D1F788036008C111E /* StampHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33BA39C1F788036008C111E /* StampHistory.swift */; };
@@ -50,6 +51,7 @@
 		677677C188E847FE92FA57FA /* Pods_contactbook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_contactbook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7021DA337BBF59D9F891C424 /* Pods-contactbookTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-contactbookTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-contactbookTests/Pods-contactbookTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8DB16390574859BAD983EC77 /* Pods-contactbook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-contactbook.release.xcconfig"; path = "Pods/Target Support Files/Pods-contactbook/Pods-contactbook.release.xcconfig"; sourceTree = "<group>"; };
+		A332FC4E1FBD10B300CFE6D8 /* HistoryUserDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryUserDefault.swift; sourceTree = "<group>"; };
 		A33BA3981F787B67008C111E /* Stamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stamp.swift; sourceTree = "<group>"; };
 		A33BA39A1F787C54008C111E /* stampHistory.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = stampHistory.storyboard; sourceTree = "<group>"; };
 		A33BA39C1F788036008C111E /* StampHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StampHistory.swift; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 		AC1BB7A81F5F80FE003BE03E /* contactbook */ = {
 			isa = PBXGroup;
 			children = (
+				A332FC4E1FBD10B300CFE6D8 /* HistoryUserDefault.swift */,
 				A36367311F70A97400A4D1A9 /* chat.swift */,
 				AC1BB7A91F5F80FE003BE03E /* AppDelegate.swift */,
 				AC1BB7AB1F5F80FE003BE03E /* HomeViewController.swift */,
@@ -417,6 +420,7 @@
 				AC1BB7AA1F5F80FE003BE03E /* AppDelegate.swift in Sources */,
 				AC1BB7DA1F5FCA87003BE03E /* SettingViewController.swift in Sources */,
 				A33BA3991F787B67008C111E /* Stamp.swift in Sources */,
+				A332FC4F1FBD10B300CFE6D8 /* HistoryUserDefault.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

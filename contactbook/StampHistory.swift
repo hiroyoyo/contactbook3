@@ -12,21 +12,29 @@ class StampHistory: UIViewController,UITableViewDataSource, UITableViewDelegate 
     
     @IBOutlet weak var table: UITableView!
     static var child_id:String="2017002"
-    var stampHst:[StampHistoryItem]=[]
+    var stampHst:Array<StampHistoryItem>=[]
     var formatter = DateFormatter()
-    let useDefauls = UserDefaults.standard
+    var useDefauls = UserDefaults.standard
+    let now = Date()
+    
+    let dateFomatter = DateFormatter()
+    
+    
+    
     func tableView(_ table: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return stampHst.count
+        return useDefauls.logDataArray.count
     }
     
     func tableView(_ table: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = table.dequeueReusableCell(withIdentifier: "cell") as! TableViewCell
-        let reversedStampHst:[StampHistoryItem] = stampHst.reversed()
+
+        let reversedStampHst:Array<StampHistoryItem> = useDefauls.logDataArray
         cell.themeLbl.numberOfLines = 0
         for _ in 0..<reversedStampHst.count{
             if reversedStampHst.count > 0{
+                print(reversedStampHst[indexPath.row].date)
                 cell.stampImg.image = UIImage(named:reversedStampHst[indexPath.row].img)
-                cell.themeLbl.text = setDete(setDt: reversedStampHst[indexPath.row].date) + reversedStampHst[indexPath.row].info + "aa\naaaaaaaaaaaaaaaaaaaaaaaaa"
+                cell.themeLbl.text = setDete(setDt: reversedStampHst[indexPath.row].date) + reversedStampHst[indexPath.row].info
                 return cell
             }
         }
@@ -37,9 +45,9 @@ class StampHistory: UIViewController,UITableViewDataSource, UITableViewDelegate 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        search()
-        // Do any additional setup after loading the view.
         
+        search()
+     
     }
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
@@ -50,6 +58,17 @@ class StampHistory: UIViewController,UITableViewDataSource, UITableViewDelegate 
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    func communication(){
+        dateFomatter.dateFormat = "yyyy-MM-01"
+        let dateString = dateFomatter.string(from: now)
+        if (useDefauls.logDataArray[0].date) == dateString{
+            
+        }else{
+            search()
+        }
+    }
+    
+    
     func search(){
         let session = URLSession.shared
         //APIのURL
@@ -80,30 +99,34 @@ class StampHistory: UIViewController,UITableViewDataSource, UITableViewDelegate 
     }
     func parseData(src:[Any]){
         //キー”forecastsの値を取得”
-
+      
         
         for val in src {
             
             let result = val as! [String:String]
             
-            let stampHistoryItem = StampHistoryItem(imgSet: result["stamp"]!, infoSet: result["info"]!, dateSet: result["date"]!)
+            
 
-            stampHst.append(stampHistoryItem)
-
+            stampHst.append(StampHistoryItem(imgSet: result["stamp"]!, infoSet: result["info"]!, dateSet: result["date"]!))
+            
         }
+        useDefauls.logDataArray = stampHst.reversed()
+        print(useDefauls.logDataArray)
         DispatchQueue.main.async {
             self.table.reloadData()
         }
-
+//        print(useDefauls.array(forKey: "DataStore"))
     }
-    
+
      func setDete(setDt:String) -> String{
         let str : String = setDt
-        let test1 = str[..<str.index(str.startIndex, offsetBy: 7)]
-        let test2 = test1.replacingOccurrences(of:"-", with:"年")
-        return test2 + "月　"
+        let offseter = str[..<str.index(str.startIndex, offsetBy: 7)]
+        let histMonth = offseter.replacingOccurrences(of:"-", with:"年")
+        return histMonth + "月　"
     }
-    /*
+    
+  
+        /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation

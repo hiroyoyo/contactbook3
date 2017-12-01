@@ -17,6 +17,5 @@ class StampHistoryItem: NSObject {
         self.img=imgSet
         self.date=dateSet
         self.info=infoSet
-        print(self.img)
     }
 }

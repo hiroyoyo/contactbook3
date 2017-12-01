@@ -15,7 +15,7 @@ class StampChoics: UIViewController ,UICollectionViewDataSource, UICollectionVie
     var choicsBtnImg :String = ""
     let linePoint: CGFloat = 5     // 罫線の太さ
     let numberOfCols: CGFloat = 3  // 1行に表示するセルの数
-
+    var useDefauls = UserDefaults.standard
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -71,8 +71,10 @@ class StampChoics: UIViewController ,UICollectionViewDataSource, UICollectionVie
                 (action: UIAlertAction!) -> Void in
                 print("OK")
                 self.choicsBtnImg =  self.photos[(indexPath as NSIndexPath).row]
+                self.useDefauls.set(self.photos[(indexPath as NSIndexPath).row], forKey: "stampString")
                 self.navigationController?.popViewController(animated: true)
                 self.seter()
+                Stamp.search()
             })
             
 
@@ -109,23 +111,28 @@ class StampChoics: UIViewController ,UICollectionViewDataSource, UICollectionVie
         }
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let size = floor((collectionView.frame.size.width - (linePoint*(numberOfCols-1))) / numberOfCols)
         
         // 正方形で返すためにwidth,heightを同じにする
         return CGSize(width: size, height: size)
     }
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsetsMake(0.0, 0.0, 0.0, 0.0)
     }
 
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return linePoint
     }
     
     
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func collectionView(_ collectionView: UICollectionView,
+                        numberOfItemsInSection section: Int) -> Int {
         // 要素数を入れる、要素以上の数字を入れると表示でエラーとなる
         return photos.count
     }
@@ -134,17 +141,20 @@ class StampChoics: UIViewController ,UICollectionViewDataSource, UICollectionVie
         let session = URLSession.shared
         //APIのURL
         let urlStr = "https://electric-contact-book-swill.c9users.io/API/stampSetApi.php"
-        let selectData = "?goal_id=\(Stamp.childrenGrade)&child_id=\(StampHistory.child_id)&stamp=\(self.choicsBtnImg)"
+        let selectData = "?goal_id=\(useDefauls.persistentDomain(forName: "stampDt")?["goal_id"]as! String)&child_id=\(StampHistory.child_id)&stamp=\(self.choicsBtnImg)"
         print(selectData)
         if let url = URL(string:urlStr + selectData){
             print(url)
             print("1")
+            print(Stamp.goalId)
             let request = URLRequest(url: url)
             let task =  session.dataTask(with: request)
+
             task.resume()
+            
         }
     }
-
+    
     /*
     // MARK: - Navigation
 

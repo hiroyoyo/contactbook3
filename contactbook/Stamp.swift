@@ -14,7 +14,7 @@ class Stamp: UIViewController , UIImagePickerControllerDelegate, UINavigationCon
     @IBOutlet weak var stampBtn: UIButton!
     @IBOutlet weak var themeLbl: UILabel!
     var text1:String = ""
-    var goalId:String = ""
+    static var goalId:String = ""
     var date:String = ""
     var info:String = ""
     var useDefauls = UserDefaults.standard
@@ -41,20 +41,35 @@ class Stamp: UIViewController , UIImagePickerControllerDelegate, UINavigationCon
         themeLbl.lineBreakMode = NSLineBreakMode.byCharWrapping
         
         let now = Date()
+      
         let dateFomatter = DateFormatter()
         dateFomatter.dateFormat = "yyyy-MM-01"
         let dateString = dateFomatter.string(from: now)
-
+    
+        
+      
         
         if (useDefauls.persistentDomain(forName: "stampDt")) != nil{
             if useDefauls.persistentDomain(forName: "stampDt")?["date"]as? String == dateString{
-                print("データ有り")
                 themeLbl.text = useDefauls.persistentDomain(forName: "stampDt")?["info"]as? String
+                
+                if useDefauls.logDataArray[0].date == dateString  {
+                    
+                    let img = UIImage(named:useDefauls.logDataArray[0].img)
+                    stampBtn.setImage(img, for: .normal)
+                    print("入ってる")
+                }
+                print(useDefauls.logDataArray[0].date)
+                print(dateString)
             }else{
+                print("月が変わってる")
+                //月が変わっている
+                useDefauls.removeObject(forKey: "stampString")
                 search()
             }
         }else{
             print("データなし")
+            //ユーザーデフォルトなし
             search()
         }
     }
@@ -84,7 +99,6 @@ class Stamp: UIViewController , UIImagePickerControllerDelegate, UINavigationCon
         //APIのURL
         let urlStr = "https://electric-contact-book-swill.c9users.io/API/stampGetApi.php?grade="
         if let url = URL(string: urlStr + Stamp.childrenGrade){
-            print(urlStr)
             let request = URLRequest(url: url)
             //リクエストを送信
             let task =  session.dataTask(with: request, completionHandler: self.onResponse)
@@ -109,10 +123,10 @@ class Stamp: UIViewController , UIImagePickerControllerDelegate, UINavigationCon
     }
     func parseData(src:[Any]){
         //キー”forecastsの値を取得”
-        print(src)
+        
         for val in src {
             let result = val as! [String:String]
-            goalId = result["goal_id"]!
+            Stamp.goalId = result["goal_id"]!
             date = result["date"]!
             info = result["info"]!
             
@@ -124,15 +138,15 @@ class Stamp: UIViewController , UIImagePickerControllerDelegate, UINavigationCon
             
         }
         //tableviewの更新
-        saveData(senddate: date, sendinfo: info)
+        saveData(senddate: date, sendinfo: info,setgoal: Stamp.goalId)
     }
-    func saveData(senddate: String,sendinfo : String){
+    func saveData(senddate: String,sendinfo : String,setgoal:String){
         
         // Keyを指定して保存
         
-        useDefauls.setPersistentDomain(["date":senddate,"info":sendinfo], forName: "stampDt")
+        useDefauls.setPersistentDomain(["date":senddate,"info":sendinfo,"goal_id":setgoal], forName: "stampDt")
         useDefauls.synchronize()
-        print(useDefauls.persistentDomain(forName: "stampDt")?["date"]as! String)
+        
         }
 
 
