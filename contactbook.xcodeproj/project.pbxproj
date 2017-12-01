@@ -30,6 +30,8 @@
 		AC1BB7D41F5F8245003BE03E /* notification.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC1BB7D31F5F8245003BE03E /* notification.storyboard */; };
 		AC1BB7D61F5F8254003BE03E /* stamp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC1BB7D51F5F8254003BE03E /* stamp.storyboard */; };
 		AC1BB7DA1F5FCA87003BE03E /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1BB7D91F5FCA87003BE03E /* SettingViewController.swift */; };
+		EF00DD521FBEA10F00A7D825 /* userData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF00DD511FBEA10F00A7D825 /* userData.swift */; };
+		EF00DD541FBEA13700A7D825 /* userDataExtensionUserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF00DD531FBEA13700A7D825 /* userDataExtensionUserDefault.swift */; };
 		EF6EE38E1F973D33007E085A /* registrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6EE38D1F973D33007E085A /* registrationViewController.swift */; };
 		EF6EE3901F973D48007E085A /* registration.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF6EE38F1F973D48007E085A /* registration.storyboard */; };
 		EF6EE3921F973D66007E085A /* login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF6EE3911F973D66007E085A /* login.storyboard */; };
@@ -77,6 +79,8 @@
 		AC1BB7D31F5F8245003BE03E /* notification.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = notification.storyboard; sourceTree = "<group>"; };
 		AC1BB7D51F5F8254003BE03E /* stamp.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = stamp.storyboard; sourceTree = "<group>"; };
 		AC1BB7D91F5FCA87003BE03E /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingViewController.swift; path = ../SettingViewController.swift; sourceTree = "<group>"; };
+		EF00DD511FBEA10F00A7D825 /* userData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userData.swift; sourceTree = "<group>"; };
+		EF00DD531FBEA13700A7D825 /* userDataExtensionUserDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userDataExtensionUserDefault.swift; sourceTree = "<group>"; };
 		EF6EE38D1F973D33007E085A /* registrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = registrationViewController.swift; sourceTree = "<group>"; };
 		EF6EE38F1F973D48007E085A /* registration.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = registration.storyboard; sourceTree = "<group>"; };
 		EF6EE3911F973D66007E085A /* login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = login.storyboard; sourceTree = "<group>"; };
@@ -163,6 +167,8 @@
 				EF6EE38F1F973D48007E085A /* registration.storyboard */,
 				EF6EE3931F973D77007E085A /* loginViewController.swift */,
 				EF6EE3981F986FF8007E085A /* Bridging-Header.h */,
+				EF00DD511FBEA10F00A7D825 /* userData.swift */,
+				EF00DD531FBEA13700A7D825 /* userDataExtensionUserDefault.swift */,
 			);
 			path = contactbook;
 			sourceTree = "<group>";
@@ -403,6 +409,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF00DD541FBEA13700A7D825 /* userDataExtensionUserDefault.swift in Sources */,
 				A33BA39D1F788036008C111E /* stampHistory.swift in Sources */,
 				AC1BB7AC1F5F80FE003BE03E /* HomeViewController.swift in Sources */,
 				EF6EE38E1F973D33007E085A /* registrationViewController.swift in Sources */,
@@ -411,6 +418,7 @@
 				AC1BB7AA1F5F80FE003BE03E /* AppDelegate.swift in Sources */,
 				AC1BB7DA1F5FCA87003BE03E /* SettingViewController.swift in Sources */,
 				A33BA3991F787B67008C111E /* stamp.swift in Sources */,
+				EF00DD521FBEA10F00A7D825 /* userData.swift in Sources */,
 				EF6EE3941F973D77007E085A /* loginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

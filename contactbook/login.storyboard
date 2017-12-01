@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="XHj-Cr-Uff">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="XHj-Cr-Uff">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -78,9 +78,23 @@
                                 <state key="normal" title="login"/>
                                 <connections>
                                     <action selector="loginButton:" destination="XHj-Cr-Uff" eventType="touchUpInside" id="kWR-MH-ccJ"/>
-                                    <segue destination="stN-hk-IYh" kind="show" id="DFe-He-u11"/>
                                 </connections>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="weW-Os-9aT">
+                                <rect key="frame" x="72" y="311" width="230" height="21"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jJQ-46-aew">
+                                        <rect key="frame" x="0.0" y="0.0" width="230" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="230" id="d00-v3-tMa"/>
+                                            <constraint firstAttribute="height" constant="21" id="f48-Nq-MO7"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -90,7 +104,10 @@
                             <constraint firstItem="cRU-e9-iJ0" firstAttribute="leading" secondItem="aLF-Hg-SXg" secondAttribute="leadingMargin" constant="56" id="DHz-fS-QRC"/>
                             <constraint firstItem="CKA-cm-DDS" firstAttribute="leading" secondItem="aLF-Hg-SXg" secondAttribute="leadingMargin" constant="252" id="Lot-7z-j22"/>
                             <constraint firstItem="yxi-5p-JIG" firstAttribute="leading" secondItem="aLF-Hg-SXg" secondAttribute="leadingMargin" constant="56" id="MKO-4Y-iNO"/>
+                            <constraint firstItem="weW-Os-9aT" firstAttribute="leading" secondItem="aLF-Hg-SXg" secondAttribute="leadingMargin" constant="56" id="Mip-IX-wm3"/>
+                            <constraint firstItem="weW-Os-9aT" firstAttribute="centerX" secondItem="aLF-Hg-SXg" secondAttribute="centerX" id="MqF-Sj-8bH"/>
                             <constraint firstAttribute="trailingMargin" secondItem="yxi-5p-JIG" secondAttribute="trailing" constant="57" id="NYx-oZ-z25"/>
+                            <constraint firstItem="weW-Os-9aT" firstAttribute="top" secondItem="CKA-cm-DDS" secondAttribute="bottom" constant="29" id="Q6B-Us-ejU"/>
                             <constraint firstItem="cRU-e9-iJ0" firstAttribute="top" secondItem="3IH-qz-2fI" secondAttribute="bottom" constant="8" id="Qv1-hZ-VPw"/>
                             <constraint firstAttribute="trailingMargin" secondItem="CKA-cm-DDS" secondAttribute="trailing" constant="57" id="Sm0-gv-8tf"/>
                             <constraint firstAttribute="trailingMargin" secondItem="3IH-qz-2fI" secondAttribute="trailing" constant="263" id="avX-aV-ptB"/>
@@ -98,6 +115,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="jVc-78-Lqh" secondAttribute="trailing" constant="192" id="dKJ-gU-UAT"/>
                             <constraint firstItem="CKA-cm-DDS" firstAttribute="top" secondItem="yxi-5p-JIG" secondAttribute="bottom" constant="8" id="idD-9q-T74"/>
                             <constraint firstItem="yxi-5p-JIG" firstAttribute="top" secondItem="jVc-78-Lqh" secondAttribute="bottom" constant="8" id="rd6-eu-Yex"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="weW-Os-9aT" secondAttribute="trailing" constant="57" id="sF3-HH-JUQ"/>
                             <constraint firstItem="jVc-78-Lqh" firstAttribute="top" secondItem="cRU-e9-iJ0" secondAttribute="bottom" constant="8" id="ssL-BI-aPk"/>
                         </constraints>
                     </view>
@@ -108,19 +126,12 @@
                         <outlet property="loginLabel" destination="cwL-k8-DeY" id="cQv-ip-vdL"/>
                         <outlet property="passLabel" destination="jVc-78-Lqh" id="WD8-bE-0se"/>
                         <outlet property="passTextField" destination="yxi-5p-JIG" id="qx6-gh-2cE"/>
+                        <outlet property="warning" destination="jJQ-46-aew" id="1qZ-Zz-4md"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KkF-Gs-3pd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-210.40000000000001" y="-202.84857571214394"/>
-        </scene>
-        <!--Main-->
-        <scene sceneID="0C9-Wd-be9">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Main" id="stN-hk-IYh" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="gCh-L0-33t" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="372" y="-346"/>
         </scene>
     </scenes>
 </document>

@@ -8,12 +8,17 @@
 
 import UIKit
 import Foundation
-//import SwiftyJSON
 
-class loginViewController: UIViewController {
-   
+class loginViewController: UIViewController{
+    
+    var response:String = ""
+    var errorCode:String = ""
+    var error:String = ""
+    var useDefauls = UserDefaults.standard
+    var hashPass:String = ""
+    var userDefauls = UserDefaults.standard
+    
     @IBOutlet weak var loginLabel: UILabel!
-
     @IBOutlet weak var idLabel: UILabel!
     @IBOutlet weak var idTextField: UITextField!
     
@@ -24,119 +29,128 @@ class loginViewController: UIViewController {
     
     var password :String = ""
     
-    
     @IBOutlet weak var loginButton: UIButton!
     @IBAction func loginButton(_ sender: Any) {
+    
         id = idTextField.text!
         password = passTextField.text!
-        password.sha1()
+        
+        //パスワードをハッシュ化
+        hashPass = md5(password)
+        print("\(hashPass)わんこ")
+        
+        search(id: id,password: hashPass)
     }
+    @IBOutlet weak var warning: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //URLを指定してオブジェクトを作成
-        let urlStr = "https://electric-contact-book-swill.c9users.io/loginapi.php"
-        let url = URL(string: urlStr)
-        let request = URLRequest(url: url!)
-        
-        //コンフィグを指定してHTTPセションを生成
-        let session = URLSession(configuration: URLSessionConfiguration.default, delegate:nil, delegateQueue: OperationQueue.main)
-        
-        //HTTP通信を実行する
-        // ※dataにJSONデータが入る
-        let task:URLSessionDataTask = session.dataTask(with: request, completionHandler: {data, responce,error in
-            
-            //エラーがあったら出力
-            if error != nil {
-                print(error!)
-                print("えらーだよーーーーーーーん")
-                return
-            }
-            DispatchQueue.main.async {
-                
-                //データ取得後の処理
-                print("\(data)")
-                print("ああああああああああああああああああああああああああああああああああああああ")
-                
-            }
-        })
-        //HTTP通信を実行
-        task.resume()
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-//    func getJson() {
-//        let urlStr = "https://electric-contact-book-swill.c9users.io/loginapi.php"
-//        if let url = URL(string: urlStr) {
-//            let request = URLRequest(url: url)
-//            //リクエストを送信
-//            let task = session.dataTask(with: request, CompletionHander: self.onResponse)
-//            task.resume()
-//        }
-//    }
-    
-//    func onResponse(data:Data?, respose:URLResponse?, error:Error?) {
-//        //データが存在するかチェック
-//        guard let data = data else {
-//            print("データなし")
-//            return
-//        }
-//        //JSON型からDictionary型に変換
-//        guard let jsonData = try! JSONSerialization.jsonObject(with:data, options: JSONSerialization.ReadingOptions.allowFragments) as?  [String: Any] else {
-//            return
-//        }
-//        //データの解析
-//        self.parseData(src: jsonData)
-//    }
-    
-//    func parseData(src:[String: Any]) {
-//        let item = Item()
-//
-//        let id = ["id"] as! String
-//        item.setData(id: id)
-//
-//        let password = ["password"] as! String
-//        item.setData(password: password)
-//
-//        let id = ["name"] as! String
-//        item.setData(name: name)
-//
-//        self.itemList.append(item)
-//    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func search(id:String, password:String) {
+        let session = URLSession.shared
+        //APIのURL
+        let urlStr = "あ"
+        
+        print("\(id)")
+        print("\(password)ニャンコ")
+        
+        let url = URL(string: urlStr)
+        let request = URLRequest(url: url!)
+        //リクエストを送信
+        let task = session.dataTask(with: request, completionHandler: self.onResponse)
+        task.resume()
     }
-    */
-}
-
-extension String {
-    // 文字列の SHA-1 ダイジェストを得る
-    func sha1() -> String! {
-        let str = self.cString(using: String.Encoding.utf8)
-        let strLen = CC_LONG(self.lengthOfBytes(using: String.Encoding.utf8))
-        let digestLen = Int(CC_SHA1_DIGEST_LENGTH)
-        let result = UnsafeMutablePointer<CUnsignedChar>.allocate(capacity: digestLen)
-        
-        CC_SHA1(str!, strLen, result)
-        
-        let hash = NSMutableString()
-        for i in 0..<digestLen {
-            hash.appendFormat("%02x", result[i])
+    func onResponse(data:Data?, response:URLResponse?,error: Error?) {
+        guard  let data = data else {
+            print("データなし")
+            return
         }
-        result.deinitialize()
-        
-        return String(hash)
+        //JSON型からDictionary型に変換
+        guard let jsonData = try! JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.allowFragments) as? [[String:String]] else {
+            return
+        }
+        //データの解析
+        self.parseData(src: jsonData)
+}
+    func parseData(src:[Any]){
+        //キー"forcastsの値を取得"
+        print(src)
+        for val in src {
+            let result = val as! [String:String]
+            response = result["response"]!
+            print(response)
+            errorCode = result["errorCode"]!
+            print(errorCode)
+            error = result["error"]!
+            print(error)
+        }
+//        ホームでユーザーデフォルトに値が入ってるか確認して
+//        入ってなかったらログインの方の画面に移る
+        errorCheck(response: response,errorCode: errorCode)
     }
+    //エラーだったらラベルに警告を表示
+    //エラーじゃなかったらホーム画面に遷移する関数
+    func errorCheck(response:String,errorCode:String) {
+        if(response == "login_ok"){
+            
+            //ユーザデフォルトにログイン許可したことを保存する
+            saveData()
+            
+            
+            print("ログイン成功しました")
+            DispatchQueue.global(qos: .default).async {
+                // サブスレッド(バックグラウンド)で実行する方を書く
+                DispatchQueue.main.async {
+                    // Main Threadで実行する
+                    //ホーム画面に遷移
+                    let storyboard:UIStoryboard = UIStoryboard(name:"Main", bundle:nil)
+                    let nextView = storyboard.instantiateInitialViewController()
+                    self.present(nextView!, animated: true, completion: nil)
+                }
+            }
+        } else if(errorCode == "100002") {
+            //ラベルにidまたはpasswordが一致しなかったことをラベルに表示
+            DispatchQueue.main.async {
+                self.warning.text = "idまたはpasswordが間違っています。"
+            }
+        } else if(errorCode == "100000"){
+            //情報自体が取れなかったことをラベルに表示
+            DispatchQueue.main.async {
+                self.warning.text = "コンテントが取得できません。"
+            }
+        } else {
+            DispatchQueue.main.async {
+                self.warning.text = "何らかのエラー"
+            }
+        }
+    }
+    func saveData() {
+        //Keyを指定して保存ユーザーデフォルトに追加
+        UserDefaults.standard.set(true, forKey: "login_ok")
+        
+        
+        if UserDefaults.standard.object(forKey: "login_ok") != nil {
+            print("値が存在しておりまする")
+        }
+        print("ユーザデフォルト設定完了しました")
+    }
+}
+func md5(_ string: String) -> String {
+    var md5String = ""
+    let digestLength = Int(CC_MD5_DIGEST_LENGTH)
+    let md5Buffer = UnsafeMutablePointer<UInt8>.allocate(capacity: digestLength)
+    
+    if let data = string.data(using: .utf8) {
+        data.withUnsafeBytes({ (bytes: UnsafePointer<CChar>) -> Void in
+            CC_MD5(bytes, CC_LONG(data.count), md5Buffer)
+            md5String = (0..<digestLength).reduce("") { $0 + String(format:"%02x", md5Buffer[$1]) }
+        })
+    }
+    return md5String
 }
