@@ -9,6 +9,7 @@ target 'contactbook' do
 pod 'JSQMessagesViewController'
 pod 'Firebase'
 pod 'Firebase/Database'
+
   # Pods for contactbook
 
   target 'contactbookTests' do
