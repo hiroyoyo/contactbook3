@@ -74,7 +74,7 @@ class StampChoics: UIViewController ,UICollectionViewDataSource, UICollectionVie
                 self.useDefauls.set(self.photos[(indexPath as NSIndexPath).row], forKey: "stampString")
                 self.navigationController?.popViewController(animated: true)
                 self.seter()
-                Stamp.search()
+               
             })
             
 
