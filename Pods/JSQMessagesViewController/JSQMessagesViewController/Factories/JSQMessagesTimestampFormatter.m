@@ -50,7 +50,7 @@
         [_dateFormatter setLocale:[NSLocale currentLocale]];
         [_dateFormatter setDoesRelativeDateFormatting:YES];
         
-        UIColor *color = [UIColor colorWithRed:1 green:1 blue:1 alpha:0.7];
+        UIColor *color = [UIColor lightGrayColor];
         
         NSMutableParagraphStyle *paragraphStyle = [[NSParagraphStyle defaultParagraphStyle] mutableCopy];
         paragraphStyle.alignment = NSTextAlignmentCenter;
