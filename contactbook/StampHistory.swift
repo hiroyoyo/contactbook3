@@ -115,6 +115,7 @@ class StampHistory: UIViewController,UITableViewDataSource, UITableViewDelegate 
         DispatchQueue.main.async {
             self.table.reloadData()
         }
+        
 //        print(useDefauls.array(forKey: "DataStore"))
     }
 

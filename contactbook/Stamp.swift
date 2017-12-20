@@ -66,26 +66,14 @@ class Stamp: UIViewController , UIImagePickerControllerDelegate, UINavigationCon
                 //月が変わっている
                 useDefauls.removeObject(forKey: "stampString")
                 search()
+                
             }
         }else{
             print("データなし")
             //ユーザーデフォルトなし
             search()
+           
         }
-    }
-
-    override func viewWillLayoutSubviews() {
-        
-        if text1 != ""{
-            let img:UIImage = UIImage(named:text1)!
-
-            stampBtn.setImage(img, for: .normal)
-            stampBtn.titleLabel?.text = ""
-          
-        }
-       
-
-        super.viewWillLayoutSubviews()
     }
    
     

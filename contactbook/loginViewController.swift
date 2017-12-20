@@ -55,7 +55,7 @@ class loginViewController: UIViewController{
     func search(id:String, password:String) {
         let session = URLSession.shared
         //APIのURL
-        let urlStr = "あ"
+        let urlStr = "https://electric-contact-book-swill.c9users.io/API/loginapi.php"
         
         print("\(id)")
         print("\(password)ニャンコ")
@@ -73,6 +73,7 @@ class loginViewController: UIViewController{
         }
         //JSON型からDictionary型に変換
         guard let jsonData = try! JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.allowFragments) as? [[String:String]] else {
+            
             return
         }
         //データの解析
