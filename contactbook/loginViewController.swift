@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Foundation
+//import Foundation
 
 class loginViewController: UIViewController{
     
@@ -17,6 +17,13 @@ class loginViewController: UIViewController{
     var useDefauls = UserDefaults.standard
     var hashPass:String = ""
     var userDefauls = UserDefaults.standard
+    var useData:Array<userData>=[]
+    
+    var childID:String = ""
+    var grade:String = ""
+    var name:String = ""
+    
+    
     
     @IBOutlet weak var loginLabel: UILabel!
     @IBOutlet weak var idLabel: UILabel!
@@ -36,10 +43,10 @@ class loginViewController: UIViewController{
         password = passTextField.text!
         
         //パスワードをハッシュ化
-        hashPass = md5(password)
-        print("\(hashPass)わんこ")
+//        hashPass = md5(password)
+//        print("\(hashPass)わんこ")
         
-        search(id: id,password: hashPass)
+        search(id: id,password: password)
     }
     @IBOutlet weak var warning: UILabel!
     
@@ -55,42 +62,63 @@ class loginViewController: UIViewController{
     func search(id:String, password:String) {
         let session = URLSession.shared
         //APIのURL
-        let urlStr = "https://electric-contact-book-swill.c9users.io/API/loginapi.php"
+        let urlStr = "https://electric-contact-book-swill.c9users.io/API/loginapi.php?id=\(id)&password=\(password)"
         
         print("\(id)")
         print("\(password)ニャンコ")
         
         let url = URL(string: urlStr)
         let request = URLRequest(url: url!)
+        
         //リクエストを送信
         let task = session.dataTask(with: request, completionHandler: self.onResponse)
         task.resume()
     }
+    
     func onResponse(data:Data?, response:URLResponse?,error: Error?) {
         guard  let data = data else {
             print("データなし")
             return
         }
+        
         //JSON型からDictionary型に変換
-        guard let jsonData = try! JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.allowFragments) as? [[String:String]] else {
-            
+        guard let jsonData = try! JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.allowFragments) as? [[String:Any]] else {
             return
         }
+        
         //データの解析
         self.parseData(src: jsonData)
 }
+    
     func parseData(src:[Any]){
+        
         //キー"forcastsの値を取得"
         print(src)
         for val in src {
-            let result = val as! [String:String]
-            response = result["response"]!
+            let result = val as! [String:Any]
+            response = result["response"]! as! String
             print(response)
-            errorCode = result["errorCode"]!
+            errorCode = result["errorCode"]! as! String
             print(errorCode)
-            error = result["error"]!
+            error = result["error"]! as! String
             print(error)
+            
+            var responseData:[String:Any]
+            responseData = result["responseData"] as! [String : Any]
+            
+            for val2 in responseData {
+                let result2 = val2 as! [String:String]
+                childID = result2["childID"]!
+                print(childID)
+                grade = result2["grade"]!
+                print(grade)
+                name = result2["name"]!
+                print(name)
+            }
+        
         }
+        
+        
 //        ホームでユーザーデフォルトに値が入ってるか確認して
 //        入ってなかったらログインの方の画面に移る
         errorCheck(response: response,errorCode: errorCode)
@@ -101,8 +129,7 @@ class loginViewController: UIViewController{
         if(response == "login_ok"){
             
             //ユーザデフォルトにログイン許可したことを保存する
-            saveData()
-            
+            saveData(send_childID: childID,send_grade: grade,send_name: name)
             
             print("ログイン成功しました")
             DispatchQueue.global(qos: .default).async {
@@ -110,7 +137,7 @@ class loginViewController: UIViewController{
                 DispatchQueue.main.async {
                     // Main Threadで実行する
                     //ホーム画面に遷移
-                    let storyboard:UIStoryboard = UIStoryboard(name:"Main", bundle:nil)
+                    let storyboard:UIStoryboard = UIStoryboard(name:"Main 2", bundle:nil)
                     let nextView = storyboard.instantiateInitialViewController()
                     self.present(nextView!, animated: true, completion: nil)
                 }
@@ -131,17 +158,19 @@ class loginViewController: UIViewController{
             }
         }
     }
-    func saveData() {
+    func saveData(send_childID: String,send_grade: String,send_name: String) {
         //Keyを指定して保存ユーザーデフォルトに追加
-        UserDefaults.standard.set(true, forKey: "login_ok")
         
+        useDefauls.setPersistentDomain(["childID":send_childID,"grade":send_grade,"name":send_name], forName: "loginDt")
+        useDefauls.synchronize()
         
-        if UserDefaults.standard.object(forKey: "login_ok") != nil {
+        if UserDefaults.standard.object(forKey: "childID") != nil {
             print("値が存在しておりまする")
         }
         print("ユーザデフォルト設定完了しました")
     }
 }
+
 func md5(_ string: String) -> String {
     var md5String = ""
     let digestLength = Int(CC_MD5_DIGEST_LENGTH)
