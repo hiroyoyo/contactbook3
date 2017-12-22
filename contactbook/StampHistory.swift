@@ -22,13 +22,13 @@ class StampHistory: UIViewController,UITableViewDataSource, UITableViewDelegate 
     
     
     func tableView(_ table: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return useDefauls.logDataArray.count
+        return useDefauls.stampLogDataArray.count
     }
     
     func tableView(_ table: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = table.dequeueReusableCell(withIdentifier: "cell") as! TableViewCell
 
-        let reversedStampHst:Array<StampHistoryItem> = useDefauls.logDataArray
+        let reversedStampHst:Array<StampHistoryItem> = useDefauls.stampLogDataArray
         cell.themeLbl.numberOfLines = 0
         for _ in 0..<reversedStampHst.count{
             if reversedStampHst.count > 0{
@@ -58,10 +58,12 @@ class StampHistory: UIViewController,UITableViewDataSource, UITableViewDelegate 
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
     func communication(){
         dateFomatter.dateFormat = "yyyy-MM-01"
         let dateString = dateFomatter.string(from: now)
-        if (useDefauls.logDataArray[0].date) == dateString{
+        if (useDefauls.stampLogDataArray[0].date) == dateString{
             
         }else{
             search()
@@ -110,8 +112,8 @@ class StampHistory: UIViewController,UITableViewDataSource, UITableViewDelegate 
             stampHst.append(StampHistoryItem(imgSet: result["stamp"]!, infoSet: result["info"]!, dateSet: result["date"]!))
             
         }
-        useDefauls.logDataArray = stampHst.reversed()
-        print(useDefauls.logDataArray)
+        useDefauls.stampLogDataArray = stampHst.reversed()
+        print(useDefauls.stampLogDataArray)
         DispatchQueue.main.async {
             self.table.reloadData()
         }

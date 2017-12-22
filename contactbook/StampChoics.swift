@@ -150,6 +150,7 @@ class StampChoics: UIViewController ,UICollectionViewDataSource, UICollectionVie
             let request = URLRequest(url: url)
             let task =  session.dataTask(with: request)
 
+            
             task.resume()
             
         }

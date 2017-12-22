@@ -51,15 +51,21 @@ class Stamp: UIViewController , UIImagePickerControllerDelegate, UINavigationCon
         
         if (useDefauls.persistentDomain(forName: "stampDt")) != nil{
             if useDefauls.persistentDomain(forName: "stampDt")?["date"]as? String == dateString{
-                themeLbl.text = useDefauls.persistentDomain(forName: "stampDt")?["info"]as? String
-                
-                if useDefauls.logDataArray[0].date == dateString  {
-                    
-                    let img = UIImage(named:useDefauls.logDataArray[0].img)
-                    stampBtn.setImage(img, for: .normal)
+
+                if useDefauls.persistentDomain(forName: "stampDt")?["date"]as? String == dateString  {
+                    print(useDefauls.persistentDomain(forName: "stampDt")?["img"]as?String! as Any)
+                    if (useDefauls.object(forKey: "stampString")) != nil{
+                        let img = UIImage(named:(useDefauls.object(forKey: "stampString") as! String))
+                        stampBtn.setImage(img, for: .normal)
+                        print(img as Any)
+                        print("1")
+                    }
+                    themeLbl.text = useDefauls.persistentDomain(forName: "stampDt")?["info"]as? String
+                    print(useDefauls.persistentDomain(forName: "stampDt")?["img"]as?String as Any)
                     print("入ってる")
+                    
                 }
-                print(useDefauls.logDataArray[0].date)
+                
                 print(dateString)
             }else{
                 print("月が変わってる")
