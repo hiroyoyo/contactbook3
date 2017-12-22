@@ -6,19 +6,20 @@
 //  Copyright © 2017年 佐野浩代. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
-struct userData {
+class userData:NSObject {
     
     var childID:String
     var grade:String
     var name:String
     
-    init(childId:String,grade:String,name:String) {
-        self.childID = ""
-        self.grade = ""
-        self.name = ""
+    init(setChildId:String,setGrade:String,setName:String) {
+        self.childID = setChildId
+        self.grade = setGrade
+        self.name = setName
     }
 }
-extension UserDefaults {
-}
+
+//var UserData = [userData]()
+
