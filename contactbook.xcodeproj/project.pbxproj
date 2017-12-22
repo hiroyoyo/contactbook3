@@ -10,6 +10,9 @@
 		5014133F9F0E73A013123C3D /* Pods_contactbook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 677677C188E847FE92FA57FA /* Pods_contactbook.framework */; };
 		A30880941FD6C5FE0089C365 /* Main 2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A30880921FD6C5FD0089C365 /* Main 2.storyboard */; };
 		A30880991FD6C8360089C365 /* HomeViewController 2.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30880981FD6C8360089C365 /* HomeViewController 2.swift */; };
+		A322909C1FEB3EC700549565 /* ContactBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A322909B1FEB3EC700549565 /* ContactBookViewController.swift */; };
+		A322909E1FEB44A600549565 /* ContactBookItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A322909D1FEB44A600549565 /* ContactBookItem.swift */; };
+		A32290A01FEC856A00549565 /* contactBookUserDfault.swift in Sources */ = {isa = PBXBuildFile; fileRef = A322909F1FEC856A00549565 /* contactBookUserDfault.swift */; };
 		A33ABBEE1FD8DAB2004CB584 /* userData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33ABBE81FD8DAB0004CB584 /* userData.swift */; };
 		A33ABBEF1FD8DAB2004CB584 /* userDataExtensionUserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33ABBE91FD8DAB1004CB584 /* userDataExtensionUserDefault.swift */; };
 		A33ABBF01FD8DAB2004CB584 /* loginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33ABBEA1FD8DAB1004CB584 /* loginViewController.swift */; };
@@ -29,7 +32,7 @@
 		A3A3E5BF1FD6DA0800C0DF69 /* line.png in Resources */ = {isa = PBXBuildFile; fileRef = A3A3E5BB1FD6DA0700C0DF69 /* line.png */; };
 		A3A3E5C01FD6DA0800C0DF69 /* illust1399_thumb.gif in Resources */ = {isa = PBXBuildFile; fileRef = A3A3E5BC1FD6DA0700C0DF69 /* illust1399_thumb.gif */; };
 		A3A3E5C11FD6DA0800C0DF69 /* illust.png in Resources */ = {isa = PBXBuildFile; fileRef = A3A3E5BD1FD6DA0700C0DF69 /* illust.png */; };
-		A3A3E5C31FD6DB5000C0DF69 /* HistoryUserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A3E5C21FD6DB5000C0DF69 /* HistoryUserDefault.swift */; };
+		A3A3E5C31FD6DB5000C0DF69 /* stampHistoryUserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A3E5C21FD6DB5000C0DF69 /* stampHistoryUserDefault.swift */; };
 		A3A3E5D31FD6E00F00C0DF69 /* NotificationDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A3E5CE1FD6E00E00C0DF69 /* NotificationDetailViewController.swift */; };
 		A3A3E5D41FD6E00F00C0DF69 /* notification.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3A3E5CF1FD6E00F00C0DF69 /* notification.storyboard */; };
 		A3A3E5D51FD6E00F00C0DF69 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A3E5D01FD6E00F00C0DF69 /* NotificationViewController.swift */; };
@@ -68,6 +71,9 @@
 		8DB16390574859BAD983EC77 /* Pods-contactbook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-contactbook.release.xcconfig"; path = "Pods/Target Support Files/Pods-contactbook/Pods-contactbook.release.xcconfig"; sourceTree = "<group>"; };
 		A30880931FD6C5FD0089C365 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Base.lproj/Main 2.storyboard"; sourceTree = "<group>"; };
 		A30880981FD6C8360089C365 /* HomeViewController 2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HomeViewController 2.swift"; sourceTree = "<group>"; };
+		A322909B1FEB3EC700549565 /* ContactBookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactBookViewController.swift; sourceTree = "<group>"; };
+		A322909D1FEB44A600549565 /* ContactBookItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactBookItem.swift; sourceTree = "<group>"; };
+		A322909F1FEC856A00549565 /* contactBookUserDfault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = contactBookUserDfault.swift; sourceTree = "<group>"; };
 		A33ABBE81FD8DAB0004CB584 /* userData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = userData.swift; sourceTree = "<group>"; };
 		A33ABBE91FD8DAB1004CB584 /* userDataExtensionUserDefault.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = userDataExtensionUserDefault.swift; sourceTree = "<group>"; };
 		A33ABBEA1FD8DAB1004CB584 /* loginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = loginViewController.swift; sourceTree = "<group>"; };
@@ -88,7 +94,7 @@
 		A3A3E5BB1FD6DA0700C0DF69 /* line.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = line.png; sourceTree = "<group>"; };
 		A3A3E5BC1FD6DA0700C0DF69 /* illust1399_thumb.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = illust1399_thumb.gif; sourceTree = "<group>"; };
 		A3A3E5BD1FD6DA0700C0DF69 /* illust.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = illust.png; sourceTree = "<group>"; };
-		A3A3E5C21FD6DB5000C0DF69 /* HistoryUserDefault.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryUserDefault.swift; sourceTree = "<group>"; };
+		A3A3E5C21FD6DB5000C0DF69 /* stampHistoryUserDefault.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = stampHistoryUserDefault.swift; sourceTree = "<group>"; };
 		A3A3E5CE1FD6E00E00C0DF69 /* NotificationDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationDetailViewController.swift; sourceTree = "<group>"; };
 		A3A3E5CF1FD6E00F00C0DF69 /* notification.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = notification.storyboard; sourceTree = "<group>"; };
 		A3A3E5D01FD6E00F00C0DF69 /* NotificationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
@@ -165,6 +171,7 @@
 		AC1BB7A81F5F80FE003BE03E /* contactbook */ = {
 			isa = PBXGroup;
 			children = (
+				A322909B1FEB3EC700549565 /* ContactBookViewController.swift */,
 				A36367311F70A97400A4D1A9 /* chat.swift */,
 				AC1BB7A91F5F80FE003BE03E /* AppDelegate.swift */,
 				A30880981FD6C8360089C365 /* HomeViewController 2.swift */,
@@ -172,8 +179,10 @@
 				A33BA3981F787B67008C111E /* Stamp.swift */,
 				A33BA39C1F788036008C111E /* StampHistory.swift */,
 				A3C55F211FAA9DD600A09783 /* StampHistoryItem.swift */,
+				A322909D1FEB44A600549565 /* ContactBookItem.swift */,
 				A33BA3A41F78A1DF008C111E /* StampChoics.swift */,
-				A3A3E5C21FD6DB5000C0DF69 /* HistoryUserDefault.swift */,
+				A3A3E5C21FD6DB5000C0DF69 /* stampHistoryUserDefault.swift */,
+				A322909F1FEC856A00549565 /* contactBookUserDfault.swift */,
 				A39E67D21F8F268B00ABDA1B /* TableViewCell.swift */,
 				A30880921FD6C5FD0089C365 /* Main 2.storyboard */,
 				A33ABBEC1FD8DAB1004CB584 /* login.storyboard */,
@@ -473,7 +482,9 @@
 				A3A3E5D51FD6E00F00C0DF69 /* NotificationViewController.swift in Sources */,
 				A33BA3A51F78A1DF008C111E /* StampChoics.swift in Sources */,
 				A3A3E5D71FD6E00F00C0DF69 /* NotificationItem.swift in Sources */,
+				A322909C1FEB3EC700549565 /* ContactBookViewController.swift in Sources */,
 				A3A3E5D31FD6E00F00C0DF69 /* NotificationDetailViewController.swift in Sources */,
+				A322909E1FEB44A600549565 /* ContactBookItem.swift in Sources */,
 				A36367321F70A97400A4D1A9 /* chat.swift in Sources */,
 				A3C55F221FAA9DD600A09783 /* StampHistoryItem.swift in Sources */,
 				AC1BB7AA1F5F80FE003BE03E /* AppDelegate.swift in Sources */,
@@ -482,9 +493,10 @@
 				A33BA3991F787B67008C111E /* Stamp.swift in Sources */,
 				A33ABBF31FD8DAB2004CB584 /* registrationViewController.swift in Sources */,
 				A33ABBF01FD8DAB2004CB584 /* loginViewController.swift in Sources */,
+				A32290A01FEC856A00549565 /* contactBookUserDfault.swift in Sources */,
 				A33ABBEF1FD8DAB2004CB584 /* userDataExtensionUserDefault.swift in Sources */,
 				A30880991FD6C8360089C365 /* HomeViewController 2.swift in Sources */,
-				A3A3E5C31FD6DB5000C0DF69 /* HistoryUserDefault.swift in Sources */,
+				A3A3E5C31FD6DB5000C0DF69 /* stampHistoryUserDefault.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

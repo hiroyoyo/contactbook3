@@ -8,7 +8,7 @@
 
 import UIKit
 extension UserDefaults {
-    var logDataArray:[StampHistoryItem]{
+    var stampLogDataArray:[StampHistoryItem]{
         set(datas){
             // Swiftのオブジェクトを、NSObjectなオブジェクトに変換する
             let newDatas:[NSDictionary] = datas.map{
