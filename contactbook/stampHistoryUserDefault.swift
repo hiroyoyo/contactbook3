@@ -17,11 +17,11 @@ extension UserDefaults {
                  "img":$0.img] as NSDictionary
             }
             // NSObjectなオブジェクトのみになったから、setObjectできる
-            self.set(newDatas,forKey:"items")
+            self.set(newDatas,forKey:"stampitems")
         }
         get{
             // NSDictionaryの配列として、データを取得
-            let datas = self.object(forKey: "items") as? [NSDictionary] ?? []
+            let datas = self.object(forKey: "stampitems") as? [NSDictionary] ?? []
             // 保存されたデータから復元出来無い場合もあり得るので、
             // mapではなくreduceを使う
             let array = datas.reduce([]){ (ary, d:NSDictionary) -> [StampHistoryItem] in

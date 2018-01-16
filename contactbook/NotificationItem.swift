@@ -8,34 +8,18 @@
 
 import Foundation
 
-public class Item{
+public class NotificationItem{
     //投稿日・タイトル・テキスト(とりあえずStringにしてる)
-    private var date: String = ""
-    private var title:String = ""
-    private var text: String = ""
+    var date: String = ""
+    var title:String = ""
+    var text: String = ""
     
-    
-    public func getDate() -> String{
-        return self.date
+    init(dateSet:String,titleSet:String,textSet:String){
+        self.date = dateSet
+        self.title = titleSet
+        self.text = textSet
     }
+
     
-    public func getTitle() -> String{
-        return self.title
-    }
     
-    public func getText() -> String{
-        return self.text
-    }
-    
-    public func setDate(date:String) {
-        self.date = date
-    }
-    
-    public func setTitle(title:String) {
-        self.title = title
-    }
-    
-    public func setText(text:String) {
-        self.text = text
-    }
 }

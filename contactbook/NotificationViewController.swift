@@ -21,20 +21,25 @@ import UIKit
 class NotificationViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     
-    
-    var itemList:[Item] = []
+    var grade="0"
+    var NoficationItemList:Array<NotificationItem> = []
+    var useDefauls = UserDefaults.standard
     
     @IBOutlet weak var tableView: UITableView!
     
-    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        // #warning Incomplete implementation, return the number of sections
+        
+        return 1
+    }
     
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
         
-        let reverseditemLIst:Array<Item> = itemList.reversed()
+    
         
-        return reverseditemLIst.count
+        return useDefauls.notificationLogDataArray.count
         
     }
     
@@ -42,11 +47,10 @@ class NotificationViewController: UIViewController, UITableViewDataSource, UITab
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
         
-        let reverseditemLIst:Array<Item> = itemList.reversed()
+
         
-        let cell = UITableViewCell(style: .default, reuseIdentifier: "mycell")
-        
-        cell.textLabel?.text = reverseditemLIst[indexPath.row].getDate() + " " + reverseditemLIst[indexPath.row].getTitle()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "NotificationCell") as! NotificationTableViewCell
+        cell.label.text = ("\(useDefauls.notificationLogDataArray[indexPath.row].date) \(useDefauls.notificationLogDataArray[indexPath.row].title)")
         
         return cell
         
@@ -58,16 +62,13 @@ class NotificationViewController: UIViewController, UITableViewDataSource, UITab
         
         //APIのURL/public/API/notificationapi.php
         
-        let urlStr = "https://electric-contact-book-swill.c9users.io/notificationapi.php"
+        let urlStr = "https://electric-contact-book-swill.c9users.io/API/notificationapi.php?grade="
         
-        if let url = URL(string: urlStr){
-            
+        if let url = URL(string: urlStr + grade){
+            print(url)
             let request = URLRequest(url: url)
-            
             //リクエストを送信
-            
             let task =  session.dataTask(with: request, completionHandler: self.onResponse)
-            
             task.resume()
             
         }
@@ -77,36 +78,16 @@ class NotificationViewController: UIViewController, UITableViewDataSource, UITab
     
     
     func onResponse(data:Data?, response:URLResponse?, error:Error?)
-        
     {
-        
         //データが存在するかチェック
-        
         guard let data = data else{
-            
             print("データなし")
-            
             return
-            
         }
-        
-        
-        
         //JSON型からDictionary型に変換
-        
-        guard let jsonData = try! JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.allowFragments) as? [Any] else{
-            
-            
-            
+        guard let jsonData = try! JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.allowFragments) as?[[String:Any]] else{
             return
-            
         }
-        
-        
-        
-        print("---------------------")
-        
-        print(jsonData)
         
         //データの解析
         
@@ -119,21 +100,15 @@ class NotificationViewController: UIViewController, UITableViewDataSource, UITab
     func parseData(src:[Any]){
         
         for val in src {
-            
-            let item:Item = Item()
+          
             
             let data = val as! [String:String]
+
             
-            item.setDate(date: data["date"]!)
-            
-            item.setTitle(title: data["title"]!)
-            
-            item.setText(text: data["text"]!)
-            
-            self.itemList.append(item)
+            self.NoficationItemList.append(NotificationItem(dateSet: data["date"]!, titleSet: data["title"]!, textSet: data["text"]!))
             
         }
-        
+        useDefauls.notificationLogDataArray = NoficationItemList.reversed()
         
         
         //tableviewの更新
@@ -156,21 +131,18 @@ class NotificationViewController: UIViewController, UITableViewDataSource, UITab
         
     }
     
-    
-    
-    //降順に表示されるようになっております
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
         
-        let reverseditemLIst:Array<Item> = itemList.reversed()
+        
         
         let vc = segue.destination as! NotificationDetailViewController
         
         let index = sender as! Int
         
-        vc.item = reverseditemLIst[index]
+        vc.item = useDefauls.notificationLogDataArray[index]
         
     }
+
     
     
     

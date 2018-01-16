@@ -13,9 +13,13 @@ class ContactBookViewController: UIViewController,UITableViewDataSource, UITable
     @IBOutlet weak var tableView: UITableView!
     var contacHst:Array<ContactBookItem>=[]
     var useDefauls = UserDefaults.standard
+    var childId = "2017002"
+    var selectText:String?
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-//        search()
+        search()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -33,42 +37,48 @@ class ContactBookViewController: UIViewController,UITableViewDataSource, UITable
     
     func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        print(useDefauls.contactBookLogDataArray.count)
-        return useDefauls.contactBookLogDataArray.count
+
+        return 1
     }
 
      func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return useDefauls.contactBookLogDataArray.count
     }
     
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
-        let cell = tableView.dequeueReusableCell(withIdentifier: "MyCell", for: indexPath as IndexPath)
-
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MyCell") as! ContactBookTableViewCell
+        cell.Label.text = useDefauls.contactBookLogDataArray[indexPath.row].text
         
-
-        cell.textLabel!.text = useDefauls.contactBookLogDataArray[indexPath.row].text
-        print("1")
         return cell
     }
     
     
     
-//    override func tableView(_ table: UITableView,didSelectRowAt indexPath: IndexPath) {
-//        // [indexPath.row] から画像名を探し、UImage を設定
-//        selectedImage = UIImage(named: imgArray[indexPath.row] as! String)
-//        if selectedImage != nil {
-//            // SubViewController へ遷移するために Segue を呼び出す
-//            performSegue(withIdentifier: "toSubViewController",sender: nil)
-//        }
     
+    
+    func tableView(_ tableView: UITableView,didSelectRowAt indexPath: IndexPath) {
+        
+        selectText =  useDefauls.contactBookLogDataArray[indexPath.row].text 
+        if selectText != nil {
+            // SubViewController へ遷移するために Segue を呼び出す
+            performSegue(withIdentifier: "toContactBookDietail",sender: nil)
+        }
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
+        if (segue.identifier == "toContactBookDietail") {
+            let subVC: contactBookDietail = (segue.destination as? contactBookDietail)!
+            // SubViewController のselectedImgに選択された画像を設定する
+            subVC.selectedText = selectText
+        }
+    }
 
     func search(){
         let session = URLSession.shared
         //APIのURL
         let urlStr = "https://electric-contact-book-swill.c9users.io/API/contactBookGetApi.php?child_id="
-        if let url = URL(string: urlStr + Stamp.childrenGrade){
+        if let url = URL(string: urlStr + childId){
             let request = URLRequest(url: url)
             //リクエストを送信
             let task =  session.dataTask(with: request, completionHandler: self.onResponse)

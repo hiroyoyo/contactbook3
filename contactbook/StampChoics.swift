@@ -72,6 +72,7 @@ class StampChoics: UIViewController ,UICollectionViewDataSource, UICollectionVie
                 print("OK")
                 self.choicsBtnImg =  self.photos[(indexPath as NSIndexPath).row]
                 self.useDefauls.set(self.photos[(indexPath as NSIndexPath).row], forKey: "stampString")
+                
                 self.navigationController?.popViewController(animated: true)
                 self.seter()
                

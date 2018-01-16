@@ -19,13 +19,13 @@ class NotificationDetailViewController: UIViewController{
         self.dismiss(animated: true,completion: nil)
     }
     
-    var item:Item!
+    var item:NotificationItem!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.UiLabel.text = self.item.getTitle()
-        self.UiTextView.text = self.item.getText()
+        self.UiLabel.text = self.item.title
+        self.UiTextView.text = self.item.text
 
     }
     

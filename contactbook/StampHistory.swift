@@ -60,15 +60,7 @@ class StampHistory: UIViewController,UITableViewDataSource, UITableViewDelegate 
     }
     
     
-    func communication(){
-        dateFomatter.dateFormat = "yyyy-MM-01"
-        let dateString = dateFomatter.string(from: now)
-        if (useDefauls.stampLogDataArray[0].date) == dateString{
-            
-        }else{
-            search()
-        }
-    }
+
     
     
     func search(){
