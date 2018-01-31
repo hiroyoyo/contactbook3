@@ -23,6 +23,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background1321.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="qbi-56-tce">
+                                <rect key="frame" x="0.0" y="64" width="414" height="623"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MCk-7s-MLH" userLabel="Stamp Btn">
                                 <rect key="frame" x="60" y="196.66666666666663" width="294" height="294"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -65,19 +69,16 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.93245061730000001" green="1" blue="0.8697288473" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="8b3-Rc-4vO" firstAttribute="leading" secondItem="vX3-bC-d5y" secondAttribute="leadingMargin" id="DBv-84-NRz"/>
-                            <constraint firstItem="8b3-Rc-4vO" firstAttribute="centerX" secondItem="vX3-bC-d5y" secondAttribute="centerX" id="DFK-EM-QlK"/>
                             <constraint firstItem="zSY-Gw-lxU" firstAttribute="top" secondItem="jVg-RP-9nW" secondAttribute="bottom" constant="15" id="F1W-Tc-YOI"/>
                             <constraint firstItem="8b3-Rc-4vO" firstAttribute="centerX" secondItem="vX3-bC-d5y" secondAttribute="centerX" id="IDX-A8-8Kf"/>
-                            <constraint firstItem="8b3-Rc-4vO" firstAttribute="trailing" secondItem="vX3-bC-d5y" secondAttribute="trailingMargin" id="RhV-yA-SDw"/>
                             <constraint firstItem="MCk-7s-MLH" firstAttribute="top" secondItem="8b3-Rc-4vO" secondAttribute="bottom" constant="25" id="YjE-1v-0m9"/>
                             <constraint firstAttribute="trailingMargin" secondItem="jVg-RP-9nW" secondAttribute="trailing" id="a80-WW-583"/>
                             <constraint firstItem="MCk-7s-MLH" firstAttribute="centerX" secondItem="vX3-bC-d5y" secondAttribute="centerX" id="aZL-pu-cye"/>
                             <constraint firstItem="MCk-7s-MLH" firstAttribute="centerY" secondItem="vX3-bC-d5y" secondAttribute="centerY" id="bqK-is-EZH"/>
                             <constraint firstItem="jVg-RP-9nW" firstAttribute="trailing" secondItem="vX3-bC-d5y" secondAttribute="trailingMargin" id="fOS-Np-QUK"/>
-                            <constraint firstItem="8b3-Rc-4vO" firstAttribute="leading" secondItem="vX3-bC-d5y" secondAttribute="leadingMargin" id="gqV-Xv-PHd"/>
                             <constraint firstAttribute="trailingMargin" secondItem="MCk-7s-MLH" secondAttribute="trailing" constant="40" id="hrZ-3Y-hDo"/>
                             <constraint firstItem="8b3-Rc-4vO" firstAttribute="trailing" secondItem="vX3-bC-d5y" secondAttribute="trailingMargin" id="k2a-H1-hba"/>
                             <constraint firstItem="8b3-Rc-4vO" firstAttribute="top" secondItem="rTV-0r-ULX" secondAttribute="bottom" constant="8" id="sv2-hR-p5D"/>
@@ -140,6 +141,7 @@
     </scenes>
     <resources>
         <image name="background" width="349" height="349"/>
+        <image name="background1321.jpg" width="1240" height="1754"/>
         <image name="star" width="21" height="21"/>
     </resources>
 </document>

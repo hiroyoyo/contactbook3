@@ -24,7 +24,8 @@ class chat: JSQMessagesViewController {
         senderId = sendUser
         navigationItem.title="もも組"
         self.navigationController?.navigationBar.barTintColor = UIColor(red: 244/255, green: 249/255, blue: 238/255, alpha: 1)
-        self.collectionView.backgroundColor = UIColor(red: 238/255, green: 1, blue: 222/255, alpha: 1)
+        initImageView()
+
         
         
         let ref = Database.database().reference()
@@ -95,6 +96,27 @@ class chat: JSQMessagesViewController {
         }
         )
     }
+    private func initImageView(){
+        // UIImage インスタンスの生成
+        // 画像はAssetsに入れてないのとjpgなので拡張子を入れます
+        let image1:UIImage = UIImage(named:"line.png")!
+        
+        // UIImageView 初期化
+        let imageView = UIImageView(image:image1)
+        
+        // 画面の横幅を取得
+        let screenWidth:CGFloat = view.frame.size.width
+        let screenHeight:CGFloat = view.frame.size.height
+        
+        // 画像の中心を画面の中心に設定
+        imageView.center = CGPoint(x:screenWidth/2, y:screenHeight/2)
+        imageView.contentMode = UIViewContentMode.redraw
+        // UIImageViewのインスタンスをビューに追加
+        
+        self.view.sendSubview(toBack: imageView)
+        
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         
         //        let imgBackground:UIImageView = UIImageView(frame: self.view.bounds)

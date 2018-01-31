@@ -30,9 +30,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background1321.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Yt2-gl-ioc">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                            </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4fj-cH-vGq">
                                 <rect key="frame" x="16" y="64" width="343" height="554"/>
-                                <color key="backgroundColor" red="0.93245061730000001" green="1" blue="0.8697288473" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.93245061730000001" green="1" blue="0.8697288473" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MyCell" id="OHX-lQ-o6E" customClass="ContactBookTableViewCell" customModule="contactbook" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="343" height="44"/>
@@ -49,9 +52,9 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <color key="backgroundColor" red="0.93333333333333335" green="1" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <color key="backgroundColor" red="0.93245061730000001" green="1" blue="0.8697288473" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.93245061730000001" green="1" blue="0.8697288473" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="backgroundColor" red="0.93245061730000001" green="1" blue="0.8697288473" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
                                         <connections>
                                             <outlet property="Label" destination="WJf-Sv-q0c" id="l6c-7U-cNK"/>
                                         </connections>
@@ -63,12 +66,16 @@
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" red="0.93245061730000001" green="1" blue="0.8697288473" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.93245061730000001" green="1" blue="0.8697288473" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Yt2-gl-ioc" secondAttribute="trailing" id="1jK-YB-4bu"/>
+                            <constraint firstItem="Yt2-gl-ioc" firstAttribute="leading" secondItem="shc-t4-tJR" secondAttribute="leading" id="3iH-ML-NM4"/>
                             <constraint firstItem="4fj-cH-vGq" firstAttribute="leading" secondItem="shc-t4-tJR" secondAttribute="leadingMargin" id="GGt-Ht-2yw"/>
                             <constraint firstItem="4fj-cH-vGq" firstAttribute="trailing" secondItem="shc-t4-tJR" secondAttribute="trailingMargin" id="bqt-ab-a8h"/>
                             <constraint firstItem="6Qt-Kk-VkV" firstAttribute="top" secondItem="4fj-cH-vGq" secondAttribute="bottom" id="jQ4-4s-gkF"/>
+                            <constraint firstItem="6Qt-Kk-VkV" firstAttribute="top" secondItem="Yt2-gl-ioc" secondAttribute="bottom" id="nNS-NG-iDj"/>
                             <constraint firstItem="4fj-cH-vGq" firstAttribute="top" secondItem="FJP-pQ-3Rs" secondAttribute="bottom" id="qNL-kT-HWt"/>
+                            <constraint firstItem="Yt2-gl-ioc" firstAttribute="top" secondItem="FJP-pQ-3Rs" secondAttribute="bottom" id="zn1-2d-y7b"/>
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" top="YES"/>
@@ -103,6 +110,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="background1321.jpg" width="1240" height="1754"/>
         <image name="book" width="32" height="32"/>
     </resources>
 </document>
