@@ -1,0 +1,22 @@
+//
+//  ContactBookItem.swift
+//  contactbook
+//
+//  Created by ryota on 2017/12/21.
+//  Copyright © 2017年 佐野浩代. All rights reserved.
+//
+
+import UIKit
+
+class ContactBookItem: NSObject {
+    var id:String
+    var date:String
+    var text:String
+    
+    init(idSet:String,dateSet:String,textSet:String) {
+        self.id = idSet
+        self.date=dateSet
+        self.text=textSet
+        
+    }
+}

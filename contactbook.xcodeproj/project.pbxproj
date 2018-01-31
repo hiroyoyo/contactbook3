@@ -8,13 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		5014133F9F0E73A013123C3D /* Pods_contactbook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 677677C188E847FE92FA57FA /* Pods_contactbook.framework */; };
-		A30880941FD6C5FE0089C365 /* Main 2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A30880921FD6C5FD0089C365 /* Main 2.storyboard */; };
-		A30880991FD6C8360089C365 /* HomeViewController 2.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30880981FD6C8360089C365 /* HomeViewController 2.swift */; };
+		A30880991FD6C8360089C365 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30880981FD6C8360089C365 /* HomeViewController.swift */; };
 		A322909C1FEB3EC700549565 /* ContactBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A322909B1FEB3EC700549565 /* ContactBookViewController.swift */; };
 		A322909E1FEB44A600549565 /* ContactBookItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A322909D1FEB44A600549565 /* ContactBookItem.swift */; };
 		A32290A01FEC856A00549565 /* contactBookUserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = A322909F1FEC856A00549565 /* contactBookUserDefault.swift */; };
 		A32290A21FECA1C600549565 /* ContactBookTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32290A11FECA1C600549565 /* ContactBookTableViewCell.swift */; };
 		A32290A41FECC38A00549565 /* contactBookDietail.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32290A31FECC38A00549565 /* contactBookDietail.swift */; };
+		A33A3EF020215E9600092843 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A33A3EEF20215E9600092843 /* Main.storyboard */; };
 		A33ABBEE1FD8DAB2004CB584 /* userData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33ABBE81FD8DAB0004CB584 /* userData.swift */; };
 		A33ABBEF1FD8DAB2004CB584 /* userDataExtensionUserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33ABBE91FD8DAB1004CB584 /* userDataExtensionUserDefault.swift */; };
 		A33ABBF01FD8DAB2004CB584 /* loginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33ABBEA1FD8DAB1004CB584 /* loginViewController.swift */; };
@@ -42,6 +42,7 @@
 		A3A3E5D61FD6E00F00C0DF69 /* NotificationDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3A3E5D11FD6E00F00C0DF69 /* NotificationDetail.storyboard */; };
 		A3A3E5D71FD6E00F00C0DF69 /* NotificationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A3E5D21FD6E00F00C0DF69 /* NotificationItem.swift */; };
 		A3BAA0F01F7B4AF4003B384A /* stamoChoics.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3BAA0EF1F7B4AF4003B384A /* stamoChoics.storyboard */; };
+		A3BEE7812021DCAE00421FA4 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BEE7802021DCAE00421FA4 /* TabBarViewController.swift */; };
 		A3C013DF1FF8BA6000A4F701 /* NotificationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C013DE1FF8BA6000A4F701 /* NotificationTableViewCell.swift */; };
 		A3C55F221FAA9DD600A09783 /* StampHistoryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C55F211FAA9DD600A09783 /* StampHistoryItem.swift */; };
 		A8180D90E934AD9605F692E4 /* Pods_contactbookTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2054808D749649FA6B00CA95 /* Pods_contactbookTests.framework */; };
@@ -73,13 +74,13 @@
 		677677C188E847FE92FA57FA /* Pods_contactbook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_contactbook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7021DA337BBF59D9F891C424 /* Pods-contactbookTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-contactbookTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-contactbookTests/Pods-contactbookTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8DB16390574859BAD983EC77 /* Pods-contactbook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-contactbook.release.xcconfig"; path = "Pods/Target Support Files/Pods-contactbook/Pods-contactbook.release.xcconfig"; sourceTree = "<group>"; };
-		A30880931FD6C5FD0089C365 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Base.lproj/Main 2.storyboard"; sourceTree = "<group>"; };
-		A30880981FD6C8360089C365 /* HomeViewController 2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HomeViewController 2.swift"; sourceTree = "<group>"; };
+		A30880981FD6C8360089C365 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		A322909B1FEB3EC700549565 /* ContactBookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactBookViewController.swift; sourceTree = "<group>"; };
 		A322909D1FEB44A600549565 /* ContactBookItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactBookItem.swift; sourceTree = "<group>"; };
 		A322909F1FEC856A00549565 /* contactBookUserDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = contactBookUserDefault.swift; sourceTree = "<group>"; };
 		A32290A11FECA1C600549565 /* ContactBookTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactBookTableViewCell.swift; sourceTree = "<group>"; };
 		A32290A31FECC38A00549565 /* contactBookDietail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = contactBookDietail.swift; sourceTree = "<group>"; };
+		A33A3EEF20215E9600092843 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		A33ABBE81FD8DAB0004CB584 /* userData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = userData.swift; sourceTree = "<group>"; };
 		A33ABBE91FD8DAB1004CB584 /* userDataExtensionUserDefault.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = userDataExtensionUserDefault.swift; sourceTree = "<group>"; };
 		A33ABBEA1FD8DAB1004CB584 /* loginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = loginViewController.swift; sourceTree = "<group>"; };
@@ -108,6 +109,7 @@
 		A3A3E5D11FD6E00F00C0DF69 /* NotificationDetail.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = NotificationDetail.storyboard; sourceTree = "<group>"; };
 		A3A3E5D21FD6E00F00C0DF69 /* NotificationItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationItem.swift; sourceTree = "<group>"; };
 		A3BAA0EF1F7B4AF4003B384A /* stamoChoics.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = stamoChoics.storyboard; sourceTree = "<group>"; };
+		A3BEE7802021DCAE00421FA4 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		A3C013DE1FF8BA6000A4F701 /* NotificationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTableViewCell.swift; sourceTree = "<group>"; };
 		A3C55F211FAA9DD600A09783 /* StampHistoryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StampHistoryItem.swift; sourceTree = "<group>"; };
 		AC1BB7A61F5F80FE003BE03E /* contactbook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = contactbook.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -156,6 +158,101 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		A33A3EE720215A7000092843 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				A33A3EEF20215E9600092843 /* Main.storyboard */,
+				A30880981FD6C8360089C365 /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		A33A3EE820215A9400092843 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				A363672F1F70A94B00A4D1A9 /* GoogleService-Info.plist */,
+				A36367311F70A97400A4D1A9 /* chat.swift */,
+				AC1BB7CD1F5F820A003BE03E /* chat.storyboard */,
+			);
+			name = Chat;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		A33A3EE920215AC200092843 /* ContactBook */ = {
+			isa = PBXGroup;
+			children = (
+				A322909B1FEB3EC700549565 /* ContactBookViewController.swift */,
+				A322909D1FEB44A600549565 /* ContactBookItem.swift */,
+				A322909F1FEC856A00549565 /* contactBookUserDefault.swift */,
+				AC1BB7D11F5F8230003BE03E /* contactbook.storyboard */,
+				A349AAF41FE784C700D3F418 /* contactbookDietail.storyboard */,
+				A32290A31FECC38A00549565 /* contactBookDietail.swift */,
+				A32290A11FECA1C600549565 /* ContactBookTableViewCell.swift */,
+			);
+			name = ContactBook;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		A33A3EEA20215B0700092843 /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				A3C013DE1FF8BA6000A4F701 /* NotificationTableViewCell.swift */,
+				A3A3E5CF1FD6E00F00C0DF69 /* notification.storyboard */,
+				A3BEE7802021DCAE00421FA4 /* TabBarViewController.swift */,
+				A3A3E5D11FD6E00F00C0DF69 /* NotificationDetail.storyboard */,
+				A35DE7881FF7B51800DB4D5E /* NotificationUserDefault.swift */,
+				A3A3E5CE1FD6E00E00C0DF69 /* NotificationDetailViewController.swift */,
+				A3A3E5D21FD6E00F00C0DF69 /* NotificationItem.swift */,
+				A3A3E5D01FD6E00F00C0DF69 /* NotificationViewController.swift */,
+			);
+			path = Notification;
+			sourceTree = "<group>";
+		};
+		A33A3EEB20215B2800092843 /* Stamp */ = {
+			isa = PBXGroup;
+			children = (
+				A33BA3981F787B67008C111E /* Stamp.swift */,
+				AC1BB7D51F5F8254003BE03E /* stamp.storyboard */,
+				A33A3EEE20215BF600092843 /* Choics */,
+				A33A3EED20215BB400092843 /* History */,
+			);
+			path = Stamp;
+			sourceTree = "<group>";
+		};
+		A33A3EEC20215B7900092843 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				A33ABBED1FD8DAB2004CB584 /* registrationViewController.swift */,
+				A33ABBE91FD8DAB1004CB584 /* userDataExtensionUserDefault.swift */,
+				A33ABBE81FD8DAB0004CB584 /* userData.swift */,
+				A33ABBEC1FD8DAB1004CB584 /* login.storyboard */,
+				A33ABBEA1FD8DAB1004CB584 /* loginViewController.swift */,
+			);
+			name = Login;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		A33A3EED20215BB400092843 /* History */ = {
+			isa = PBXGroup;
+			children = (
+				A39E67D21F8F268B00ABDA1B /* TableViewCell.swift */,
+				A33BA39A1F787C54008C111E /* stampHistory.storyboard */,
+				A33BA39C1F788036008C111E /* StampHistory.swift */,
+				A3C55F211FAA9DD600A09783 /* StampHistoryItem.swift */,
+				A3A3E5C21FD6DB5000C0DF69 /* stampHistoryUserDefault.swift */,
+			);
+			path = History;
+			sourceTree = "<group>";
+		};
+		A33A3EEE20215BF600092843 /* Choics */ = {
+			isa = PBXGroup;
+			children = (
+				A33BA3A41F78A1DF008C111E /* StampChoics.swift */,
+				A3BAA0EF1F7B4AF4003B384A /* stamoChoics.storyboard */,
+			);
+			path = Choics;
+			sourceTree = "<group>";
+		};
 		AC1BB79D1F5F80FE003BE03E = {
 			isa = PBXGroup;
 			children = (
@@ -179,44 +276,17 @@
 		AC1BB7A81F5F80FE003BE03E /* contactbook */ = {
 			isa = PBXGroup;
 			children = (
-				A3C013DE1FF8BA6000A4F701 /* NotificationTableViewCell.swift */,
-				A322909B1FEB3EC700549565 /* ContactBookViewController.swift */,
-				A36367311F70A97400A4D1A9 /* chat.swift */,
+				A33A3EEC20215B7900092843 /* Login */,
+				A33A3EEB20215B2800092843 /* Stamp */,
+				A33A3EEA20215B0700092843 /* Notification */,
+				A33A3EE920215AC200092843 /* ContactBook */,
+				A33A3EE820215A9400092843 /* Chat */,
+				A33A3EE720215A7000092843 /* Home */,
 				AC1BB7A91F5F80FE003BE03E /* AppDelegate.swift */,
-				A30880981FD6C8360089C365 /* HomeViewController 2.swift */,
+				AC1BB7CF1F5F821B003BE03E /* setting.storyboard */,
 				AC1BB7D91F5FCA87003BE03E /* SettingViewController.swift */,
-				A33BA3981F787B67008C111E /* Stamp.swift */,
-				A32290A11FECA1C600549565 /* ContactBookTableViewCell.swift */,
-				A33BA39C1F788036008C111E /* StampHistory.swift */,
-				A3C55F211FAA9DD600A09783 /* StampHistoryItem.swift */,
-				A322909D1FEB44A600549565 /* ContactBookItem.swift */,
-				A33BA3A41F78A1DF008C111E /* StampChoics.swift */,
-				A3A3E5C21FD6DB5000C0DF69 /* stampHistoryUserDefault.swift */,
-				A322909F1FEC856A00549565 /* contactBookUserDefault.swift */,
-				A39E67D21F8F268B00ABDA1B /* TableViewCell.swift */,
-				A30880921FD6C5FD0089C365 /* Main 2.storyboard */,
-				A33ABBEC1FD8DAB1004CB584 /* login.storyboard */,
-				A33ABBEA1FD8DAB1004CB584 /* loginViewController.swift */,
 				A33ABBEB1FD8DAB1004CB584 /* registration.storyboard */,
 				A33ABBF41FD8DB35004CB584 /* Bridging-Header.h */,
-				A33ABBED1FD8DAB2004CB584 /* registrationViewController.swift */,
-				A33ABBE81FD8DAB0004CB584 /* userData.swift */,
-				A33ABBE91FD8DAB1004CB584 /* userDataExtensionUserDefault.swift */,
-				A3A3E5CF1FD6E00F00C0DF69 /* notification.storyboard */,
-				A3A3E5D11FD6E00F00C0DF69 /* NotificationDetail.storyboard */,
-				A35DE7881FF7B51800DB4D5E /* NotificationUserDefault.swift */,
-				A3A3E5CE1FD6E00E00C0DF69 /* NotificationDetailViewController.swift */,
-				A3A3E5D21FD6E00F00C0DF69 /* NotificationItem.swift */,
-				A3A3E5D01FD6E00F00C0DF69 /* NotificationViewController.swift */,
-				A3BAA0EF1F7B4AF4003B384A /* stamoChoics.storyboard */,
-				AC1BB7CD1F5F820A003BE03E /* chat.storyboard */,
-				AC1BB7CF1F5F821B003BE03E /* setting.storyboard */,
-				AC1BB7D11F5F8230003BE03E /* contactbook.storyboard */,
-				A349AAF41FE784C700D3F418 /* contactbookDietail.storyboard */,
-				A32290A31FECC38A00549565 /* contactBookDietail.swift */,
-				AC1BB7D51F5F8254003BE03E /* stamp.storyboard */,
-				A33BA39A1F787C54008C111E /* stampHistory.storyboard */,
-				A363672F1F70A94B00A4D1A9 /* GoogleService-Info.plist */,
 				A33BA3A21F78A115008C111E /* Stamp.xcassets */,
 				AC1BB7CB1F5F818C003BE03E /* Media.xcassets */,
 				AC1BB7B01F5F80FE003BE03E /* Assets.xcassets */,
@@ -340,6 +410,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A33A3EF020215E9600092843 /* Main.storyboard in Resources */,
 				AC1BB7CC1F5F818C003BE03E /* Media.xcassets in Resources */,
 				AC1BB7B41F5F80FE003BE03E /* LaunchScreen.storyboard in Resources */,
 				A3BAA0F01F7B4AF4003B384A /* stamoChoics.storyboard in Resources */,
@@ -347,7 +418,6 @@
 				AC1BB7B11F5F80FE003BE03E /* Assets.xcassets in Resources */,
 				A3A3E5BE1FD6DA0800C0DF69 /* line2.png in Resources */,
 				A3A3E5D61FD6E00F00C0DF69 /* NotificationDetail.storyboard in Resources */,
-				A30880941FD6C5FE0089C365 /* Main 2.storyboard in Resources */,
 				A33ABBF21FD8DAB2004CB584 /* login.storyboard in Resources */,
 				A33BA3A31F78A115008C111E /* Stamp.xcassets in Resources */,
 				A349AAF51FE784C700D3F418 /* contactbookDietail.storyboard in Resources */,
@@ -501,6 +571,7 @@
 				A36367321F70A97400A4D1A9 /* chat.swift in Sources */,
 				A3C55F221FAA9DD600A09783 /* StampHistoryItem.swift in Sources */,
 				A3C013DF1FF8BA6000A4F701 /* NotificationTableViewCell.swift in Sources */,
+				A3BEE7812021DCAE00421FA4 /* TabBarViewController.swift in Sources */,
 				AC1BB7AA1F5F80FE003BE03E /* AppDelegate.swift in Sources */,
 				AC1BB7DA1F5FCA87003BE03E /* SettingViewController.swift in Sources */,
 				A33ABBEE1FD8DAB2004CB584 /* userData.swift in Sources */,
@@ -510,7 +581,7 @@
 				A33ABBF01FD8DAB2004CB584 /* loginViewController.swift in Sources */,
 				A32290A01FEC856A00549565 /* contactBookUserDefault.swift in Sources */,
 				A33ABBEF1FD8DAB2004CB584 /* userDataExtensionUserDefault.swift in Sources */,
-				A30880991FD6C8360089C365 /* HomeViewController 2.swift in Sources */,
+				A30880991FD6C8360089C365 /* HomeViewController.swift in Sources */,
 				A3A3E5C31FD6DB5000C0DF69 /* stampHistoryUserDefault.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -534,14 +605,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		A30880921FD6C5FD0089C365 /* Main 2.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A30880931FD6C5FD0089C365 /* Base */,
-			);
-			name = "Main 2.storyboard";
-			sourceTree = "<group>";
-		};
 		AC1BB7B21F5F80FE003BE03E /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -664,6 +727,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F76078BF55A90BCB5425EE6E /* Pods-contactbook.debug.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = F39YLTWJFM;
 				INFOPLIST_FILE = contactbook/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
@@ -681,6 +746,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8DB16390574859BAD983EC77 /* Pods-contactbook.release.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = F39YLTWJFM;
 				INFOPLIST_FILE = contactbook/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;

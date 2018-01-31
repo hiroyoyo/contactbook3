@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="tgz-sN-xmC">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Stamp Choics-->
+        <scene sceneID="quZ-B6-JL0">
+            <objects>
+                <viewController storyboardIdentifier="StampChoics" useStoryboardIdentifierAsRestorationIdentifier="YES" id="tgz-sN-xmC" customClass="StampChoics" customModule="contactbook" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="BNJ-9k-rT4"/>
+                        <viewControllerLayoutGuide type="bottom" id="tHL-nt-Sh6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tIV-To-8aj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="sEb-BA-Eb1">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.93725490196078431" green="1" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="2" id="KId-fj-rCd">
+                                    <size key="itemSize" width="113" height="104"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="any-bT-iPX">
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="1" translatesAutoresizingMaskIntoConstraints="NO" id="hf8-4m-oS0">
+                                                    <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="hf8-4m-oS0" secondAttribute="trailing" id="9Gu-de-ok1"/>
+                                            <constraint firstAttribute="bottom" secondItem="hf8-4m-oS0" secondAttribute="bottom" id="OQZ-TZ-id7"/>
+                                            <constraint firstItem="hf8-4m-oS0" firstAttribute="top" secondItem="any-bT-iPX" secondAttribute="top" id="kYu-4Q-JVa"/>
+                                            <constraint firstItem="hf8-4m-oS0" firstAttribute="leading" secondItem="any-bT-iPX" secondAttribute="leading" id="w6N-mr-OPx"/>
+                                        </constraints>
+                                        <size key="customSize" width="150" height="150"/>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="tgz-sN-xmC" id="M9v-MM-wha"/>
+                                    <outlet property="delegate" destination="tgz-sN-xmC" id="ruw-ja-zYN"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="sEb-BA-Eb1" firstAttribute="top" secondItem="tIV-To-8aj" secondAttribute="top" id="8bw-00-dWL"/>
+                            <constraint firstAttribute="trailing" secondItem="sEb-BA-Eb1" secondAttribute="trailing" id="Vw6-d3-D8E"/>
+                            <constraint firstItem="sEb-BA-Eb1" firstAttribute="leading" secondItem="tIV-To-8aj" secondAttribute="leading" id="YgB-hz-ABj"/>
+                            <constraint firstItem="tHL-nt-Sh6" firstAttribute="top" secondItem="sEb-BA-Eb1" secondAttribute="bottom" id="mZL-5b-ASO"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <segue destination="MDD-Od-qN1" kind="show" identifier="Stamp" action="showDetailViewController:sender:" id="LVE-LB-RQO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z0W-e4-tz7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="64.799999999999997" y="119.1904047976012"/>
+        </scene>
+        <!--stamp-->
+        <scene sceneID="UrQ-oV-ILr">
+            <objects>
+                <viewControllerPlaceholder storyboardName="stamp" id="MDD-Od-qN1" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W2d-Bq-h8L" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="878" y="157"/>
+        </scene>
+    </scenes>
+</document>
