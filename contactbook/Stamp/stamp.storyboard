@@ -23,9 +23,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background1321.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="qbi-56-tce">
+                            <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background1321.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="qbi-56-tce">
                                 <rect key="frame" x="0.0" y="64" width="414" height="623"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MCk-7s-MLH" userLabel="Stamp Btn">
                                 <rect key="frame" x="60" y="196.66666666666663" width="294" height="294"/>
@@ -62,8 +61,8 @@
                                     <segue destination="fHT-D5-g8G" kind="show" id="5ks-jT-SLk"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="読み込み中" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8b3-Rc-4vO">
-                                <rect key="frame" x="20" y="72" width="374" height="99"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="読み込み中" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8b3-Rc-4vO">
+                                <rect key="frame" x="156" y="131" width="102" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -71,19 +70,19 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="8b3-Rc-4vO" firstAttribute="leading" secondItem="vX3-bC-d5y" secondAttribute="leadingMargin" id="DBv-84-NRz"/>
+                            <constraint firstItem="qbi-56-tce" firstAttribute="top" secondItem="rTV-0r-ULX" secondAttribute="bottom" id="9Qw-R6-mvN"/>
                             <constraint firstItem="zSY-Gw-lxU" firstAttribute="top" secondItem="jVg-RP-9nW" secondAttribute="bottom" constant="15" id="F1W-Tc-YOI"/>
                             <constraint firstItem="8b3-Rc-4vO" firstAttribute="centerX" secondItem="vX3-bC-d5y" secondAttribute="centerX" id="IDX-A8-8Kf"/>
-                            <constraint firstItem="MCk-7s-MLH" firstAttribute="top" secondItem="8b3-Rc-4vO" secondAttribute="bottom" constant="25" id="YjE-1v-0m9"/>
+                            <constraint firstItem="qbi-56-tce" firstAttribute="leading" secondItem="vX3-bC-d5y" secondAttribute="leading" id="XcA-Hq-JIq"/>
+                            <constraint firstItem="MCk-7s-MLH" firstAttribute="top" secondItem="8b3-Rc-4vO" secondAttribute="bottom" constant="41.666666666666629" id="YjE-1v-0m9"/>
                             <constraint firstAttribute="trailingMargin" secondItem="jVg-RP-9nW" secondAttribute="trailing" id="a80-WW-583"/>
                             <constraint firstItem="MCk-7s-MLH" firstAttribute="centerX" secondItem="vX3-bC-d5y" secondAttribute="centerX" id="aZL-pu-cye"/>
                             <constraint firstItem="MCk-7s-MLH" firstAttribute="centerY" secondItem="vX3-bC-d5y" secondAttribute="centerY" id="bqK-is-EZH"/>
                             <constraint firstItem="jVg-RP-9nW" firstAttribute="trailing" secondItem="vX3-bC-d5y" secondAttribute="trailingMargin" id="fOS-Np-QUK"/>
                             <constraint firstAttribute="trailingMargin" secondItem="MCk-7s-MLH" secondAttribute="trailing" constant="40" id="hrZ-3Y-hDo"/>
-                            <constraint firstItem="8b3-Rc-4vO" firstAttribute="trailing" secondItem="vX3-bC-d5y" secondAttribute="trailingMargin" id="k2a-H1-hba"/>
-                            <constraint firstItem="8b3-Rc-4vO" firstAttribute="top" secondItem="rTV-0r-ULX" secondAttribute="bottom" constant="8" id="sv2-hR-p5D"/>
+                            <constraint firstAttribute="trailing" secondItem="qbi-56-tce" secondAttribute="trailing" id="qub-T0-cK4"/>
+                            <constraint firstItem="zSY-Gw-lxU" firstAttribute="top" secondItem="qbi-56-tce" secondAttribute="bottom" id="sUt-YR-sUt"/>
                             <constraint firstItem="MCk-7s-MLH" firstAttribute="leading" secondItem="vX3-bC-d5y" secondAttribute="leadingMargin" constant="40" id="uCe-lf-oDU"/>
-                            <constraint firstItem="8b3-Rc-4vO" firstAttribute="centerX" secondItem="vX3-bC-d5y" secondAttribute="centerX" id="w0n-2r-j2t"/>
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" top="YES"/>
@@ -119,12 +118,13 @@
             </objects>
             <point key="canvasLocation" x="1447" y="174"/>
         </scene>
-        <!--スタンプ帳だお-->
+        <!--スタンプ帳-->
         <scene sceneID="7ua-8u-V59">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="HUN-to-0iS" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="スタンプ帳だお" image="star" id="jM3-rO-YWC"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="HUN-to-0iS" userLabel="スタンプ帳" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="スタンプ帳" image="star" id="jM3-rO-YWC" userLabel="スタンプ帳"/>
                     <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="vhS-hQ-b2R">
                         <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>

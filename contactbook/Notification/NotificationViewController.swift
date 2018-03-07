@@ -21,10 +21,10 @@ import UIKit
 class NotificationViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     
-    var grade="0"
+    var grade="4"
     var NoficationItemList:Array<NotificationItem> = []
     var useDefauls = UserDefaults.standard
-    
+    let refreshControl = UIRefreshControl()
     @IBOutlet weak var tableView: UITableView!
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -53,6 +53,20 @@ class NotificationViewController: UIViewController, UITableViewDataSource, UITab
         cell.label.text = ("\(useDefauls.notificationLogDataArray[indexPath.row].date) \(useDefauls.notificationLogDataArray[indexPath.row].title)")
         
         return cell
+        
+    }
+    @objc func refresh(sender: UIRefreshControl) {
+        
+
+        
+        search()
+        //読込中の表示を見るためにあえて2秒スリープする。
+
+        self.refreshControl.endRefreshing()
+        //テーブルを再読み込みする。
+        tableView.reloadData()
+        
+        //読込中の表示を消す。
         
     }
     
@@ -98,7 +112,7 @@ class NotificationViewController: UIViewController, UITableViewDataSource, UITab
     
     
     func parseData(src:[Any]){
-        
+        self.NoficationItemList.removeAll()
         for val in src {
           
             
@@ -151,14 +165,16 @@ class NotificationViewController: UIViewController, UITableViewDataSource, UITab
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        
+        self.navigationController?.navigationBar.barTintColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1)
         search()
         
-        // Do any additional setup after loading the view, typically from a nib.
-        
-        
-        
+        tableView.refreshControl = refreshControl
+        refreshControl.addTarget(self, action: #selector(NotificationViewController.refresh(sender:)), for: .valueChanged)
+        refreshControl.endRefreshing()
+       
     }
+
+
     
     
     

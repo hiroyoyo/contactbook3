@@ -11,7 +11,7 @@ import UIKit
 class StampHistory: UIViewController,UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var table: UITableView!
-    static var child_id:String="2017002"
+    static var child_id:String="2013004"
     var stampHst:Array<StampHistoryItem>=[]
     var formatter = DateFormatter()
     var useDefauls = UserDefaults.standard

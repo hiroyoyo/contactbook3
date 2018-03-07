@@ -15,7 +15,7 @@ import FirebaseDatabase
 class chat: JSQMessagesViewController {
 
     
-    let sendUser = "福本"
+    let sendUser = "ふくもと りょうた"
     var messages: [JSQMessage] = []
     
     override func viewDidLoad() {
@@ -23,7 +23,8 @@ class chat: JSQMessagesViewController {
         senderDisplayName = sendUser
         senderId = sendUser
         navigationItem.title="もも組"
-        self.navigationController?.navigationBar.barTintColor = UIColor(red: 244/255, green: 249/255, blue: 238/255, alpha: 1)
+        self.navigationController?.navigationBar.barTintColor = UIColor(red: 230/255, green: 230/255, blue: 230/255, alpha: 1)
+
         initImageView()
 
         
@@ -113,7 +114,7 @@ class chat: JSQMessagesViewController {
         imageView.contentMode = UIViewContentMode.redraw
         // UIImageViewのインスタンスをビューに追加
         
-        self.view.sendSubview(toBack: imageView)
+        self.view.bringSubview(toFront: imageView)
         
     }
     

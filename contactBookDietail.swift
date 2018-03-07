@@ -16,7 +16,9 @@ class contactBookDietail: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+       
         TextView.text = selectedText
+        print(TextView.text)
         seter(id: selectedId)
         // Do any additional setup after loading the view.
     }

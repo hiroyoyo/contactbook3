@@ -18,16 +18,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Pb1-jK-YI5">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.93725490199999995" green="1" blue="0.97254901959999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background1301.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="RGF-7w-dFG">
+                                <rect key="frame" x="0.0" y="20" width="375" height="627"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Pb1-jK-YI5">
+                                <rect key="frame" x="16" y="20" width="343" height="627"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
-                        <color key="backgroundColor" red="0.93725490199999995" green="1" blue="0.97254901959999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="RGF-7w-dFG" firstAttribute="top" secondItem="FSj-Dt-GQR" secondAttribute="top" id="38g-Wq-i5p"/>
+                            <constraint firstItem="RGF-7w-dFG" firstAttribute="trailing" secondItem="Pb1-jK-YI5" secondAttribute="trailing" constant="16" id="9BB-EW-XUa"/>
+                            <constraint firstAttribute="bottom" secondItem="RGF-7w-dFG" secondAttribute="bottom" constant="20" symbolic="YES" id="Gdf-91-227"/>
+                            <constraint firstItem="Pb1-jK-YI5" firstAttribute="leading" secondItem="OHs-8I-OGz" secondAttribute="leading" constant="16" id="Uwc-EX-7Pr"/>
+                            <constraint firstItem="Pb1-jK-YI5" firstAttribute="top" secondItem="FSj-Dt-GQR" secondAttribute="top" id="aS9-aJ-1nO"/>
+                            <constraint firstAttribute="trailing" secondItem="RGF-7w-dFG" secondAttribute="trailing" id="bh5-CG-brC"/>
+                            <constraint firstItem="Pb1-jK-YI5" firstAttribute="bottom" secondItem="RGF-7w-dFG" secondAttribute="bottom" id="leA-sf-umu"/>
+                            <constraint firstItem="RGF-7w-dFG" firstAttribute="leading" secondItem="Pb1-jK-YI5" secondAttribute="leading" constant="-16" id="nND-G3-1y5"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="FSj-Dt-GQR"/>
                     </view>
                     <connections>
@@ -36,7 +46,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b06-63-Dr4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2" y="175"/>
+            <point key="canvasLocation" x="0.80000000000000004" y="174.96251874062969"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="background1301.jpg" width="1240" height="1754"/>
+    </resources>
 </document>

@@ -28,6 +28,7 @@
 		A33BA3A51F78A1DF008C111E /* StampChoics.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33BA3A41F78A1DF008C111E /* StampChoics.swift */; };
 		A349AAF51FE784C700D3F418 /* contactbookDietail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A349AAF41FE784C700D3F418 /* contactbookDietail.storyboard */; };
 		A35585EF20220E7C00B0B582 /* background1321.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A35585EE20220E7B00B0B582 /* background1321.jpg */; };
+		A35585F12022ADEC00B0B582 /* background1301.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A35585F02022ADEC00B0B582 /* background1301.jpg */; };
 		A35DE7891FF7B51800DB4D5E /* NotificationUserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35DE7881FF7B51800DB4D5E /* NotificationUserDefault.swift */; };
 		A36367301F70A94B00A4D1A9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A363672F1F70A94B00A4D1A9 /* GoogleService-Info.plist */; };
 		A36367321F70A97400A4D1A9 /* chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36367311F70A97400A4D1A9 /* chat.swift */; };
@@ -96,6 +97,7 @@
 		A33BA3A41F78A1DF008C111E /* StampChoics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StampChoics.swift; sourceTree = "<group>"; };
 		A349AAF41FE784C700D3F418 /* contactbookDietail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = contactbookDietail.storyboard; sourceTree = "<group>"; };
 		A35585EE20220E7B00B0B582 /* background1321.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background1321.jpg; sourceTree = "<group>"; };
+		A35585F02022ADEC00B0B582 /* background1301.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background1301.jpg; sourceTree = "<group>"; };
 		A35DE7881FF7B51800DB4D5E /* NotificationUserDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationUserDefault.swift; sourceTree = "<group>"; };
 		A363672F1F70A94B00A4D1A9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A36367311F70A97400A4D1A9 /* chat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = chat.swift; sourceTree = "<group>"; };
@@ -296,6 +298,7 @@
 				A3A3E5BC1FD6DA0700C0DF69 /* illust1399_thumb.gif */,
 				A3A3E5BB1FD6DA0700C0DF69 /* line.png */,
 				A3A3E5BA1FD6DA0600C0DF69 /* line2.png */,
+				A35585F02022ADEC00B0B582 /* background1301.jpg */,
 				A35585EE20220E7B00B0B582 /* background1321.jpg */,
 				AC1BB7B21F5F80FE003BE03E /* LaunchScreen.storyboard */,
 				AC1BB7B51F5F80FE003BE03E /* Info.plist */,
@@ -434,6 +437,7 @@
 				A3A3E5BF1FD6DA0800C0DF69 /* line.png in Resources */,
 				A33BA39B1F787C54008C111E /* stampHistory.storyboard in Resources */,
 				A36367301F70A94B00A4D1A9 /* GoogleService-Info.plist in Resources */,
+				A35585F12022ADEC00B0B582 /* background1301.jpg in Resources */,
 				AC1BB7CE1F5F820A003BE03E /* chat.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -733,12 +737,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				DEVELOPMENT_TEAM = F39YLTWJFM;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PCCZJUYRT6;
 				INFOPLIST_FILE = contactbook/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.contactBook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "/Users/ryota/contactbook3/contactbook/Bridging-Header.h";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
@@ -752,12 +759,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				DEVELOPMENT_TEAM = F39YLTWJFM;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PCCZJUYRT6;
 				INFOPLIST_FILE = contactbook/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.contactBook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "/Users/ryota/contactbook3/contactbook/Bridging-Header.h";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;

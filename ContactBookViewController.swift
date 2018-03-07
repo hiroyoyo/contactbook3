@@ -13,14 +13,19 @@ class ContactBookViewController: UIViewController,UITableViewDataSource, UITable
     @IBOutlet weak var tableView: UITableView!
     var contacHst:Array<ContactBookItem>=[]
     var useDefauls = UserDefaults.standard
-    var childId = "2017002"
+    var childId = "2013004"
     var selectText:String?
     var selectId:String?
-    
+    let refreshControl = UIRefreshControl()
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         search()
+        self.navigationController?.navigationBar.barTintColor = UIColor(red: 249/255, green: 249/255, blue: 249/255, alpha: 1)
+        tableView.refreshControl = refreshControl
+        refreshControl.addTarget(self, action: #selector(NotificationViewController.refresh(sender:)), for: .valueChanged)
+        refreshControl.endRefreshing()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -105,7 +110,7 @@ class ContactBookViewController: UIViewController,UITableViewDataSource, UITable
     }
     func parseData(src:[Any]){
         //キー”forecastsの値を取得”
-        
+        self.contacHst.removeAll()
         for val in src {
             let result = val as! [String:String]
 
@@ -124,7 +129,21 @@ class ContactBookViewController: UIViewController,UITableViewDataSource, UITable
             
         }
     }
-    
+    @objc func refresh(sender: UIRefreshControl) {
+        
+        
+        
+        search()
+        //読込中の表示を見るためにあえて2秒スリープする。
+        
+        self.refreshControl.endRefreshing()
+        //テーブルを再読み込みする。
+        tableView.reloadData()
+        
+        //読込中の表示を消す。
+        
+    }
+
     
     
 }

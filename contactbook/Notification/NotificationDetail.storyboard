@@ -18,25 +18,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background1301.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="hOa-I1-2se">
+                                <rect key="frame" x="0.0" y="44" width="375" height="533"/>
+                            </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="rOW-pX-zIz">
-                                <rect key="frame" x="16" y="20" width="343" height="603"/>
-                                <color key="backgroundColor" red="0.93725490199999995" green="1" blue="0.97254901959999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="16" y="44" width="343" height="574"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
-                        <color key="backgroundColor" red="0.93725490199999995" green="1" blue="0.97254901959999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="M3m-FS-d9z" firstAttribute="bottom" secondItem="rOW-pX-zIz" secondAttribute="bottom" id="2q6-4I-msw"/>
                             <constraint firstItem="M3m-FS-d9z" firstAttribute="trailing" secondItem="rOW-pX-zIz" secondAttribute="trailing" constant="16" id="Eer-An-xuF"/>
+                            <constraint firstItem="hOa-I1-2se" firstAttribute="leading" secondItem="u9h-Gd-UzR" secondAttribute="leading" id="YMa-8X-VQ5"/>
                             <constraint firstItem="rOW-pX-zIz" firstAttribute="leading" secondItem="M3m-FS-d9z" secondAttribute="leading" constant="16" id="YVu-0D-3M6"/>
-                            <constraint firstItem="rOW-pX-zIz" firstAttribute="top" secondItem="M3m-FS-d9z" secondAttribute="top" id="qZX-vx-crJ"/>
+                            <constraint firstItem="hOa-I1-2se" firstAttribute="centerX" secondItem="rOW-pX-zIz" secondAttribute="centerX" id="b67-65-xAb"/>
+                            <constraint firstItem="M3m-FS-d9z" firstAttribute="bottom" secondItem="hOa-I1-2se" secondAttribute="bottom" constant="41" id="fy9-q9-HUb"/>
+                            <constraint firstItem="rOW-pX-zIz" firstAttribute="top" secondItem="M3m-FS-d9z" secondAttribute="top" constant="24" id="qZX-vx-crJ"/>
+                            <constraint firstItem="hOa-I1-2se" firstAttribute="top" secondItem="rOW-pX-zIz" secondAttribute="top" id="qkn-fj-up2"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="M3m-FS-d9z"/>
                     </view>
                     <toolbarItems/>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="UiTextView" destination="rOW-pX-zIz" id="GG0-Hs-fMm"/>
                     </connections>
@@ -46,4 +51,7 @@
             <point key="canvasLocation" x="100" y="108.39580209895054"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="background1301.jpg" width="1240" height="1754"/>
+    </resources>
 </document>

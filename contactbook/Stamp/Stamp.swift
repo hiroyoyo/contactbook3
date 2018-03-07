@@ -40,6 +40,8 @@ class Stamp: UIViewController , UIImagePickerControllerDelegate, UINavigationCon
         themeLbl.sizeToFit()
         themeLbl.lineBreakMode = NSLineBreakMode.byCharWrapping
         
+        self.navigationController?.navigationBar.barTintColor = UIColor(red: 249/255, green: 249/255, blue: 249/255, alpha: 1)
+        
         let now = Date()
       
         let dateFomatter = DateFormatter()

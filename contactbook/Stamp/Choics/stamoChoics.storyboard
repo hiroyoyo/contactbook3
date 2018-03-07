@@ -21,9 +21,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background1301.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="vRb-0R-UId">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="sEb-BA-Eb1">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <color key="backgroundColor" red="0.93725490196078431" green="1" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="0.0" y="28" width="375" height="639"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="2" id="KId-fj-rCd">
                                     <size key="itemSize" width="113" height="104"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -43,7 +46,7 @@
                                                 </imageView>
                                             </subviews>
                                         </view>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="hf8-4m-oS0" secondAttribute="trailing" id="9Gu-de-ok1"/>
                                             <constraint firstAttribute="bottom" secondItem="hf8-4m-oS0" secondAttribute="bottom" id="OQZ-TZ-id7"/>
@@ -60,10 +63,14 @@
                             </collectionView>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="sEb-BA-Eb1" firstAttribute="top" secondItem="tIV-To-8aj" secondAttribute="top" id="8bw-00-dWL"/>
-                            <constraint firstAttribute="trailing" secondItem="sEb-BA-Eb1" secondAttribute="trailing" id="Vw6-d3-D8E"/>
-                            <constraint firstItem="sEb-BA-Eb1" firstAttribute="leading" secondItem="tIV-To-8aj" secondAttribute="leading" id="YgB-hz-ABj"/>
-                            <constraint firstItem="tHL-nt-Sh6" firstAttribute="top" secondItem="sEb-BA-Eb1" secondAttribute="bottom" id="mZL-5b-ASO"/>
+                            <constraint firstItem="sEb-BA-Eb1" firstAttribute="top" secondItem="BNJ-9k-rT4" secondAttribute="bottom" constant="8" symbolic="YES" id="565-Hv-xTe"/>
+                            <constraint firstAttribute="trailing" secondItem="vRb-0R-UId" secondAttribute="trailing" id="Bfn-7c-MeY"/>
+                            <constraint firstItem="vRb-0R-UId" firstAttribute="leading" secondItem="sEb-BA-Eb1" secondAttribute="leading" id="Juw-Nc-b5U"/>
+                            <constraint firstItem="vRb-0R-UId" firstAttribute="bottom" secondItem="tHL-nt-Sh6" secondAttribute="top" id="ROv-PA-M9f"/>
+                            <constraint firstItem="vRb-0R-UId" firstAttribute="top" secondItem="BNJ-9k-rT4" secondAttribute="bottom" id="fba-3S-365"/>
+                            <constraint firstItem="sEb-BA-Eb1" firstAttribute="bottom" secondItem="tHL-nt-Sh6" secondAttribute="top" id="ktO-qe-cza"/>
+                            <constraint firstItem="vRb-0R-UId" firstAttribute="trailing" secondItem="sEb-BA-Eb1" secondAttribute="trailing" id="lEH-2S-pEX"/>
+                            <constraint firstItem="vRb-0R-UId" firstAttribute="leading" secondItem="tIV-To-8aj" secondAttribute="leading" id="vDP-fU-SJ4"/>
                         </constraints>
                     </view>
                     <connections>
@@ -83,4 +90,7 @@
             <point key="canvasLocation" x="878" y="157"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="background1301.jpg" width="1240" height="1754"/>
+    </resources>
 </document>
